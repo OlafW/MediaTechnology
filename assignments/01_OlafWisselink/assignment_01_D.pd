@@ -1,0 +1,25 @@
+#N canvas 0 23 1280 751 10;
+#X obj 90 162 bng 100 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 90 271 1;
+#X obj 90 362 +;
+#X msg 91 512 Clicked \$1 times.;
+#X obj 92 542 print counter;
+#X msg 238 512 Switch at \$1;
+#X obj 239 546 print switch;
+#X obj 238 469 % 2;
+#X floatatom 152 360 5 0 0 0 - - -;
+#X msg 199 318 0;
+#X text 196 299 Press te reset counter;
+#X text 204 363 Make a counter: feed output to cold inlet of [+];
+#X text 272 469 [modulo 2] tells if count is even or uneven;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 7 0;
+#X connect 2 0 8 0;
+#X connect 3 0 4 0;
+#X connect 5 0 6 0;
+#X connect 7 0 5 0;
+#X connect 8 0 2 1;
+#X connect 9 0 2 1;
