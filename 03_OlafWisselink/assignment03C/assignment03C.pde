@@ -1,4 +1,3 @@
-String results[] = {"YOU LOSE", "DRAW", "YOU WIN!!!!1!"};
 boolean keyReleased = true;
 
 void setup() {
@@ -12,7 +11,7 @@ void keyPressed() {
     String computer = "";
     boolean win = false;
     
-    // See which key we typed and set player
+    // See which key we typed and set string player
     if (key == 'r') player = "rock";
     else if (key == 'p') player = "paper";
     else if (key == 's') player = "scissors";
@@ -67,7 +66,6 @@ void keyReleased() {
   // holding a key triggers it just once
   keyReleased = true;
 }
-
 
 void draw() {
   background(255);
