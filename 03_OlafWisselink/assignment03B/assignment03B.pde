@@ -1,5 +1,5 @@
 void setup() {
-  size(500, 500);
+  size(128, 128);
 }
 
 String modulus(int input) {
