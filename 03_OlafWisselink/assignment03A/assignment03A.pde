@@ -11,20 +11,19 @@ void gridDraw(float xpos, float ypos, int rows, int cols, float w, float h) {
   // Make a nested for loop to draw a grid of lines
   // Draw for r <= rows and c <= cols because we need to close the grid with one last extra line
   
+  // Horizontal lines
   for (int r = 0; r <= rows; ++r) {
     // What's the spacing between the lines?
     // Amount of y spacing = row number * height / number of horizontal lines (rows)
     // Offset the lines with the xpos and ypos (mouse position)
-    
-    // Horizontal lines
     float yspacing = r * h / (float)rows;
     line(xpos, ypos + yspacing, xpos + w, ypos + yspacing);
-    
-    for (int c = 0; c <= cols; ++c) {
-      // Amount of x spacing = column number * width / number of vertical lines (cols)
-      // Vertical lines
-      float xspacing = c * w / (float)cols;
-      line(xpos + xspacing, ypos, xpos + xspacing, ypos + h);
-    }
+  }
+  
+  // Vertical lines
+  for (int c = 0; c <= cols; ++c) {
+    // Amount of x spacing = column number * width / number of vertical lines (cols)
+    float xspacing = c * w / (float)cols;
+    line(xpos + xspacing, ypos, xpos + xspacing, ypos + h);
   }
 }
