@@ -3,7 +3,7 @@ void setup() {
   background(255);
   
   float radius = 64; // initial circle radius
-  float overlap = 4; // vertical overlap factor;
+  float overlap = 3.5; // vertical overlap factor;
   int cols = int(width/radius) + 1; // number of horizontal circles
   int rows = int(height/radius * overlap) + 1; // number of vertical circles
   
