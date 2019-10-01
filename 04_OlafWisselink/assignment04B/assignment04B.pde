@@ -25,7 +25,7 @@ void setup() {
 }
 
 void drawCircles(float x, float y, float radius) {
-  int numCircle = 4;
+  int numCircle = 4; // Number of circles at each spot
   float bright = 255; // (0 - 255)
   float bright_offset = 0.5; // (0 - 1)
   
@@ -39,7 +39,6 @@ void drawCircles(float x, float y, float radius) {
     color col = color(255, whiteness, whiteness);
     
     fill(col);
-    noStroke();
     strokeWeight(2);
     stroke(150, 50, 50);
     ellipse(x, y, r * radius, r * radius);

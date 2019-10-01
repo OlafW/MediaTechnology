@@ -21,7 +21,7 @@ void setup() {
   for (int i = 0; i < numRect; i++) {
     rotate(phi);
     noStroke();
-    fill(255, 125, 0);
+    fill(246, 151, 74);
     rect(0, 0, rectHeight, rectWidth);
   }
   
@@ -33,7 +33,7 @@ void setup() {
   ellipse(0, 0, 150, 150);
   
   // Draw yellow circle
-  fill(255, 200, 0);
+  fill(255, 200, 85);
   ellipse(0, 0, 100, 100);
 }
 
