@@ -8,7 +8,6 @@ void draw() {
 }
 
 void gridDraw(float xpos, float ypos, int rows, int cols, float w, float h) {
-  // Make a nested for loop to draw a grid of lines
   // Draw for r <= rows and c <= cols because we need to close the grid with one last extra line
   
   // Horizontal lines
