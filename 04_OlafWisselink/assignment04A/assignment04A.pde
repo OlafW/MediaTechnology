@@ -12,19 +12,21 @@ void setup() {
     for (int j = 0; j < numRect; ++j) {
       // rect index = i * number of rect + j
       // index is even when divisible by 2
-      if ((i * numRect + j) % 2== 0) {
+      if ((i * numRect + j) % 2 == 0) {
         drawRandomRect(i * rectSize, j * rectSize, rectSize);
       }
     }
   }
   
   // For every uneven rect: draw white rectangle
+  // Needs be drawn in a second nested loop after the first
+  // Because it needs to draw over it
   for (int i = 0; i < numRect; ++i) {
     for (int j = 0; j < numRect; ++j) {
       if ((i * numRect + j) % 2 != 0) {
         fill(255);
-        noStroke();
-        rect(i * rectSize, j * rectSize, rectSize, rectSize);
+        stroke(255);
+        rect(i * rectSize, j * rectSize, rectSize+1, rectSize+1);
       }
     }
   }

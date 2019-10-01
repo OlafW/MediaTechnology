@@ -25,7 +25,7 @@ void setup() {
 }
 
 void drawCircles(float x, float y, float radius) {
-  int numCircle = 4;
+  int numCircle = 4; // Number of circles at each spot
   float bright = 255; // (0 - 255)
   float bright_offset = 0.5; // (0 - 1)
   
