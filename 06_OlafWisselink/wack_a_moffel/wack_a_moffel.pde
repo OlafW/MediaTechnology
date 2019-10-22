@@ -1,5 +1,6 @@
+// Create an array of mole objects
 int score = 0;
-int numMole = 5;
+int numMole = 1;
 Mole mole[] = new Mole[numMole];
 
 PImage moffel;
@@ -11,6 +12,7 @@ void setup() {
   moffel = loadImage("./data/moffel.png");
   piertje = loadImage("./data/piertje.png");
   
+  // Create the mole objects
   for (int i = 0; i < numMole; i++) {
     mole[i] = new Mole();
   }
@@ -24,6 +26,7 @@ void draw() {
     mole[i].display();
   }
   
+  // Display score
   textSize(20);
   fill(0);
   noStroke();
@@ -31,7 +34,10 @@ void draw() {
 }
 
 void mousePressed() {
+  // For every mole, check if we pressed it
   for (int i = 0; i < numMole; i++) {
+    
+    // Keep track of score
     score += mole[i].wack(mouseX, mouseY);
     
     if (score < 0) score = 0;

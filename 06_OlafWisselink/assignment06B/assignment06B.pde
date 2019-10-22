@@ -1,3 +1,4 @@
+// Create a ripple object
 Ripple ripple = new Ripple();
 boolean firstPress = false;
 
@@ -11,6 +12,7 @@ void draw() {
 }
 
 void mousePressed() {
-  ripple.set(mouseX, mouseY);
+  // Set the ripple position according to mouse pos
+  ripple.init(mouseX, mouseY);
   firstPress = true;
 }
