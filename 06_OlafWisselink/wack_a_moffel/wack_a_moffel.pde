@@ -1,6 +1,6 @@
 // Create an array of mole objects
 int score = 0;
-int numMole = 1;
+int numMole = 5;
 Mole mole[] = new Mole[numMole];
 
 PImage moffel;

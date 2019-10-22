@@ -15,7 +15,7 @@ class Mole {
     int score = 0;
 
     // Check if we clicked within the image, which is a rectangle
-    // Only do this when its not waiting to reappear after being wacked
+    // Only do this when its not waiting to reappear
     if (visible) {
       if ( (mx > x && mx < x + moffel.width) &&
            (my > y && my < y + moffel.height)) {
