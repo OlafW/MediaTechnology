@@ -2,7 +2,7 @@ class RandCircle {
   float x, y;
   float diam = 60;
   RandCircle[] circle;
-
+  
   RandCircle(float x, float y, RandCircle[] circle) {
     this.x = x;
     this.y = y;
@@ -30,9 +30,10 @@ class RandCircle {
 
       // ...Then for every circle, check if we aren't colliding
       // If we are, break out of the for loop and start all over again!
-      // Don't check against itself
+      // Don't check against itself or not-initiated objects
       for (int i = 0; i < circle.length; i++) {
-        if (circle[i] != this) {
+        
+        if (circle[i] != this && circle[i] != null) {
           float dist = dist(x, y, circle[i].x, circle[i].y);
 
           if (dist <= diam) {
@@ -56,7 +57,7 @@ class RandCircle {
   void clicked(float mx, float my) {
     float dist = dist(x, y, mx, my);
 
-    // We clicked on this circle, reset it's position
+    // We clicked on this circle, set a new random position
     if (dist < diam / 2) {
       setRandPosition();
     }

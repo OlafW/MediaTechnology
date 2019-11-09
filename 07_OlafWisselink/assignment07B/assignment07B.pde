@@ -22,8 +22,11 @@ void draw() {
     // Read from the array starting at the writepointer 
     int readPtr = (i + writePtr) % numPoints;
     
+    // Map radius and alpha to i
+    // This way r and alpha continously change for every circle because 
+    // the readpointer keeps reading out from different points in the array
     r = map(i, 0, numPoints, 5, 50);
-    alpha = map(i, 0, numPoints, 0, 255);
+    alpha = map(i, 0, numPoints, 25, 255);
     
     fill(0, alpha);
     noStroke();

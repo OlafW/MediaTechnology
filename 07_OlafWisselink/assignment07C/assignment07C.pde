@@ -1,17 +1,13 @@
-int numCircle = 40;
+int numCircle = 20;
 RandCircle[] circle = new RandCircle[numCircle];
 
 void setup() {
   size(512, 512);
-
+  
   for (int i = 0; i < numCircle; i++) {
     circle[i] = new RandCircle(random(width), random(height), circle);
-  }
-
-  for (int i = 0; i < numCircle; i++) {
     circle[i].setRandPosition();
   }
-
 }
 
 void draw() {

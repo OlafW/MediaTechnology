@@ -74,14 +74,15 @@ void keyReleased() {
         
         // Make a new array of current size + 1
         String[] copyMoves = new String[moveList.length + 1];
-            
-        // Make a random move
-        String randMove = (random(1) < 0.5) ? "L" : "R";
-        
+                    
         // Copy all the current moves to the new array
         for (int i = 0; i < moveList.length; i++) {
            copyMoves[i] = moveList[i];
         }
+        
+        // Make a random move
+        String randMove = (random(1) < 0.5) ? "L" : "R";
+        
         // Add the new random move at the end
         copyMoves[copyMoves.length-1] = randMove;
         
