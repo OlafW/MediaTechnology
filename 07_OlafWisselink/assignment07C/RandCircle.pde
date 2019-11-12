@@ -17,16 +17,9 @@ class RandCircle {
     while (!foundEmptySpot) {
       collided = false;
 
-      // ..Set a random position
-      x = random(width);
-      y = random(height);
-
-      // ..If we're outside of the canvas, set a new random position until we're not anymore
-      while (x - diam * 0.5 < 0 || x + diam * 0.5 > width || 
-             y - diam * 0.5 < 0 || y + diam * 0.5 > height) {
-        x = random(width);
-        y = random(height);
-      }
+      // ..Set a random position within the canvas
+      x = random(diam/2, width - diam/2);
+      y = random(diam/2, height - diam/2);
 
       // ...Then for every circle, check if we aren't colliding
       // If we are, break out of the for loop and start all over again!
