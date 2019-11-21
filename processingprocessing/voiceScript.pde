@@ -14,14 +14,22 @@ String[] voiceScript = {
   "Yes, that's the one. Amazing, don't you think?", 
   "Could be a Malevitsj.",
   "But the circle seems to be missing... Please find it",
-  "Ah, there it is! Way better now.",
+  "Ah, there it is! Sneaky little thing.",
+  "Way better now.",
   "But let's add even more...",
   "Say cheese!!",
   "Looking great there. But let's make one tiny adjustment",
-  "I'm assuming you're head is over here, please clearly shout if that's the case"
+  "I'm assuming you're head is over here",
+  "Please clearly shout if that's the case",
+  "Okay great! ....Well... that's about it, I guess",
+  "...I'm running late for yoga class, so...",
+  "I gotta go now. See you, bye bye!"
 };
 
-String review = "I don't really like it, tbh this is like beginner stuff. It could have been 2 circles easily... or a square. And no animations? Or color? What is this even, 3/10";
+String review = "I don't really like it, tbh this is like beginner stuff. " + 
+                "It could have been 2 circles easily... or a square. " +
+                "And no animation? Or color? Did you even spend more than 5 minutes on this?";
+  
 String[] bluh = {"ba", "bluh", "poh", "huh?!", "oooooooooh", "bluh?", "oooooooh?"}; 
 
 int randWindow = (int)random(20, 50);

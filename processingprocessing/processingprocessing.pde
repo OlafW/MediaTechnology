@@ -7,7 +7,7 @@ int speechInterval = 3000;
 long addWindowTime = 0;
 int addWindowInterval = 4000;
 
-int voiceScriptIndex = 0;
+int voiceScriptIndex = 9;
 boolean continueVoiceScript = true;
 
 Process speech;
@@ -88,12 +88,12 @@ void draw() {
           continueVoiceScript = false;
           break;
 
-        case 17:
+        case 18:
           child.get(0).getSurface().setResizable(false);
           child.get(0).getSurface().setSize(512, 512);
           child.get(0).getSurface().setLocation((int)displayWidth/2-256, (int)displayHeight/2-256);
           child.get(0).startVideo();
-          continueVoiceScript = false;
+          //continueVoiceScript = false;
           break;
         }
       }
@@ -112,7 +112,7 @@ void draw() {
         reviewTextIndex += 15;
       }
       lastKey = key;
-      if (reviewTextIndex > width + textWidth(review) * 0.7) {
+      if (reviewTextIndex > width + textWidth(review) * 0.6) {
         continueVoiceScript = true;
       }   
       break;
@@ -120,6 +120,7 @@ void draw() {
     case 7: 
     case 11:
       if (child.size() < 20) {
+        
         if (millis() - addWindowTime > addWindowInterval) {
           addWindowTime = millis();
           child.add(new ChildApplet(child.size(), true));
@@ -130,7 +131,7 @@ void draw() {
       for (int i = child.size()-1; i >= 0; i--) {
         ChildApplet ch = child.get(i);
 
-        if (ch.mousePressed) {  
+        if (ch.mousePressed || ch.getSurface().isStopped()) {  
           if (ch.ID == randWindow) {
             for (int j = child.size()-1; j >= 0; j--) {
               if (j != i) {
@@ -140,7 +141,9 @@ void draw() {
             }
             continueVoiceScript = true;
             break;
-          } else {
+          } 
+          
+          else {
             ch.exit();
             child.remove(i); 
 
@@ -148,12 +151,11 @@ void draw() {
               int randombluh = (int)random(bluh.length);
               speak(bluh[randombluh]);
             }
-
-            if (child.size() == 0) {
-              continueVoiceScript = true;
-            }
           }
         }
+      }
+      if (child.size() == 0) {
+        continueVoiceScript = true;
       }
       break;
 
@@ -169,6 +171,8 @@ void draw() {
   fill(0);
   textAlign(CENTER);
   text(voiceScript[voiceScriptIndex], width/2, height-12);
+  
+  //text((int)frameRate, 60, 50);
 }
 
 Process speak(String text) {
