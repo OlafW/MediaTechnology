@@ -28,7 +28,7 @@ public class ChildApplet extends PApplet {
     wy = (int)random(displayHeight - this.height - 75);
     surface.setLocation(wx, wy);
     if (speak && !speech.isAlive()) {
-      speak("Hi, I'm program number"+ID);
+      speak("Hi, I'm" + ID);
     }
   }
 

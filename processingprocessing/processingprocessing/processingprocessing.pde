@@ -5,9 +5,9 @@ ArrayList<ChildApplet> child = new ArrayList<ChildApplet>();
 long speechTime = 0; 
 int speechInterval = 3000;
 long addWindowTime = 0;
-int addWindowInterval = 5000;
+int addWindowInterval = 4000;
 
-int voiceScriptIndex = 4;
+int voiceScriptIndex = 0;
 boolean continueVoiceScript = true;
 
 Process speech;
@@ -79,8 +79,7 @@ void draw() {
           }
           break;
 
-        case 7: 
-        case 11:
+        case 7: case 11:
           continueVoiceScript = false;
           break;
 
@@ -124,6 +123,7 @@ void draw() {
         if (millis() - addWindowTime > addWindowInterval) {
           addWindowTime = millis();
           child.add(new ChildApplet(child.size(), true));
+          if (addWindowInterval > 2000) addWindowInterval *= 0.9;
         }
       }
 
