@@ -1,8 +1,8 @@
 public class ChildApplet extends PApplet {
   int ID;
 
-  int wx, wy;
-  color bg = color(random(255), random(255), random(255));  
+  int windowX, windowY;
+  color bg; 
   
   boolean mouseOver = false;
   boolean speak = false;
@@ -16,7 +16,7 @@ public class ChildApplet extends PApplet {
   }
 
   public void settings() {
-    size((int)random(128, 200), (int)random(128, 200));
+    size((int)random(128, 250), (int)random(128, 250));
     beginWindowWidth = width;
   }
 
@@ -24,9 +24,12 @@ public class ChildApplet extends PApplet {
     surface.setTitle(str(ID));
     surface.setAlwaysOnTop(true);
 
-    wx = (int)random(displayWidth - this.width);
-    wy = (int)random(displayHeight - this.height - 75);
-    surface.setLocation(wx, wy);
+    windowX = (int)random(displayWidth - this.width);
+    windowY = (int)random(displayHeight - this.height - 75);
+    surface.setLocation(windowX, windowY);
+    
+    bg = color(random(255), random(255), random(255));
+    
     if (speak && !speech.isAlive()) {
       speak("Hi, I'm program" + ID);
     }
@@ -46,6 +49,7 @@ public class ChildApplet extends PApplet {
         ellipse(beginWindowWidth + 100, height/2, 75, 75);
       }
     }
+    
     else {
       if (mouseOver) background(255);
       else background(bg);
@@ -74,7 +78,7 @@ public class ChildApplet extends PApplet {
     video.read();
   }
   
-  public boolean foundTheCircle() {
+  public boolean foundCircle() {
     return (width > beginWindowWidth + 150);  
   }
 }

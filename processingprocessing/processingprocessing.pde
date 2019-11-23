@@ -2,177 +2,187 @@ import processing.video.*;
 
 ArrayList<ChildApplet> child = new ArrayList<ChildApplet>();
 
-long speechTime = 0; 
-int speechInterval = 3000;
 long addWindowTime = 0;
 int addWindowInterval = 4000;
-
-int voiceScriptIndex = 9;
-boolean continueVoiceScript = true;
-
-Process speech;
-
 char lastKey = ' ';
 int reviewTextIndex = 0;
 
 Capture video;
 
+Process speech;
+
 void settings() {
   fullScreen();
-  //size(displayWidth, displayHeight);
 }
 
 void setup() {
-  //String mainTitle = " ";
-  //for (int i = 0; i < 50; i++) {
-  //  mainTitle += "processing";
-  //}
-  //surface.setTitle(mainTitle);
-
-  speech = speak(voiceScript[voiceScriptIndex]);
-  speechTime = millis();
-
-  initVoiceScript();
+  fullScreen();
+  voiceScript = loadJSONArray("data/voicescript.json");
 }
-
 
 void draw() {
   background(255);
 
   fill(0);
   noStroke();
-  ellipse(width/2, height/2, 75, 75); 
+  ellipse(width/2, height/2, 75, 75);
 
-  int numWindows;
+  if (speech == null) {
+    if (millis() > 3000) {
+      sentence = voiceScript.getJSONObject(voiceScriptIndex);
+      line = sentence.getString("line");
+      speech = speak(line);
+      
+      speechTime = millis();
+      voiceScriptIndex++;
+    }
+  } 
+  
+  else {
+    if (continueVoiceScript) {
+      if (!speech.isAlive()) {
 
-  if (continueVoiceScript) {
-    if (!speech.isAlive()) {
+        if (millis() - speechTime > speechInterval) {
+          speechTime = millis();
 
-      if (millis() - speechTime > speechInterval) {
-        speechTime = millis();
-
-        if (voiceScriptIndex < voiceScript.length-1) {
-          voiceScriptIndex++;
-          speech = speak(voiceScript[voiceScriptIndex]);
-        }
-
-        switch(voiceScriptIndex) {
-
-        case 3:
-          continueVoiceScript = false;
-          break;
-
-        case 6:
-          numWindows = 5;
-
-          for (int i = 0; i < numWindows; i++) {
-            child.add(new ChildApplet(child.size(), false));
+          sentence = voiceScript.getJSONObject(voiceScriptIndex);
+          ID = sentence.getString("ID");
+          line = sentence.getString("line");
+          speechInterval = sentence.getInt("time");
+          
+          if (ID.equals("findWindow")) {
+            line += randWindowSentence;
+          }     
+          speech = speak(line);
+          
+          if (voiceScriptIndex < voiceScript.size()-1) {
+            voiceScriptIndex++;
           }
-          break;
 
-        case 10:
-          numWindows = 50;
+          int numWindows = 0;
 
-          child.clear();
-          for (int i = 0; i < numWindows; i++) {
-            child.add(new ChildApplet(child.size(), false));
+          switch(ID) {
+          case "review":
+            continueVoiceScript = false;
+            break;
+
+          case "firstWindows":
+            numWindows = 5;
+
+            for (int i = 0; i < numWindows; i++) {
+              child.add(new ChildApplet(child.size(), false));
+            }
+            break;
+
+          case "secondWindows":
+            numWindows = 50;
+
+            child.clear();
+            for (int i = 0; i < numWindows; i++) {
+              child.add(new ChildApplet(child.size(), false));
+            }
+            break;
+
+          case "clickWindows":
+          case "findWindow":
+            continueVoiceScript = false;
+            break;
+            
+          case "findCircle":
+            child.get(0).getSurface().setResizable(true);
+            continueVoiceScript = false;
+            break;
+
+          case "camera":
+            child.get(0).getSurface().setResizable(false);
+            child.get(0).getSurface().setSize(512, 512);
+            child.get(0).getSurface().setLocation((int)displayWidth/2-256, (int)displayHeight/2-256);
+            child.get(0).startVideo();
+            break;
+                    
+         case "ending":
+           exit();
+         
           }
-          break;
-
-        case 7: case 11:
-          continueVoiceScript = false;
-          break;
-
-        case 14:
-          child.get(0).getSurface().setResizable(true);
-          continueVoiceScript = false;
-          break;
-
-        case 18:
-          child.get(0).getSurface().setResizable(false);
-          child.get(0).getSurface().setSize(512, 512);
-          child.get(0).getSurface().setLocation((int)displayWidth/2-256, (int)displayHeight/2-256);
-          child.get(0).startVideo();
-          //continueVoiceScript = false;
-          break;
         }
       }
     }
-  }
 
-  if (!speech.isAlive()) {
-    switch(voiceScriptIndex) {
-    case 3:
-      textSize(80);
-      fill(255, 0, 0);
-      textAlign(LEFT);
-      text(review, width - reviewTextIndex, height/2);
+    if (!speech.isAlive()) {    
+      switch(ID) {
 
-      if (keyPressed && key != lastKey) {
-        reviewTextIndex += 15;
-      }
-      lastKey = key;
-      if (reviewTextIndex > width + textWidth(review) * 0.6) {
-        continueVoiceScript = true;
-      }   
-      break;
+      case "review":
+        textSize(80);
+        fill(255, 0, 0);
+        textAlign(LEFT);
+        text(review, width - reviewTextIndex, height/2);
 
-    case 7: 
-    case 11:
-      if (child.size() < 20) {
-        
-        if (millis() - addWindowTime > addWindowInterval) {
-          addWindowTime = millis();
-          child.add(new ChildApplet(child.size(), true));
-          if (addWindowInterval > 2000) addWindowInterval *= 0.9;
+        if (keyPressed && key != lastKey) {
+          reviewTextIndex += 15;
         }
-      }
+        lastKey = key;
+        if (reviewTextIndex > width + textWidth(review) * 0.55) {
+          continueVoiceScript = true;
+        }   
+        break;
 
-      for (int i = child.size()-1; i >= 0; i--) {
-        ChildApplet ch = child.get(i);
+      case "clickWindows": 
+      case "findWindow":
+      
+        if (child.size() < 20) {
 
-        if (ch.mousePressed || ch.getSurface().isStopped()) {  
-          if (ch.ID == randWindow) {
-            for (int j = child.size()-1; j >= 0; j--) {
-              if (j != i) {
-                child.get(j).exit();
-                child.remove(j);
+          if (millis() - addWindowTime > addWindowInterval) {
+            addWindowTime = millis();
+            child.add(new ChildApplet(child.size(), true));
+            if (addWindowInterval > 750) addWindowInterval *= 0.9;
+            else addWindowInterval = 4000;
+          }
+        }
+
+        for (int i = child.size()-1; i >= 0; i--) {
+          ChildApplet ch = child.get(i);
+
+          if (ch.mousePressed || ch.getSurface().isStopped()) {  
+            if (ch.ID == randWindow) {
+              for (int j = child.size()-1; j >= 0; j--) {
+                if (j != i) {
+                  child.get(j).exit();
+                  child.remove(j);
+                }
               }
-            }
-            continueVoiceScript = true;
-            break;
-          } 
-          
-          else {
-            ch.exit();
-            child.remove(i); 
+              continueVoiceScript = true;
+              break;
+            } 
+            
+            else {
+              ch.exit();
+              child.remove(i); 
 
-            if (child.size() > 0) {
-              int randombluh = (int)random(bluh.length);
-              speak(bluh[randombluh]);
+              if (child.size() > 0) {
+                int randombluh = (int)random(bluh.length);
+                speak(bluh[randombluh]);
+              }
             }
           }
         }
-      }
-      if (child.size() == 0) {
-        continueVoiceScript = true;
-      }
-      break;
+        if (child.size() == 0) {
+          continueVoiceScript = true;
+        }
+        break;
 
-    case 14: 
-      if (child.get(0).foundTheCircle()) {
-        continueVoiceScript = true;
+      case "findCircle": 
+        if (child.get(0).foundCircle()) {
+          continueVoiceScript = true;
+        }
+        break;
       }
-      break;
     }
   }
 
   textSize(40);
   fill(0);
   textAlign(CENTER);
-  text(voiceScript[voiceScriptIndex], width/2, height-12);
-  
-  //text((int)frameRate, 60, 50);
+  text(line, width/2, height-12);
 }
 
 Process speak(String text) {
