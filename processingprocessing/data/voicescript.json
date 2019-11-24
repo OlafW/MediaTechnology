@@ -1,122 +1,137 @@
 [
     {
         "ID": "0",
-        "line": "Hi! welcome to this Processing program",
+        "sentence": "Hi! welcome to this Processing program",
         "time": 3000
     },
     {
         "ID": "0",
-        "line": "Do you like it?",
+        "sentence": "Do you like it?",
         "time": 3000
     },
     {
         "ID": "review",
-        "line": "Please type your experience in full detail",
+        "sentence": "Please type your experience in full detail",
         "time": 3000
     },
     {
         "ID": "0",
-        "line": "Ok ok, I get it....",
+        "sentence": "Ok ok, I get it....",
         "time": 3000
     },
     {
         "ID": "0",
-        "line": "Think you can do better?",
+        "sentence": "Think you can do better?",
         "time": 3000
     },
     {
         "ID": "firstWindows",
-        "line": "What about now, huh? It's beautiful............",
+        "sentence": "What about now, huh? It's beautiful............",
         "time": 5000
     },
     {
         "ID": "clickWindows",
-        "line": "Let's add some more",
+        "sentence": "Let's add some more",
         "time": 3000
     },
     {
         "ID": "0",
-        "line": "Hey! Don't destroy my program!",
+        "sentence": "Hey! Don't destroy my program!",
         "time": 3000
     },
     {
         "ID": "0",
-        "line": "I worked so hard on that...",
+        "sentence": "I worked so hard on that...",
         "time": 3000
     },
     {
         "ID": "secondWindows",
-        "line": "You asked for this...",
+        "sentence": "You asked for this...",
         "time": 3000
     },
     {
         "ID": "findWindow",
-        "line": "Now look at program",
+        "sentence": "Now look at program",
         "time": 3000
     },
     {
         "ID": "0",
-        "line": "Yes, that's the one. Amazing, don't you think?",
+        "sentence": "Yes, that's the one. Amazing, don't you think?",
         "time": 3000
     },
     {
         "ID": "0",
-        "line": "Could be a Malevich.",
+        "sentence": "Could be a Malevich.",
         "time": 3000
     },
     {
         "ID": "findCircle",
-        "line": "But the circle seems to be missing... Please find it",
+        "sentence": "But the circle seems to be missing... Please find it",
         "time": 3000
     },
     {
         "ID": "0",
-        "line": "Ah, there it is! Sneaky little thing.",
+        "sentence": "Ah, there it is! Sneaky little thing.",
         "time": 3000
     },
     {
         "ID": "0",
-        "line": "Way better now.",
+        "sentence": "Way better now.",
         "time": 3000
     },
     {
         "ID": "0",
-        "line": "But let's add even more...",
+        "sentence": "But now let's also add some of your input...",
         "time": 3000
     },
     {
         "ID": "camera",
-        "line": "Say cheese!!",
+        "sentence": "Say cheese!!",
         "time": 5000
     },
     {
         "ID": "0",
-        "line": "Looking great there. But let's make one tiny adjustment",
-        "time": 6000
+        "sentence": "Looking great there. Now let's recombine our works",
+        "time": 4000
+    },
+    {
+        "ID": "audio",
+        "sentence": "Please shout to reposition the circle to your liking",
+        "time": 10000
     },
     {
         "ID": "0",
-        "line": "I'm assuming you're head is over here",
+        "sentence": "Yes! Yes, it's a masterpiece now!",
         "time": 3000
     },
     {
         "ID": "0",
-        "line": "Please clearly shout if that's the case",
-        "time": 5000
-    },
-    {
-        "ID": "0",
-        "line": "Okay great! ....Well... that's about it I guess",
+        "sentence": "....Well... that's about it, I guess.",
         "time": 3000
     },
     {
         "ID": "0",
-        "line": "...I'm running late for yoga class, so...",
+        "sentence": "...I'm running late for yoga class, so...",
         "time": 3000
     },
     {
         "ID": "ending",
-        "line": "I gotta go now. See you, bye bye!",
+        "sentence": "I gotta go. See you, bye bye!",
+        "time": 3000
+    },
+    {
+        "ID": "toolong",
+        "sentence": "You're taking very long...",
+        "time": 2000
+    },
+    {
+        "ID": "0",
+        "sentence": "And my attention span is only like a minute or so",
+        "time": 4000
+    },
+    {
+        "ID": "timeup",
+        "sentence": "Please restart the program and try again",
         "time": 3000
     },
 ]

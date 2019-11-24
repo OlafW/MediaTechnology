@@ -1,6 +1,9 @@
 import processing.video.*;
+import processing.sound.*;
 
 ArrayList<ChildApplet> child = new ArrayList<ChildApplet>();
+
+long MINUTES = 5 * (1000 * 60);
 
 long addWindowTime = 0;
 int addWindowInterval = 4000;
@@ -8,6 +11,8 @@ char lastKey = ' ';
 int reviewTextIndex = 0;
 
 Capture video;
+AudioIn mic;
+Amplitude amp;
 
 Process speech;
 
@@ -26,12 +31,12 @@ void draw() {
   fill(0);
   noStroke();
   ellipse(width/2, height/2, 75, 75);
-
+    
   if (speech == null) {
     if (millis() > 3000) {
-      sentence = voiceScript.getJSONObject(voiceScriptIndex);
-      line = sentence.getString("line");
-      speech = speak(line);
+      voice = voiceScript.getJSONObject(voiceScriptIndex);
+      sentence = voice.getString("sentence");
+      speech = speak(sentence);
       
       speechTime = millis();
       voiceScriptIndex++;
@@ -45,15 +50,16 @@ void draw() {
         if (millis() - speechTime > speechInterval) {
           speechTime = millis();
 
-          sentence = voiceScript.getJSONObject(voiceScriptIndex);
-          ID = sentence.getString("ID");
-          line = sentence.getString("line");
-          speechInterval = sentence.getInt("time");
+          voice = voiceScript.getJSONObject(voiceScriptIndex);
+          sentenceID = voice.getString("ID");
+          sentence = voice.getString("sentence");
+          speechInterval = voice.getInt("time");
           
-          if (ID.equals("findWindow")) {
-            line += randWindowSentence;
+          if (sentenceID.equals("findWindow")) {
+            sentence += randWindowSentence;
           }     
-          speech = speak(line);
+          
+          speech = speak(sentence);
           
           if (voiceScriptIndex < voiceScript.size()-1) {
             voiceScriptIndex++;
@@ -61,11 +67,7 @@ void draw() {
 
           int numWindows = 0;
 
-          switch(ID) {
-          case "review":
-            continueVoiceScript = false;
-            break;
-
+          switch(sentenceID) {
           case "firstWindows":
             numWindows = 5;
 
@@ -83,8 +85,8 @@ void draw() {
             }
             break;
 
-          case "clickWindows":
-          case "findWindow":
+          case "review":
+          case "clickWindows": case "findWindow":
             continueVoiceScript = false;
             break;
             
@@ -94,22 +96,37 @@ void draw() {
             break;
 
           case "camera":
-            child.get(0).getSurface().setResizable(false);
-            child.get(0).getSurface().setSize(512, 512);
-            child.get(0).getSurface().setLocation((int)displayWidth/2-256, (int)displayHeight/2-256);
-            child.get(0).startVideo();
+            ChildApplet ch = child.get(0);   
+            ch.getSurface().setResizable(false);
+            ch.getSurface().setSize(512, 512);
+            ch.getSurface().setLocation((int)displayWidth/2-256, (int)displayHeight/2-256);
+            ch.startVideo();
             break;
+            
+         case "audio":
+           child.get(0).startAudio();
+           //continueVoiceScript = false;
+           break;
                     
-         case "ending":
-           exit();
-         
+         case "ending": case "timeup":
+           //if (!speech.isAlive()) {
+             exit();
+           //}       
           }
         }
       }
     }
 
-    if (!speech.isAlive()) {    
-      switch(ID) {
+    if (!speech.isAlive()) { 
+      
+      if (millis() > MINUTES) {
+        if (voiceScriptIndex < 10) {
+          voiceScriptIndex = voiceScript.size()-3;
+          continueVoiceScript = true;
+        }
+      }
+      
+      switch(sentenceID) {
 
       case "review":
         textSize(80);
@@ -130,14 +147,13 @@ void draw() {
       case "findWindow":
       
         if (child.size() < 20) {
-
           if (millis() - addWindowTime > addWindowInterval) {
             addWindowTime = millis();
             child.add(new ChildApplet(child.size(), true));
             if (addWindowInterval > 750) addWindowInterval *= 0.9;
-            else addWindowInterval = 4000;
           }
         }
+        else addWindowInterval = 4000;
 
         for (int i = child.size()-1; i >= 0; i--) {
           ChildApplet ch = child.get(i);
@@ -182,7 +198,7 @@ void draw() {
   textSize(40);
   fill(0);
   textAlign(CENTER);
-  text(line, width/2, height-12);
+  text(sentence, width/2, height-12);
 }
 
 Process speak(String text) {
