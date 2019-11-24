@@ -3,7 +3,7 @@ import processing.sound.*;
 
 ArrayList<ChildApplet> child = new ArrayList<ChildApplet>();
 
-long MINUTES = 5 * (1000 * 60);
+long MINUTES = 4 * (1000 * 60);
 
 long addWindowTime = 0;
 int addWindowInterval = 4000;
@@ -80,14 +80,13 @@ void draw() {
             numWindows = 50;
 
             child.clear();
+            child.add(new ChildApplet(randWindow, false));
+            
             for (int i = 0; i < numWindows; i++) {
-              child.add(new ChildApplet(child.size(), false));
+              if (i != randWindow) {
+                child.add(new ChildApplet(i, false));
+              }
             }
-            break;
-
-          case "review":
-          case "clickWindows": case "findWindow":
-            continueVoiceScript = false;
             break;
             
           case "findCircle":
@@ -103,15 +102,16 @@ void draw() {
             ch.startVideo();
             break;
             
-         case "audio":
+         case "shoutCircle":
            child.get(0).startAudio();
-           //continueVoiceScript = false;
+           continueVoiceScript = false;
            break;
-                    
-         case "ending": case "timeup":
-           //if (!speech.isAlive()) {
-             exit();
-           //}       
+          
+         case "review":
+         case "clickWindows": case "findWindow":           
+         case "ending": case "timeUp":
+           continueVoiceScript = false;
+             break;
           }
         }
       }
@@ -119,15 +119,7 @@ void draw() {
 
     if (!speech.isAlive()) { 
       
-      if (millis() > MINUTES) {
-        if (voiceScriptIndex < 10) {
-          voiceScriptIndex = voiceScript.size()-3;
-          continueVoiceScript = true;
-        }
-      }
-      
       switch(sentenceID) {
-
       case "review":
         textSize(80);
         fill(255, 0, 0);
@@ -191,10 +183,33 @@ void draw() {
           continueVoiceScript = true;
         }
         break;
+        
+      case "shoutCircle": 
+        if (child.get(0).circleOffScreen()) {
+          println(child.get(0).circleOffScreen());
+          continueVoiceScript = true;
+        }
+        break;
+        
+       case "ending": case "timeUp":
+         exit();
+         break;
+      }
+    
+     if (millis() > MINUTES) {
+      if (voiceScriptIndex < 10) {
+        for (int i = voiceScript.size()-1; i >= 0; i--) {
+          if (voiceScript.getJSONObject(i).getString("ID").equals("tooLong")) {
+            voiceScriptIndex = i;
+            continueVoiceScript = true;
+            break;
+          }
+        }
       }
     }
+   }
   }
-
+ 
   textSize(40);
   fill(0);
   textAlign(CENTER);

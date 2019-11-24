@@ -47,6 +47,7 @@ public class ChildApplet extends PApplet {
     if (ID == randWindow) {   
       if (video != null) {
         image(video, 0, 0);
+        ellipse(x, y, diam, diam);
       }
       
       else {
@@ -55,17 +56,13 @@ public class ChildApplet extends PApplet {
       }
       
       if (mic != null && amp != null) {
-        diam = 125;
+        
         float amplitude = amp.analyze() * 75.0;
         
         if (!speech.isAlive()) {
           x += random(-1, 1) * amplitude;
           y += random(-1, 1) * amplitude;
         }
-        x = constrain(x, diam/2, width-diam/2);
-        y = constrain(y, diam/2, height-diam/2);
-        
-        ellipse(x, y, diam, diam);
       }
     }
     
@@ -91,6 +88,10 @@ public class ChildApplet extends PApplet {
   public void startVideo() {
     video = new Capture(this, width, height);
     video.start();  
+    
+    diam = 125;
+    x = width/2;
+    y = height/2;
   }
   
   public void startAudio() {
@@ -106,5 +107,10 @@ public class ChildApplet extends PApplet {
   
   public boolean foundCircle() {
     return (width > beginWindowWidth + 150);  
+  }
+  
+  public boolean circleOffScreen() {
+    return (x < -diam/2 || x > width + diam/2 ||
+            y < -diam/2 || y > height + diam/2);
   }
 }

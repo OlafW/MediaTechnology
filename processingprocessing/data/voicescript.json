@@ -26,8 +26,13 @@
     },
     {
         "ID": "firstWindows",
-        "sentence": "What about now, huh? It's beautiful............",
-        "time": 5000
+        "sentence": "What about now, huh? I copied myself!",
+        "time": 3000
+    },
+    {
+        "ID": "0",
+        "sentence": "It's beautiful............",
+        "time": 3000
     },
     {
         "ID": "clickWindows",
@@ -36,7 +41,7 @@
     },
     {
         "ID": "0",
-        "sentence": "Hey! Don't destroy my program!",
+        "sentence": "Hey! Don't destroy my programs!",
         "time": 3000
     },
     {
@@ -81,23 +86,23 @@
     },
     {
         "ID": "0",
-        "sentence": "But now let's also add some of your input...",
-        "time": 3000
+        "sentence": "But now, let's also add some of your own input...",
+        "time": 4000
     },
     {
         "ID": "camera",
         "sentence": "Say cheese!!",
-        "time": 5000
+        "time": 6000
     },
     {
         "ID": "0",
-        "sentence": "Looking great there. Now let's recombine our works",
-        "time": 4000
+        "sentence": "Looking great there. But now the circle's not so fitting..",
+        "time": 5000
     },
     {
-        "ID": "audio",
-        "sentence": "Please shout to reposition the circle to your liking",
-        "time": 10000
+        "ID": "shoutCircle",
+        "sentence": "Please shout it off the screen",
+        "time": 3000
     },
     {
         "ID": "0",
@@ -120,7 +125,7 @@
         "time": 3000
     },
     {
-        "ID": "toolong",
+        "ID": "tooLong",
         "sentence": "You're taking very long...",
         "time": 2000
     },
@@ -130,7 +135,7 @@
         "time": 4000
     },
     {
-        "ID": "timeup",
+        "ID": "timeUp",
         "sentence": "Please restart the program and try again",
         "time": 3000
     },
