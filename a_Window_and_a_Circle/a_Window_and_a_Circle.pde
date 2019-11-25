@@ -192,6 +192,10 @@ void draw() {
       ChildApplet ch = child.get(i);
         
       if (ch.getSurface().isStopped()) {
+        if (ch.ID == randWindow) {
+          voiceScriptIndex = findVoiceScriptIndex("broken");
+          continueVoiceScript = true;
+        }
         child.remove(i); 
       }
     }
@@ -202,8 +206,4 @@ void draw() {
   fill(0);
   textAlign(CENTER);
   text(sentence, width/2, height-12);
-}
-
-Process speak(String text) {
-  return exec("/usr/bin/say", text);
 }

@@ -99,8 +99,6 @@ public class ChildApplet extends PApplet {
   
   public void exit() {
     if (ID == randWindow) {
-      voiceScriptIndex = findVoiceScriptIndex("broken");
-      continueVoiceScript = true;
       endSpeak = false;
     }    
     
