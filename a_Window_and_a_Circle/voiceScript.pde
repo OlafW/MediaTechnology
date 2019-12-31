@@ -4,14 +4,19 @@ String sentence = " ";
 String sentenceID = " ";
 int speechInterval;
 long speechTime;
-
-int voiceScriptIndex = 0;
-boolean continueVoiceScript = true;
-int randWindow = (int)random(25, 50);
 int speakRate = 195;
+
+int voiceScriptIndex = 9;
+boolean continueVoiceScript = true;
+
+int randWindow = (int)random(25, 50);
 
 Process speak(String text) {
   return exec("/usr/bin/say", text, "-r " + speakRate);
+}
+
+Process speak(String text, int rate) {
+  return exec("/usr/bin/say", text, "-r " + rate);
 }
 
 int findVoiceScriptIndex(String ID) {

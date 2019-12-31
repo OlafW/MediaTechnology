@@ -1,13 +1,22 @@
 /*
-
+  
+  A Window and a Circle
+  Olaf Wisselink
+  Media Technology Introduction to Programming Final Project
+  December 2019
+  
+ -----IMPORTANT NOTE-----
+ This will (probably) only work on OSX, because I'm running the terminal from within Processing.
+ I haven't figured out a way to also make it work on Windows....
+ 
  Hi!
- This is an unfinished (but working) Processing game
- It's all about windows and circles!
+ This a Processing game all about windows and circles. And clicking!
  Some notes about the assignment requirements:
- - It takes slightly longer than 1 minute due to there being a narrator - max 2 minutes
+ - It can take slightly longer than 1 minute due to there being a narrator - max 2 minutes
  - Winning or losing is slightly vague - there are multiple outcomes though
  - This also goes for the indication of time =D
- 
+ - The ending is not really done, I want to extend the game but
+ this goes beyond the assignment
  
  General structure of the program:
  The main part of the code serves to keep track of the state of the game and act accordingly
@@ -18,12 +27,11 @@
 
 ArrayList<ChildApplet> child = new ArrayList<ChildApplet>();
 
-int NUMLOOPS = 0;
-
 float MINUTES = 2.0;
-long TOTALTIME = int(MINUTES * (1000 * 60));
+long TOTALTIME_MS = int(MINUTES * (1000 * 60));
 long passedTime = 0;
 boolean timeUp = false;
+int NUMRANDWINDOWS = 0;
 
 long addWindowTime = 0;
 int addWindowInterval = 4000;
@@ -43,8 +51,8 @@ void setup() {
 void draw() {    
   background(255);
 
-  float timeMs = constrain(millis() - passedTime - 5000, 0, TOTALTIME);
-  float t = pow(timeMs / (float)TOTALTIME, 4);  
+  float timeMs = constrain(millis() - passedTime - 5000, 0, TOTALTIME_MS);
+  float t = pow(timeMs / (float)TOTALTIME_MS, 4);  
 
   loadPixels();
   for (int i = 0; i < pixels.length; i++) {
@@ -87,8 +95,12 @@ void draw() {
           if (sentenceID.equals("findWindow")) {
             sentence += randWindowSentence;
           }     
-
+          
           speech = speak(sentence);
+          
+          for (int n = 0; n < NUMRANDWINDOWS; n++) {
+            speak(sentence, speakRate + (n + 1) * 30);
+          }
 
           if (voiceScriptIndex < voiceScript.size()-1) {
             voiceScriptIndex++;
@@ -124,9 +136,8 @@ void draw() {
             break;
 
           case "thirdClick":
-            NUMLOOPS++;
+            NUMRANDWINDOWS++;
             ChildApplet ch = child.get(0); 
-            //child.get(0).ID = -1;
             voiceScriptIndex = 0;
             passedTime = millis();
             break;
@@ -155,14 +166,16 @@ void draw() {
 
             addWindowInterval *= 0.8;
           }
-        } else {
+        } 
+        else {
           voiceScriptIndex = findVoiceScriptIndex("broken");
           continueVoiceScript = true;
           addWindowInterval = 4000;
           break;
         }
 
-        if (child.size() == NUMLOOPS) {
+        if (child.size() == NUMRANDWINDOWS) {
+          addWindowInterval = 4000;
           continueVoiceScript = true;
         }  
         break;
@@ -220,13 +233,13 @@ void draw() {
         child.add(ch);
       }
 
-      if (millis() - passedTime > TOTALTIME && !timeUp) {
+      if (millis() - passedTime > TOTALTIME_MS && !timeUp) {
         continueVoiceScript = true;
         timeUp = true;
-        
-        if (voiceScriptIndex < findVoiceScriptIndex("secondClick")) {
+
+        if (voiceScriptIndex <= findVoiceScriptIndex("secondClick")) {
           voiceScriptIndex = findVoiceScriptIndex("didNotClick");
-        }
+        } 
         else {
           voiceScriptIndex = findVoiceScriptIndex("tooLong");
         }

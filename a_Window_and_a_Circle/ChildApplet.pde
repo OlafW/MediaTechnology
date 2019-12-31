@@ -1,5 +1,9 @@
-// A class that extends the main PApplet class
-// This is basically a sketch within a sketch
+/* 
+  Class ChildApplet
+  A class that extends the main PApplet class
+  This is basically a sketch within a sketch
+  Handles its own draw(), mousePressed() etc.
+*/
 
 public class ChildApplet extends PApplet {
   int ID;

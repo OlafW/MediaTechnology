@@ -52,7 +52,7 @@
     {
         "ID": "dontClick2",
         "sentence": "Don't click it again!",
-        "time": 3000
+        "time": 0
     },
     {
         "ID": "secondClick",
@@ -91,7 +91,7 @@
     },
     {
         "ID": "clickCircle",
-        "sentence": "You can click it, it's really cool!",
+        "sentence": "You can click it, it's really cool! No bugs!",
         "time": 3000
     },
     {
@@ -106,8 +106,8 @@
     },
     {
         "ID": "0",
-        "sentence": "Were you entertained for at least two minutes!?!",
-        "time": 0
+        "sentence": "Weren't you entertained for about two minutes?!",
+        "time": 3500
     },
     {
         "ID": "0",
