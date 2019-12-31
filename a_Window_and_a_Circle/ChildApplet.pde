@@ -1,3 +1,6 @@
+// A class that extends the main PApplet class
+// This is basically a sketch within a sketch
+
 public class ChildApplet extends PApplet {
   int ID;
 
@@ -107,7 +110,7 @@ public void mousePressed() {
       speak("Uh-uh, don't do that!");
     }    
 
-    if (child.size() > 0 && endSpeak) {
+    if (child.size() > 1 && endSpeak) {
       int randombluh = (int)random(bluh.length);
       speak(bluh[randombluh]);
     }

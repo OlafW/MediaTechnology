@@ -1,15 +1,24 @@
 /*
 
  Hi!
- This is a unfinished (but working) Processing game
+ This is an unfinished (but working) Processing game
  It's all about windows and circles!
  Some notes about the assignment requirements:
  - It takes slightly longer than 1 minute due to there being a narrator - max 2 minutes
  - Winning or losing is slightly vague - there are multiple outcomes though
  - This also goes for the indication of time =D
+ 
+ 
+ General structure of the program:
+ The main part of the code serves to keep track of the state of the game and act accordingly
+ A JSON file is read that contains the voice lines and a state ID
+ The program executes actions relating to the state: play the speechline,  wait for user input, make new windows or to advance the next state, etc.
+ This happens mostly in the giant switch() statements in draw()
  */
 
 ArrayList<ChildApplet> child = new ArrayList<ChildApplet>();
+
+int NUMLOOPS = 0;
 
 float MINUTES = 2.0;
 long TOTALTIME = int(MINUTES * (1000 * 60));
@@ -38,10 +47,8 @@ void draw() {
   float t = pow(timeMs / (float)TOTALTIME, 4);  
 
   loadPixels();
-  float noise = 0.0;
   for (int i = 0; i < pixels.length; i++) {
-    noise = (1.0 - t) * 255.0 + t * random(255);
-    pixels[i] = color(noise);
+    pixels[i] = color((1.0 - t) * 255.0 + t * random(255));
   }
   updatePixels();  
 
@@ -63,7 +70,9 @@ void draw() {
       speechTime = millis();
       voiceScriptIndex++;
     }
-  } else {
+  } 
+  
+  else {
     if (continueVoiceScript) {
       if (!speech.isAlive()) {
 
@@ -115,6 +124,7 @@ void draw() {
             break;
 
           case "thirdClick":
+            NUMLOOPS++;
             ChildApplet ch = child.get(0); 
             //child.get(0).ID = -1;
             voiceScriptIndex = 0;
@@ -148,10 +158,11 @@ void draw() {
         } else {
           voiceScriptIndex = findVoiceScriptIndex("broken");
           continueVoiceScript = true;
+          addWindowInterval = 4000;
           break;
         }
 
-        if (child.size() == 0) {
+        if (child.size() == NUMLOOPS) {
           continueVoiceScript = true;
         }  
         break;
