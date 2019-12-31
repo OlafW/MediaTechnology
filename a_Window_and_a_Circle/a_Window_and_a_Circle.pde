@@ -4,7 +4,7 @@
  This is a unfinished (but working) Processing game
  It's all about windows and circles!
  Some notes about the assignment requirements:
- - It takes slightly longer than 1 minute due to there being a narrator - around 2 minutes
+ - It takes slightly longer than 1 minute due to there being a narrator - max 2 minutes
  - Winning or losing is slightly vague - there are multiple outcomes though
  - This also goes for the indication of time =D
  */
@@ -13,6 +13,8 @@ ArrayList<ChildApplet> child = new ArrayList<ChildApplet>();
 
 float MINUTES = 2.0;
 long TOTALTIME = int(MINUTES * (1000 * 60));
+long passedTime = 0;
+boolean timeUp = false;
 
 long addWindowTime = 0;
 int addWindowInterval = 4000;
@@ -32,7 +34,7 @@ void setup() {
 void draw() {    
   background(255);
 
-  float timeMs = constrain(millis()-5000, 0, TOTALTIME);
+  float timeMs = constrain(millis() - passedTime - 5000, 0, TOTALTIME);
   float t = pow(timeMs / (float)TOTALTIME, 4);  
 
   loadPixels();
@@ -116,11 +118,11 @@ void draw() {
             ChildApplet ch = child.get(0); 
             //child.get(0).ID = -1;
             voiceScriptIndex = 0;
+            passedTime = millis();
             break;
 
           case "clickWindows": 
           case "findWindow":           
-          case "ending": 
           case "restart":
           case "dontClick1": 
           case "dontClick2":
@@ -177,7 +179,7 @@ void draw() {
         }
         break;
 
-      case "ending": 
+      case "stopProgram": 
       case "restart":
         exit();
         break;
@@ -207,21 +209,15 @@ void draw() {
         child.add(ch);
       }
 
-      if (millis() > TOTALTIME) {
-        switch(sentenceID) {
-
-        case "tooLong":
-        break;
+      if (millis() - passedTime > TOTALTIME && !timeUp) {
+        continueVoiceScript = true;
+        timeUp = true;
         
-        
-        default:
-        
-          int tooLongIndex = findVoiceScriptIndex("tooLong");
-          if (voiceScriptIndex < tooLongIndex) {
-            voiceScriptIndex = tooLongIndex;
-            continueVoiceScript = true;
-          }
-          break;
+        if (voiceScriptIndex < findVoiceScriptIndex("secondClick")) {
+          voiceScriptIndex = findVoiceScriptIndex("didNotClick");
+        }
+        else {
+          voiceScriptIndex = findVoiceScriptIndex("tooLong");
         }
       }
     }

@@ -3,7 +3,7 @@ public class ChildApplet extends PApplet {
 
   int windowX, windowY;
   int beginWindowWidth;
-  float cirleX, cirlceY;
+  float circleX, circleY;
   
   float diam = 75;
   color bg; 
@@ -35,8 +35,8 @@ public class ChildApplet extends PApplet {
     windowY = (int)random(displayHeight - this.height - 75);
     surface.setLocation(windowX, windowY);
 
-    cirleX = width/2;
-    cirleX = height/2;
+    circleX = width/2;
+    circleY = height/2;
 
     bg = color(random(255), random(255), random(255));
 
@@ -61,7 +61,7 @@ public class ChildApplet extends PApplet {
     else {
       if (mouseOver) background(255);
       else background(bg);
-      ellipse(cirleX, cirleY, diam, diam);
+      ellipse(circleX, circleY, diam, diam);
     }
   }
 

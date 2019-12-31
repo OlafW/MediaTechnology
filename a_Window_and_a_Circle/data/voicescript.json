@@ -99,30 +99,39 @@
         "sentence": "...................",
         "time": 4000
     },
-
+    {
+        "ID": "didNotClick",
+        "sentence": "Well, that's about it I guess.",
+        "time": 3000
+    },
     {
         "ID": "0",
-        "sentence": "....Well... that's about it, I guess.",
-        "time": 3000
+        "sentence": "Were you entertained for at least two minutes!?!",
+        "time": 0
     },
     {
         "ID": "0",
         "sentence": "...I'm running late for yoga class, so...",
-        "time": 3000
+        "time": 2000
     },
     {
-        "ID": "ending",
+        "ID": "stopProgram",
         "sentence": "I gotta go. See you, bye bye!",
         "time": 3000
     },
     {
         "ID": "tooLong",
-        "sentence": "Oops, you are not supposed to see that....",
+        "sentence": "Ok, the background is doing weird stuff",
+        "time": 2000
+    },
+    {
+        "ID": "0",
+        "sentence": "This bug happens always after two minutes",
         "time": 2000
     },
     {
         "ID": "restart",
-        "sentence": "Please restart the program and try again",
+        "sentence": "Please restart the program and play faster",
         "time": 3000
     },
     {
