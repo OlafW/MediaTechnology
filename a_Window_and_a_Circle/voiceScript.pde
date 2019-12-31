@@ -6,7 +6,7 @@ int speechInterval;
 long speechTime;
 int speakRate = 195;
 
-int voiceScriptIndex = 9;
+int voiceScriptIndex = 0;
 boolean continueVoiceScript = true;
 
 int randWindow = (int)random(25, 50);
