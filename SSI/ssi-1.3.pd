@@ -1,0 +1,65 @@
+#N canvas 0 23 1280 751 12;
+#X msg 91 91 \; pd dsp \$1;
+#X obj 91 57 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X text 113 59 Turn on DAC;
+#X obj 612 142 soundfiler;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array readbuffer 470400 float 2;
+#X coords 0 1 470400 -1 200 140 1;
+#X restore 909 234 graph;
+#X obj 612 90 openpanel;
+#X obj 612 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#N canvas 0 23 450 278 (subpatch) 0;
+#X array writebuffer 470400 float 2;
+#X coords 0 1 470400 -1 200 140 1;
+#X restore 908 401 graph;
+#X msg 612 114 read -resize \$1 readbuffer;
+#X obj 592 421 tabread4~ readbuffer;
+#X msg 661 228 \$1;
+#X obj 646 266 / 1;
+#X msg 714 59 string /Users/olafwisselink/Downloads/usb-hku_jaar1/2TurvenHoogMaxMSP/samples/2th_interact_bel6.wav
+;
+#X obj 594 225 t f f;
+#X msg 592 355 \$1 \, 0 \$2;
+#X obj 593 324 pack f f;
+#X obj 592 389 line~;
+#X obj 593 461 dac~;
+#X obj 646 297 * 1000;
+#X obj 594 184 f;
+#X obj 531 193 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 530 506 tabwrite~ writebuffer;
+#X obj 744 189 array size writebuffer;
+#X text 609 39 Load soundfile;
+#X text 148 193 Play soundfile in reverse and record in second buffer
+;
+#X obj 168 525 soundfiler;
+#X msg 168 498 write -wave /tmp/ssi_rev writebuffer;
+#X text 164 475 Write the reversed buffer to a file on disk;
+#X text 699 296 Amount of ms;
+#X text 671 354 Play from last sample to first;
+#X connect 1 0 0 0;
+#X connect 3 0 19 1;
+#X connect 3 0 22 0;
+#X connect 3 1 10 0;
+#X connect 5 0 8 0;
+#X connect 6 0 5 0;
+#X connect 8 0 3 0;
+#X connect 9 0 17 0;
+#X connect 9 0 17 1;
+#X connect 9 0 21 0;
+#X connect 10 0 11 1;
+#X connect 11 0 18 0;
+#X connect 12 0 8 0;
+#X connect 13 0 15 0;
+#X connect 13 1 11 0;
+#X connect 14 0 16 0;
+#X connect 15 0 14 0;
+#X connect 16 0 9 0;
+#X connect 18 0 15 1;
+#X connect 19 0 13 0;
+#X connect 20 0 19 0;
+#X connect 20 0 21 0;
+#X connect 26 0 25 0;
