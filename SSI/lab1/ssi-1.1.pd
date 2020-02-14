@@ -22,7 +22,7 @@
 #X obj 661 612 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
 #X obj 517 146 keyup;
 #X obj 517 211 sel 112;
-#X obj 427 245 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 427 245 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 629 410 loadmess 4;
 #X floatatom 629 433 5 0 0 0 - - -;
@@ -41,7 +41,7 @@
 #X text 298 532 quick fadein/out;
 #X text 908 152 Record when r key pressed;
 #X text 205 239 play back while p key pressed;
-#X text 703 470 amount of samples;
+#X text 690 461 amount of samples;
 #X text 486 425 playback speed;
 #X msg 425 532 \$1 5;
 #X text 469 73 2 Turn on key tracking. This patch assumes key repeat
