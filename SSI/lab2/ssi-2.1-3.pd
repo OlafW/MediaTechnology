@@ -14,8 +14,8 @@
 -1 -1;
 #X obj 1027 266 soundfiler;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array buffer 1.58326e+06 float 2;
-#X coords 0 1 1.58326e+06 -1 200 140 1;
+#X array buffer 529200 float 2;
+#X coords 0 1 529200 -1 200 140 1;
 #X restore 1026 309 graph;
 #X msg 1027 234 read -resize \$1 buffer;
 #X obj 404 231 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
