@@ -20,9 +20,9 @@
 #X text 326 231 f0 \, harmonic number;
 #X obj 492 276 *;
 #X obj 884 499 sel 0 1;
-#X obj 930 552 scale 2 5 -1 1;
 #X obj 852 473 t f f;
 #X obj 852 607 pack f f, f 12;
+#X obj 930 552 scale 2 5 -1 1;
 #X connect 0 0 4 0;
 #X connect 1 0 0 1;
 #X connect 3 0 15 0;
@@ -31,9 +31,9 @@
 #X connect 7 0 0 0;
 #X connect 8 0 7 1;
 #X connect 9 0 10 0;
-#X connect 10 0 21 0;
+#X connect 10 0 20 0;
 #X connect 11 0 4 1;
-#X connect 11 0 22 1;
+#X connect 11 0 21 1;
 #X connect 12 0 7 0;
 #X connect 15 0 16 0;
 #X connect 15 1 1 0;
@@ -44,8 +44,8 @@
 #X connect 18 0 12 0;
 #X connect 19 0 11 0;
 #X connect 19 1 11 0;
-#X connect 19 2 20 0;
-#X connect 20 0 4 1;
-#X connect 20 0 22 1;
-#X connect 21 0 22 0;
-#X connect 21 1 19 0;
+#X connect 19 2 22 0;
+#X connect 20 0 21 0;
+#X connect 20 1 19 0;
+#X connect 22 0 4 1;
+#X connect 22 0 21 1;
