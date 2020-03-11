@@ -8,13 +8,13 @@
 #X obj 352 576 - 100;
 #X obj 353 601 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
 #X msg 81 102 \; pd dsp \$1;
-#X obj 81 77 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+#X obj 81 77 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X floatatom 896 542 5 0 1 0 - - -;
 #X floatatom 843 542 5 0 1 0 - - -;
 #X obj 437 688 dac~;
 #X obj 843 569 pak f f, f 8;
-#X obj 956 181 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 955 181 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 881 181 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -29,21 +29,17 @@
 #X msg 882 345 \$1 sound2 \$2 \$3;
 #X msg 843 594 all mix \$1 \$2;
 #X obj 619 568 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 12700 1;
+-1 -1 4500 1;
 #X msg 616 588 \$1 25;
 #X obj 616 612 line~;
 #X obj 437 641 *~;
 #X floatatom 193 200 5 0 0 0 - - -;
 #X floatatom 843 502 5 0 1 0 - - -;
-#X obj 193 259 *~;
-#X obj 223 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 194 277 *~;
+#X obj 224 277 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X floatatom 296 201 5 0 0 0 - - -;
 #X floatatom 93 197 5 0 0 0 - - -;
-#X obj 193 283 *~ 0.33;
-#X obj 296 231 else/saw~ 330;
-#X obj 93 229 else/saw~ 110;
-#X obj 193 230 else/saw~ 220;
 #N canvas 0 23 1280 751 playfile 0;
 #X obj 569 526 readsf~;
 #X obj 569 315 openpanel;
@@ -78,11 +74,11 @@
 #X connect 13 0 3 0;
 #X restore 881 202 pd playfile;
 #X text 874 158 load play loop;
-#X obj 514 192 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 513 192 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 439 192 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 476 193 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 476 193 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 0 23 1280 751 playfile 0;
 #X obj 569 526 readsf~;
@@ -120,8 +116,7 @@
 #X text 433 171 load play loop;
 #X obj 882 321 sigmund~ -npts 2048 -hop 1024 -npeak 50 peaks;
 #X obj 439 316 sigmund~ -npts 2048 -hop 1024 -npeak 50 peaks;
-#X obj 437 567 clone ssi5-harm-mix 50;
-#X text 508 103 Combine two sounds by mixing their frequency and amplitude
+#X text 455 81 Combine two sounds by mixing their frequency and amplitude
 content;
 #X obj 540 673 writesf~;
 #X msg 539 640 open /Users/olafwisselink/Desktop/ssi5.wav;
@@ -139,8 +134,23 @@ content;
 #X floatatom 1097 394 5 0 0 0 - - -;
 #X text 849 631 freq mix (0: sound1 - 1: sound2) amp mix (0: sound1
 - 1: sound2), f 32;
-#X obj 152 534 ssi5-harm-scale;
-#X connect 0 0 45 0;
+#X obj 154 683 ssi5-harm-scale;
+#X obj 1083 556 s stabletime1;
+#X obj 1085 603 s stabletime2;
+#X floatatom 1083 529 5 0 0 0 - - -;
+#X floatatom 1085 578 5 0 0 0 - - -;
+#X floatatom 1134 522 5 0 0 0 - - -;
+#X obj 938 543 loadmess 1;
+#X obj 1134 495 loadmess 0;
+#X obj 439 237 *~ 2;
+#X obj 93 229 else/saw~ 100;
+#X obj 193 230 else/saw~ 300;
+#X obj 296 231 else/saw~ 500;
+#X floatatom 297 251 5 0 0 0 - - -;
+#X obj 194 301 *~ 0.25;
+#X obj 297 281 else/saw~ 600;
+#X obj 437 567 clone ssi5-harm-mix 50;
+#X connect 0 0 41 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 0 1;
@@ -150,52 +160,61 @@ content;
 #X connect 9 0 12 1;
 #X connect 10 0 12 0;
 #X connect 12 0 22 0;
-#X connect 13 0 37 2;
-#X connect 14 0 37 0;
-#X connect 15 0 37 1;
-#X connect 16 0 44 0;
+#X connect 13 0 33 2;
+#X connect 14 0 33 0;
+#X connect 15 0 33 1;
+#X connect 16 0 40 0;
 #X connect 17 0 18 0;
 #X connect 18 0 19 0;
 #X connect 19 0 16 1;
-#X connect 20 0 46 0;
-#X connect 21 0 46 0;
-#X connect 22 0 46 0;
+#X connect 20 0 73 0;
+#X connect 21 0 73 0;
+#X connect 22 0 73 0;
 #X connect 23 0 24 0;
 #X connect 24 0 25 0;
 #X connect 25 0 26 1;
 #X connect 26 0 11 0;
 #X connect 26 0 11 1;
 #X connect 26 0 4 0;
-#X connect 26 0 48 0;
-#X connect 27 0 36 0;
+#X connect 26 0 43 0;
+#X connect 27 0 68 0;
 #X connect 28 0 10 0;
 #X connect 28 0 9 0;
-#X connect 29 0 33 0;
+#X connect 29 0 71 0;
 #X connect 30 0 29 1;
-#X connect 31 0 34 0;
-#X connect 32 0 35 0;
-#X connect 33 0 0 0;
-#X connect 34 0 29 0;
-#X connect 35 0 29 0;
-#X connect 36 0 29 0;
-#X connect 37 0 16 0;
-#X connect 39 0 42 2;
-#X connect 40 0 42 0;
-#X connect 41 0 42 1;
-#X connect 42 0 0 0;
-#X connect 44 0 21 0;
-#X connect 45 0 20 0;
-#X connect 46 0 26 0;
-#X connect 49 0 48 0;
-#X connect 50 0 48 0;
-#X connect 51 0 48 0;
+#X connect 31 0 69 0;
+#X connect 32 0 67 0;
+#X connect 33 0 16 0;
+#X connect 35 0 38 2;
+#X connect 36 0 38 0;
+#X connect 37 0 38 1;
+#X connect 38 0 66 0;
+#X connect 40 0 21 0;
+#X connect 41 0 20 0;
+#X connect 44 0 43 0;
+#X connect 45 0 43 0;
+#X connect 46 0 43 0;
+#X connect 47 0 48 0;
+#X connect 48 0 10 0;
+#X connect 49 0 47 0;
+#X connect 50 0 49 0;
+#X connect 51 0 49 1;
 #X connect 52 0 53 0;
-#X connect 53 0 10 0;
+#X connect 53 0 9 0;
 #X connect 54 0 52 0;
 #X connect 55 0 54 0;
 #X connect 56 0 54 1;
-#X connect 57 0 58 0;
-#X connect 58 0 9 0;
-#X connect 59 0 57 0;
-#X connect 60 0 59 0;
-#X connect 61 0 59 1;
+#X connect 61 0 59 0;
+#X connect 62 0 60 0;
+#X connect 63 0 61 0;
+#X connect 63 0 62 0;
+#X connect 64 0 9 0;
+#X connect 65 0 63 0;
+#X connect 66 0 0 0;
+#X connect 67 0 29 0;
+#X connect 68 0 29 0;
+#X connect 69 0 29 0;
+#X connect 70 0 72 0;
+#X connect 71 0 0 0;
+#X connect 72 0 29 0;
+#X connect 73 0 26 0;
