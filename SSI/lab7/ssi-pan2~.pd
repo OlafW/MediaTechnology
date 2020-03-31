@@ -1,0 +1,28 @@
+#N canvas 0 23 1280 751 12;
+#X obj 513 413 *~;
+#X obj 531 370 cos~;
+#X obj 692 344 -~ 0.25;
+#X obj 674 413 *~;
+#X obj 692 368 cos~;
+#X obj 692 247 +~ 1;
+#X obj 692 271 *~ 0.125;
+#X obj 513 466 outlet~;
+#X obj 674 471 outlet~;
+#X obj 692 212 inlet~;
+#X obj 514 217 inlet~;
+#X obj 632 216 sig~ 0;
+#X text 753 345 cos(phi -0.5*PI) = sin(phi);
+#X text 746 213 Scale position control~ (-1 - 1) to (0 - 0.25 = 0.5*pi)
+;
+#X connect 0 0 7 0;
+#X connect 1 0 0 1;
+#X connect 2 0 4 0;
+#X connect 3 0 8 0;
+#X connect 4 0 3 1;
+#X connect 5 0 6 0;
+#X connect 6 0 1 0;
+#X connect 6 0 2 0;
+#X connect 9 0 5 0;
+#X connect 10 0 0 0;
+#X connect 10 0 3 0;
+#X connect 11 0 5 0;

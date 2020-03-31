@@ -21,10 +21,10 @@ float yfreq = xfreq * 1.5;
 float xamp, yamp;
 
 // x & y modulation
-float xmodf = 0.025;
-float ymodf = 0.001;
+float xmodf = 0.05;
+float ymodf = 0.01;
 float xmodamp = 0.0;
-float ymodamp = 4.0;
+float ymodamp = 5.0;
 
 float t = 0;
 float dt = 0;
@@ -77,8 +77,8 @@ void draw() {
   float x, y;
   float xmod, ymod;
   
-  xmod = cos(TWO_PI * t * 0.5*xmodf) * xmodamp;
-  ymod = sin(TWO_PI * t * 0.5*ymodf) * ymodamp;
+  xmod = cos(TWO_PI * t * xmodf) * xmodamp;
+  ymod = sin(TWO_PI * t * ymodf) * ymodamp;
     
   for (int i = 0; i < numPoints; i++) {  
     x = cos(TWO_PI * t * (xfreq + xmod)) * xamp;
