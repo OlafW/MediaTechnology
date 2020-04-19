@@ -3,14 +3,12 @@
 #include <mpu.h>
 
 int mpu_status; // return value of mpu
-
-int serialInterval = -1;
-unsigned long prevTime = 0;
+boolean plotSerial = false;
 
 void setup() {
   Fastwire::setup(400, 0);
-  Serial.begin(38400);
-  
+  Serial.begin(115200);
+
   mpu_status = mympu_open(200);
 }
 
@@ -33,38 +31,41 @@ void loop() {
       return;
   }
 
-  if (!(c % 25)) {
+  float gyroVal = sqrt(mympu.gyro[0] * mympu.gyro[0] +
+                       mympu.gyro[1] * mympu.gyro[1] +
+                       mympu.gyro[2] * mympu.gyro[2]) / 3.0;
+
+  if (plotSerial) {
+    Serial.println(gyroVal);
+
     // Accelerometer
 //    Serial.print(" Y: "); Serial.print(mympu.ypr[0]);
 //    Serial.print(" P: "); Serial.print(mympu.ypr[1]);
 //    Serial.print(" R: "); Serial.print(mympu.ypr[2]);
+//    Serial.println();
 
     // Gyroscope
 //    Serial.print("\tgy: "); Serial.print(mympu.gyro[0]);
 //    Serial.print(" gp: "); Serial.print(mympu.gyro[1]);
 //    Serial.print(" gr: "); Serial.print(mympu.gyro[2]);
 //    Serial.println();
+  }
 
-    // Send data to PD
-    // start byte
-    Serial.write(255);
-    
-    // x,y,z data
-    float scalar = 10.0; // 50
-    float maxGyro = 250.0 * scalar;
+  float scalar = 50.0;
+  float maxGyro = 250.0 * scalar;
+  
+  gyroVal *= scalar;
+  gyroVal = constrain_float(gyroVal, -maxGyro, maxGyro);
+  gyroVal = (0.5 * gyroVal) + (0.5 * maxGyro);
 
-    for (int i = 0; i < 3; i++) {
-      float val = mympu.gyro[i] * scalar;
+  int lowerTwoDigits = (int)gyroVal % 100;
+  int higherTwoDigits = gyroVal / 100;
 
-      val = constrain_float(val, -maxGyro, maxGyro);
-      val = (0.5*val) + (0.5*maxGyro);
-      
-      int lowerTwoDigits = (int)val % 100;
-      int higherTwoDigits = val / 100;
-      
-      Serial.write(lowerTwoDigits);
-      Serial.write(higherTwoDigits);
-    }
+  // Send data to PD
+  if (!plotSerial) {
+    Serial.write(255);  // start byte
+    Serial.write(lowerTwoDigits);
+    Serial.write(higherTwoDigits);
   }
 }
 
