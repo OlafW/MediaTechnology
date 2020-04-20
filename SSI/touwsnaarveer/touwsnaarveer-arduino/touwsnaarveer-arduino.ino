@@ -1,16 +1,16 @@
 /*
- * Sound, Space & Interaction
- * Media Technology april 2020
- * Olaf Wisselink
- * 'TouwSnaarVeer'
- * 
- * This Arduino sketch requires the following MPU library:
+   Sound, Space & Interaction
+   Media Technology april 2020
+   Olaf Wisselink
+   'TouwSnaarVeer'
+
+   This Arduino sketch requires the following MPU library:
    https://github.com/rpicopter/ArduinoMotionSensorExample
- * For this project I used an MPU6500.
- * 
- * This program calculates the amplitude of the gyroscope (sqrt(a^2 + b^2 + c^2))
- * and sends this value as two digits over to Pure Data.
- */
+   For this project I used an MPU6500.
+
+   This program calculates the amplitude of the gyroscope (sqrt(a^2 + b^2 + c^2))
+   and sends this value as two digits over to Pure Data.
+*/
 
 #include <inv_mpu.h>
 #include <inv_mpu_dmp_motion_driver.h>
@@ -52,31 +52,31 @@ void loop() {
 
   if (plotSerial) {
     Serial.println(gyroVal);
-    // Accelerometer 
-//    Serial.print(" Y: "); Serial.print(mympu.ypr[0]);
-//    Serial.print(" P: "); Serial.print(mympu.ypr[1]);
-//    Serial.print(" R: "); Serial.print(mympu.ypr[2]);
-//    Serial.println();
+    // Accelerometer
+    //    Serial.print(" Y: "); Serial.print(mympu.ypr[0]);
+    //    Serial.print(" P: "); Serial.print(mympu.ypr[1]);
+    //    Serial.print(" R: "); Serial.print(mympu.ypr[2]);
+    //    Serial.println();
 
     // Gyroscope
-//    Serial.print("\tgy: "); Serial.print(mympu.gyro[0]);
-//    Serial.print(" gp: "); Serial.print(mympu.gyro[1]);
-//    Serial.print(" gr: "); Serial.print(mympu.gyro[2]);
-//    Serial.println();
+    //    Serial.print("\tgy: "); Serial.print(mympu.gyro[0]);
+    //    Serial.print(" gp: "); Serial.print(mympu.gyro[1]);
+    //    Serial.print(" gr: "); Serial.print(mympu.gyro[2]);
+    //    Serial.println();
   }
 
-  float scalar = 50.0;
-  float maxGyro = 250.0 * scalar;
-  
-  gyroVal *= scalar;
-  gyroVal = constrain_float(gyroVal, -maxGyro, maxGyro);
-  gyroVal = (0.5 * gyroVal) + (0.5 * maxGyro);
-
-  int lowerTwoDigits = (int)gyroVal % 100;
-  int higherTwoDigits = gyroVal / 100;
-
   // Send data to PD
-  if (!plotSerial) {
+  else { 
+    float scalar = 50.0;
+    float maxGyro = 250.0 * scalar;
+
+    gyroVal *= scalar;
+    gyroVal = constrain_float(gyroVal, -maxGyro, maxGyro);
+    gyroVal = (0.5 * gyroVal) + (0.5 * maxGyro);
+
+    int lowerTwoDigits = (int)gyroVal % 100;
+    int higherTwoDigits = gyroVal / 100;
+
     Serial.write(255);  // start byte
     Serial.write(lowerTwoDigits);
     Serial.write(higherTwoDigits);
