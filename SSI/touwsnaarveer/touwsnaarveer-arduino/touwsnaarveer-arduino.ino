@@ -1,3 +1,17 @@
+/*
+ * Sound, Space & Interaction
+ * Media Technology april 2020
+ * Olaf Wisselink
+ * 'TouwSnaarVeer'
+ * 
+ * This Arduino sketch requires the following MPU library:
+   https://github.com/rpicopter/ArduinoMotionSensorExample
+ * For this project I used an MPU6500.
+ * 
+ * This program calculates the amplitude of the gyroscope (sqrt(a^2 + b^2 + c^2))
+ * and sends this value as two digits over to Pure Data.
+ */
+
 #include <inv_mpu.h>
 #include <inv_mpu_dmp_motion_driver.h>
 #include <mpu.h>
@@ -31,14 +45,14 @@ void loop() {
       return;
   }
 
+  // Get amplitude of gyroscope
   float gyroVal = sqrt(mympu.gyro[0] * mympu.gyro[0] +
                        mympu.gyro[1] * mympu.gyro[1] +
                        mympu.gyro[2] * mympu.gyro[2]) / 3.0;
 
   if (plotSerial) {
     Serial.println(gyroVal);
-
-    // Accelerometer
+    // Accelerometer 
 //    Serial.print(" Y: "); Serial.print(mympu.ypr[0]);
 //    Serial.print(" P: "); Serial.print(mympu.ypr[1]);
 //    Serial.print(" R: "); Serial.print(mympu.ypr[2]);
