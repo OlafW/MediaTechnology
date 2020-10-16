@@ -1,0 +1,27 @@
+#N canvas -9 -9 1920 976 12;
+#X obj 278 314 pinknoise~;
+#X obj 327 468 bob~, f 50;
+#X floatatom 706 428 5 0 0 0 - - -;
+#X obj 334 668 *~;
+#X obj 494 502 hsl 128 15 0 2 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 8600 1;
+#X obj 479 579 line~;
+#X obj 332 809 dac~;
+#X obj 380 338 +~ 100;
+#X obj 378 293 *~ 300;
+#X obj 375 251 osc~ 0.1;
+#X msg 482 529 \$1 30;
+#X text 563 574 comment I used line to get rid of clicks (I think)
+but there is still one at the beginning;
+#X text 455 315 comment;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 2;
+#X connect 3 0 6 0;
+#X connect 3 0 6 1;
+#X connect 4 0 10 0;
+#X connect 5 0 3 1;
+#X connect 7 0 1 1;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 5 0;

@@ -1,0 +1,12 @@
+#N canvas 615 53 662 266 10;
+#X obj 141 122 rect_ssi~;
+#X obj 141 172 dac~ 1 2;
+#X floatatom 141 46 5 0 0 0 - - -, f 5;
+#X floatatom 192 91 5 0 0 0 - - -, f 5;
+#X text 178 46 frequency in Hz, f 20;
+#X text 231 91 pulse width (0..1) \, 0.5 is a symmetrical square wave
+;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 2 0 0 0;
+#X connect 3 0 0 1;

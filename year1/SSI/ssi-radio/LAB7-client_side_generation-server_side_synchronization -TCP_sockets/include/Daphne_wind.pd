@@ -1,0 +1,94 @@
+#N canvas 39 105 1438 843 12;
+#X floatatom 247 211 5 0 0 0 - - -;
+#X floatatom 299 291 5 0 0 0 - - -;
+#X obj 302 260 hsl 128 15 0.1 10 0 0 empty empty Q-slider -2 -8 0 10
+-86853 -262144 -1 1589 1;
+#X obj 510 682 *~;
+#X floatatom 977 245 5 0 0 0 - - -;
+#X obj 977 273 osc~ 0.1;
+#X obj 981 214 hsl 128 15 -1 1 0 0 empty empty change_frequency_over_time
+-2 -8 0 10 -262144 -260097 -1 7112 1;
+#X text 435 258 manually change resonance;
+#X obj 977 305 *~ 400;
+#X floatatom 1054 335 5 0 0 0 - - -;
+#X obj 1057 304 hsl 128 15 0.1 10 0 0 empty empty Q-slider -2 -8 0
+10 -86277 -262144 -1 2382 1;
+#X text 1190 302 manually change resonance;
+#X obj 554 682 *~;
+#X obj 473 486 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12700 1;
+#X msg 470 514 \$1 50;
+#X obj 470 543 line~;
+#X obj 531 73 bng 70 250 50 0 empty empty masterbang 12 35 0 8 -261682
+-1 -1;
+#X obj 251 189 hsl 60 15 200 400 0 0 empty empty phase_cycle -2 -8
+0 10 -261682 -1 -1 0 1;
+#X obj 119 291 else/brown~;
+#X obj 120 341 else/bandpass~, f 26;
+#X obj 207 158 osc~ 0.1;
+#X obj 621 485 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 3810 1;
+#X msg 618 513 \$1 50;
+#X obj 618 542 line~;
+#X text 477 465 Left volume;
+#X text 627 464 Right volume;
+#X obj 208 239 *~ 200;
+#X obj 208 289 +~ 800;
+#X text 107 134 wind range is centrally between 600 - 2000 frequency
+;
+#X msg 299 212 7.5;
+#X msg 469 438 1;
+#X obj 895 372 bob~, f 23;
+#X msg 617 437 0.3;
+#X msg 1054 256 3.3;
+#X obj 977 334 +~ 800;
+#X obj 893 332 else/ikeda~;
+#X msg 978 174 0.12;
+#X obj 853 31 inlet;
+#X obj 530 34 loadbang;
+#X obj 343 34 inlet;
+#X obj 343 58 * 10;
+#X obj 466 749 outlet~;
+#X obj 578 750 outlet~;
+#X obj 853 55 * 3.5;
+#X connect 0 0 26 1;
+#X connect 1 0 19 2;
+#X connect 2 0 1 0;
+#X connect 3 0 41 0;
+#X connect 4 0 5 0;
+#X connect 5 0 8 0;
+#X connect 6 0 4 0;
+#X connect 8 0 34 0;
+#X connect 9 0 31 2;
+#X connect 10 0 9 0;
+#X connect 12 0 42 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 15 0 3 1;
+#X connect 16 0 30 0;
+#X connect 16 0 36 0;
+#X connect 16 0 29 0;
+#X connect 16 0 33 0;
+#X connect 16 0 32 0;
+#X connect 17 0 0 0;
+#X connect 18 0 19 0;
+#X connect 19 0 3 0;
+#X connect 20 0 26 0;
+#X connect 21 0 22 0;
+#X connect 22 0 23 0;
+#X connect 23 0 12 1;
+#X connect 26 0 27 0;
+#X connect 27 0 19 1;
+#X connect 29 0 2 0;
+#X connect 30 0 13 0;
+#X connect 31 0 12 0;
+#X connect 32 0 21 0;
+#X connect 33 0 10 0;
+#X connect 34 0 31 1;
+#X connect 35 0 31 0;
+#X connect 36 0 6 0;
+#X connect 37 0 43 0;
+#X connect 38 0 16 0;
+#X connect 39 0 40 0;
+#X connect 40 0 2 0;
+#X connect 43 0 10 0;

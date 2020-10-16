@@ -1,0 +1,226 @@
+#N canvas 0 23 1571 989 12;
+#X floatatom 254 303 5 0 0 0 - - -;
+#X text 258 321 socket;
+#X floatatom 125 303 5 0 0 0 - - -;
+#X text 129 321 clients;
+#X obj 67 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 108 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 150 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 191 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 66 380 fudiparse;
+#X obj 67 147 list trim;
+#X obj 67 173 fudiformat;
+#X msg 148 95 fromsocket \$1;
+#X obj 67 199 prepend broadcast;
+#X text 618 201 send socketnumber only to socket \$1 (itself);
+#X obj 521 176 fudiformat;
+#X msg 521 152 socketnumber \$1;
+#X obj 521 200 list prepend;
+#X obj 521 102 t f f;
+#X msg 67 679 val1 \$1;
+#X msg 108 706 val2 \$1;
+#X msg 150 679 val3 \$1;
+#X msg 191 706 val4 \$1;
+#X obj 67 506 route val1 val2 val3 val4 val5 val6 val7 val8 val9 val10
+val11 val12 val13 val14 val15 val16 val17 val18 val19 val20, f 119
+;
+#X obj 233 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 274 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 316 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 357 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 399 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 440 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 482 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 523 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 566 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 607 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 649 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 690 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 731 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 772 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 814 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 855 536 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X msg 233 679 val5 \$1;
+#X msg 274 706 val6 \$1;
+#X msg 316 679 val7 \$1;
+#X msg 357 706 val8 \$1;
+#X msg 400 679 val9 \$1;
+#X msg 440 706 val10 \$1;
+#X msg 482 679 val11 \$1;
+#X msg 523 706 val12 \$1;
+#X msg 566 679 val13 \$1;
+#X msg 607 706 val14 \$1;
+#X msg 649 679 val15 \$1;
+#X msg 690 706 val16 \$1;
+#X msg 731 679 val17 \$1;
+#X msg 772 706 val18 \$1;
+#X msg 814 679 val19 \$1;
+#X msg 855 706 val20 \$1;
+#X obj 951 513 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 951 484 t b b;
+#X msg 983 513 0;
+#X obj 521 127 change;
+#X obj 67 751 send send_data;
+#X obj 67 44 receive send_data;
+#X obj 67 121 list prepend;
+#X obj 67 475 receive received_data;
+#X obj 66 406 send received_data;
+#X obj 951 454 r client_update;
+#X obj 125 340 s client_update;
+#X obj 148 70 r from_socket;
+#X obj 983 537 s from_socket;
+#X obj 254 340 s from_socket;
+#X text 201 199 make it a broadcast;
+#X text 578 86 we use a change of the socket number as trigger to send
+the corresponding client its socket number. The client can use this
+to filter out (block) its own messages from the received broadcasts.
+;
+#X text 154 173 syntax: "fromsocket <number> val# <value>";
+#X text 363 327 IP:;
+#X text 605 175 syntax: "socketnumber <number>";
+#X text 618 220 this way the sender gets to know its own socket number
+;
+#X text 1017 512 use socket number 0 to control and update all clients
+;
+#X obj 521 224 list trim;
+#X floatatom 395 328 3 0 0 0 - - -;
+#X floatatom 422 328 3 0 0 0 - - -;
+#X floatatom 449 328 3 0 0 0 - - -;
+#X floatatom 476 328 3 0 0 0 - - -;
+#X obj 395 305 unpack f f f f f;
+#X floatatom 504 328 6 0 0 0 - - -;
+#X obj 67 255 mrpeach/tcpsocketserver FUDI 55556;
+#X text 323 255 iemnet/tcpserver 55556;
+#X connect 0 0 68 0;
+#X connect 2 0 65 0;
+#X connect 4 0 18 0;
+#X connect 5 0 19 0;
+#X connect 6 0 20 0;
+#X connect 7 0 21 0;
+#X connect 8 0 63 0;
+#X connect 9 0 10 0;
+#X connect 10 0 12 0;
+#X connect 11 0 61 1;
+#X connect 12 0 83 0;
+#X connect 14 0 16 0;
+#X connect 15 0 14 0;
+#X connect 16 0 76 0;
+#X connect 17 0 58 0;
+#X connect 17 1 16 1;
+#X connect 18 0 59 0;
+#X connect 19 0 59 0;
+#X connect 20 0 59 0;
+#X connect 21 0 59 0;
+#X connect 22 0 4 0;
+#X connect 22 1 5 0;
+#X connect 22 2 6 0;
+#X connect 22 3 7 0;
+#X connect 22 4 23 0;
+#X connect 22 5 24 0;
+#X connect 22 6 25 0;
+#X connect 22 7 26 0;
+#X connect 22 8 27 0;
+#X connect 22 9 28 0;
+#X connect 22 10 29 0;
+#X connect 22 11 30 0;
+#X connect 22 12 31 0;
+#X connect 22 13 32 0;
+#X connect 22 14 33 0;
+#X connect 22 15 34 0;
+#X connect 22 16 35 0;
+#X connect 22 17 36 0;
+#X connect 22 18 37 0;
+#X connect 22 19 38 0;
+#X connect 23 0 39 0;
+#X connect 24 0 40 0;
+#X connect 25 0 41 0;
+#X connect 26 0 42 0;
+#X connect 27 0 43 0;
+#X connect 28 0 44 0;
+#X connect 29 0 45 0;
+#X connect 30 0 46 0;
+#X connect 31 0 47 0;
+#X connect 32 0 48 0;
+#X connect 33 0 49 0;
+#X connect 34 0 50 0;
+#X connect 35 0 51 0;
+#X connect 36 0 52 0;
+#X connect 37 0 53 0;
+#X connect 38 0 54 0;
+#X connect 39 0 59 0;
+#X connect 40 0 59 0;
+#X connect 41 0 59 0;
+#X connect 42 0 59 0;
+#X connect 43 0 59 0;
+#X connect 44 0 59 0;
+#X connect 45 0 59 0;
+#X connect 46 0 59 0;
+#X connect 47 0 59 0;
+#X connect 48 0 59 0;
+#X connect 49 0 59 0;
+#X connect 50 0 59 0;
+#X connect 51 0 59 0;
+#X connect 52 0 59 0;
+#X connect 53 0 59 0;
+#X connect 54 0 59 0;
+#X connect 55 0 38 0;
+#X connect 55 0 37 0;
+#X connect 55 0 36 0;
+#X connect 55 0 35 0;
+#X connect 55 0 34 0;
+#X connect 55 0 33 0;
+#X connect 55 0 32 0;
+#X connect 55 0 31 0;
+#X connect 55 0 30 0;
+#X connect 55 0 29 0;
+#X connect 55 0 28 0;
+#X connect 55 0 27 0;
+#X connect 55 0 26 0;
+#X connect 55 0 25 0;
+#X connect 55 0 24 0;
+#X connect 55 0 23 0;
+#X connect 55 0 7 0;
+#X connect 55 0 6 0;
+#X connect 55 0 5 0;
+#X connect 55 0 4 0;
+#X connect 56 0 55 0;
+#X connect 56 1 57 0;
+#X connect 57 0 67 0;
+#X connect 58 0 15 0;
+#X connect 60 0 61 0;
+#X connect 61 0 9 0;
+#X connect 62 0 22 0;
+#X connect 64 0 56 0;
+#X connect 66 0 11 0;
+#X connect 66 0 17 0;
+#X connect 76 0 83 0;
+#X connect 81 0 77 0;
+#X connect 81 1 78 0;
+#X connect 81 2 79 0;
+#X connect 81 3 80 0;
+#X connect 81 4 82 0;
+#X connect 83 0 8 0;
+#X connect 83 1 2 0;
+#X connect 83 2 0 0;
+#X connect 83 3 81 0;

@@ -1,0 +1,92 @@
+#N canvas 0 23 1321 678 12;
+#X text 23 98 Sea on the beach;
+#X obj 410 276 hsl 128 17 0.1 10 1 0 empty \$0-Q-set empty 5 9 0 10
+-228856 -1 -1 7154 0;
+#X obj 383 306 nbx 8 14 -1e+37 1e+37 0 0 \$0-Q empty empty 0 -8 0 10
+-228856 -1 -1 1.33858 256;
+#X obj 250 222 noise~;
+#X text 421 277 Q/Resonance;
+#X obj 294 311 lowpass~;
+#X obj 321 196 *~ 250;
+#X obj 321 221 +~ 750;
+#X obj 525 385 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12700 1;
+#X msg 522 413 \$1 50;
+#X obj 522 442 line~;
+#X obj 293 541 *~;
+#X obj 885 270 hsl 128 17 0.1 10 1 0 empty \$0-Q-set empty 5 9 0 10
+-228856 -1 -1 11096 0;
+#X obj 853 306 nbx 8 14 -1e+37 1e+37 0 0 \$0-Q empty empty 0 -8 0 10
+-228856 -1 -1 5.59055 256;
+#X obj 700 233 noise~;
+#X text 899 270 Q/Resonance;
+#X obj 750 310 lowpass~;
+#X obj 733 541 *~;
+#X obj 777 181 osc~ 0.1;
+#X obj 777 205 *~ 400;
+#X obj 777 230 +~ 600;
+#X msg 522 231 1;
+#X obj 521 132 bng 45 250 50 0 empty empty start 12 20 0 10 -204786
+-1 -1;
+#X text 46 510 (-1 = 500) (0 = 750) (1 = 1000);
+#X text 896 227 (-1 = 200) (0 = 600) (1 = 1000);
+#X text 431 227 Change value when desired., f 10;
+#X text 354 373 With the speed of 50 it will go to the end point (\$1)
+defined in the Hslider with a value between 0 and 1 (0 is no sound
+and (-)1 is full sound)., f 20;
+#X text 584 413 The value can be changed suddenly \, to avoid hearing
+clicks the line~ object is used., f 21;
+#X msg 853 238 0.55;
+#X msg 383 233 0.5;
+#X obj 321 172 osc~ 0.08;
+#X text 531 364 Set volume.;
+#X text 692 310 Filter;
+#X text 239 312 Filter;
+#X text 551 276 Resonance Q/ filter sharpness., f 18;
+#X text 266 96 The oscillator makes a cosine wave (from -1 to 1). The
+value 0.08 determines the length of the waves., f 25;
+#X text 895 151 We can hear frequencies between 20 – 2000 \, that
+is the reason why I multiplied the osc value with 400 and added 600
+, f 25;
+#X text 46 435 We can hear frequencies between 20 – 2000 \, that
+is the reason why I multiplied the osc value with 250 and added 750
+, f 25;
+#X obj 521 96 loadbang;
+#X obj 293 568 outlet~;
+#X obj 734 569 outlet~;
+#X text 1128 175 >>>20 - 20000 Hz!;
+#X obj 406 22 inlet;
+#X obj 406 46 * 10;
+#X obj 877 16 inlet;
+#X obj 877 40 * 10;
+#X connect 1 0 2 0;
+#X connect 2 0 5 2;
+#X connect 3 0 5 0;
+#X connect 5 0 11 0;
+#X connect 6 0 7 0;
+#X connect 7 0 5 1;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 1;
+#X connect 10 0 17 0;
+#X connect 11 0 39 0;
+#X connect 12 0 13 0;
+#X connect 13 0 16 2;
+#X connect 14 0 16 0;
+#X connect 16 0 17 1;
+#X connect 17 0 40 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 16 1;
+#X connect 21 0 8 0;
+#X connect 22 0 21 0;
+#X connect 22 0 29 0;
+#X connect 22 0 28 0;
+#X connect 28 0 13 0;
+#X connect 29 0 2 0;
+#X connect 30 0 6 0;
+#X connect 38 0 22 0;
+#X connect 42 0 43 0;
+#X connect 43 0 1 0;
+#X connect 44 0 45 0;
+#X connect 45 0 12 0;

@@ -1,0 +1,103 @@
+#N canvas 141 53 1438 843 12;
+#X floatatom 245 166 5 0 0 0 - - -;
+#X text 196 84 central freq should be between 20 - 2000;
+#X obj 206 244 +~ 600;
+#X obj 206 194 *~ 300;
+#X floatatom 297 246 5 0 0 0 - - -;
+#X obj 300 215 hsl 128 15 0.1 10 0 0 empty empty Q-slider -2 -8 0 10
+-191407 -1 -1 513 1;
+#X obj 508 637 *~;
+#X obj 507 707 else/out~;
+#X floatatom 975 200 5 0 0 0 - - -;
+#X obj 1182 304 cnv 5 5 5 empty empty 1 0 0 0 16 -262144 -162280 0
+;
+#X obj 1173 410 cnv 5 5 5 empty empty -1 0 0 0 16 -262144 -162280 0
+;
+#X obj 1181 357 cnv 5 5 5 empty empty 0 0 0 0 16 -262144 -162280 0
+;
+#X obj 1194 301 scope~ 183 112 256 3 128 -1 1 0 0 0 0 0 250 255 19
+18 85 96 98 102 0;
+#X obj 975 228 osc~ 0.1;
+#X obj 979 169 hsl 128 15 -1 1 0 0 empty empty change_frequency_over_time
+-2 -8 0 10 -228856 -1 -1 7620 1;
+#X text 433 213 manually change resonance;
+#X obj 975 260 *~ 400;
+#X obj 975 289 +~ 400;
+#X obj 235 348 cnv 5 5 5 empty empty 1 0 0 0 16 -262144 -162280 0;
+#X obj 226 454 cnv 5 5 5 empty empty -1 0 0 0 16 -262144 -162280 0
+;
+#X obj 234 401 cnv 5 5 5 empty empty 0 0 0 0 16 -262144 -162280 0;
+#X obj 247 345 scope~ 183 112 256 3 128 -1 1 0 0 0 0 0 250 255 19 18
+85 96 98 102 0;
+#X floatatom 1052 290 5 0 0 0 - - -;
+#X obj 1055 259 hsl 128 15 0.1 10 0 0 empty empty Q-slider -2 -8 0
+10 -191407 -1 -1 257 1;
+#X text 1188 257 manually change resonance;
+#X obj 896 275 brown~;
+#X obj 552 637 *~;
+#X obj 471 441 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 3600 1;
+#X msg 468 469 \$1 50;
+#X obj 468 498 line~;
+#X obj 529 28 bng 70 250 50 0 empty empty masterbang 12 35 0 8 -204800
+-1 -1;
+#X obj 248 144 hsl 60 15 300 500 0 0 empty empty phase_cycle -2 -8
+0 10 -228856 -1 -1 0 1;
+#X text 608 741 change volume manually;
+#X text 626 637 default volume;
+#X obj 117 246 else/brown~;
+#X msg 594 637 1;
+#X obj 118 296 else/bandpass~, f 26;
+#X msg 297 167 0.5;
+#X msg 976 129 0.2;
+#X obj 896 327 lowpass~, f 23;
+#X msg 1052 211 0.3;
+#X obj 205 113 osc~ 0.1;
+#X obj 619 440 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12700 1;
+#X msg 616 468 \$1 50;
+#X obj 616 497 line~;
+#X msg 615 392 1;
+#X msg 467 393 0.5;
+#X text 475 420 Left volume;
+#X text 625 419 Right volume;
+#X connect 0 0 3 1;
+#X connect 2 0 36 1;
+#X connect 3 0 2 0;
+#X connect 4 0 36 2;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 8 0 13 0;
+#X connect 13 0 12 0;
+#X connect 13 0 16 0;
+#X connect 14 0 8 0;
+#X connect 16 0 17 0;
+#X connect 17 0 39 1;
+#X connect 22 0 39 2;
+#X connect 23 0 22 0;
+#X connect 25 0 39 0;
+#X connect 26 0 7 1;
+#X connect 27 0 28 0;
+#X connect 28 0 29 0;
+#X connect 29 0 6 1;
+#X connect 30 0 46 0;
+#X connect 30 0 38 0;
+#X connect 30 0 37 0;
+#X connect 30 0 35 0;
+#X connect 30 0 40 0;
+#X connect 30 0 45 0;
+#X connect 31 0 0 0;
+#X connect 34 0 36 0;
+#X connect 35 0 7 2;
+#X connect 36 0 6 0;
+#X connect 37 0 5 0;
+#X connect 38 0 14 0;
+#X connect 39 0 26 0;
+#X connect 40 0 23 0;
+#X connect 41 0 3 0;
+#X connect 41 0 21 0;
+#X connect 42 0 43 0;
+#X connect 43 0 44 0;
+#X connect 44 0 26 1;
+#X connect 45 0 42 0;
+#X connect 46 0 27 0;

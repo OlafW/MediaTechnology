@@ -1,0 +1,28 @@
+#N canvas 1131 258 436 467 12;
+#X obj 149 316 bp~ 3000 10;
+#X obj 149 358 else/out~ 1 0;
+#X obj 183 255 snapshot~;
+#X obj 184 211 line~;
+#X obj 279 214 metro 10;
+#X obj 279 30 tgl 40 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 184 285 5 0 0 0 - - -;
+#X msg 201 177 750 3000;
+#X obj 65 144 delay 3000 1 msec;
+#X obj 201 105 metro 6000;
+#X obj 49 272 else/pinknoise~;
+#X msg 131 176 350 3000;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 2 0 6 0;
+#X connect 3 0 2 0;
+#X connect 4 0 2 0;
+#X connect 5 0 4 0;
+#X connect 5 0 9 0;
+#X connect 6 0 0 1;
+#X connect 7 0 3 0;
+#X connect 8 0 11 0;
+#X connect 9 0 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 0 0;
+#X connect 11 0 3 0;

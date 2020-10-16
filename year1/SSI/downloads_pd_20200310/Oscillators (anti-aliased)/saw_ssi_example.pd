@@ -1,0 +1,8 @@
+#N canvas 615 53 450 300 10;
+#X obj 144 114 saw_ssi~;
+#X obj 144 179 dac~ 1 2;
+#X floatatom 144 67 5 0 0 0 - - -, f 5;
+#X text 183 65 frequency in Hz;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 2 0 0 0;

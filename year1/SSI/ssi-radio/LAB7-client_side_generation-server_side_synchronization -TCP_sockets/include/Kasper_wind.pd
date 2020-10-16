@@ -1,0 +1,67 @@
+#N canvas 720 23 960 976 12;
+#X declare -path else;
+#X obj 412 366 lowpass~;
+#X obj 801 27 declare -path else;
+#X obj 151 188 line~;
+#X obj 63 248 ikeda~;
+#X obj 120 244 bandpass~;
+#X obj 191 321 out~;
+#X obj 128 102 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 33 102 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 77 35 bng 25 250 50 0 empty empty empty 17 7 0 10 -4034 -1 -1
+;
+#X msg 49 99 600 3000;
+#X obj 48 124 delay 1 3 sec;
+#X obj 494 180 line~;
+#X obj 463 236 bandpass~;
+#X obj 471 94 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 376 94 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 396 210 henon~;
+#X msg 391 90 600 2000;
+#X msg 492 91 150 3000;
+#X obj 491 116 delay 1 3 sec;
+#X obj 391 116 delay 1 2 sec;
+#X msg 149 99 150 6000;
+#X obj 148 124 delay 1 6 sec;
+#X obj 532 216 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 15.931 256;
+#X obj 471 339 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 2.1 256;
+#X obj 447 314 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 1845 256;
+#X obj 214 217 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 6.422 256;
+#X connect 0 0 5 1;
+#X connect 2 0 4 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 21 0;
+#X connect 7 0 10 0;
+#X connect 8 0 7 0;
+#X connect 8 0 14 0;
+#X connect 9 0 7 0;
+#X connect 9 0 2 0;
+#X connect 10 0 20 0;
+#X connect 11 0 12 1;
+#X connect 12 0 0 0;
+#X connect 13 0 18 0;
+#X connect 13 0 6 0;
+#X connect 14 0 19 0;
+#X connect 15 0 12 0;
+#X connect 16 0 14 0;
+#X connect 16 0 11 0;
+#X connect 17 0 13 0;
+#X connect 17 0 11 0;
+#X connect 18 0 16 0;
+#X connect 19 0 17 0;
+#X connect 20 0 6 0;
+#X connect 20 0 2 0;
+#X connect 21 0 9 0;
+#X connect 22 0 12 2;
+#X connect 23 0 0 2;
+#X connect 24 0 0 1;
+#X connect 25 0 4 2;

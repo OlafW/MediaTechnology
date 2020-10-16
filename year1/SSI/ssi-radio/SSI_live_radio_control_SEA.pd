@@ -1,0 +1,205 @@
+#N canvas 20 61 1546 696 12;
+#X msg 91 588 disconnect;
+#X obj 59 618 netsend -u -b;
+#X obj 59 468 list prepend send;
+#X obj 59 499 list trim;
+#X text 186 594 **ip address and port number;
+#X obj 91 532 loadbang;
+#X obj 16 16 cnv 15 1040 400 empty empty empty 20 12 0 14 -204800 -66577
+0;
+#X floatatom 59 290 5 0 0 0 - - -;
+#X floatatom 127 351 5 0 0 0 - - -;
+#X obj 59 317 oscformat fader1;
+#X obj 127 378 oscformat fader2;
+#X obj 59 149 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 127 149 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 191 290 5 0 0 0 - - -;
+#X floatatom 259 351 5 0 0 0 - - -;
+#X obj 191 149 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 259 149 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 321 290 5 0 0 0 - - -;
+#X floatatom 389 351 5 0 0 0 - - -;
+#X obj 321 149 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 389 149 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8800 1;
+#X floatatom 453 290 5 0 0 0 - - -;
+#X floatatom 521 351 5 0 0 0 - - -;
+#X obj 453 149 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 521 149 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 585 290 5 0 0 0 - - -;
+#X floatatom 653 351 5 0 0 0 - - -;
+#X obj 585 149 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 653 149 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 717 290 5 0 0 0 - - -;
+#X floatatom 785 351 5 0 0 0 - - -;
+#X obj 717 149 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 785 149 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 847 290 5 0 0 0 - - -;
+#X floatatom 915 351 5 0 0 0 - - -;
+#X obj 847 149 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 915 149 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 191 317 oscformat fader3;
+#X obj 259 378 oscformat fader4;
+#X obj 321 317 oscformat fader5;
+#X obj 389 378 oscformat fader6;
+#X obj 453 317 oscformat fader7;
+#X obj 521 378 oscformat fader8;
+#X obj 584 317 oscformat fader9;
+#X obj 654 378 oscformat fader10;
+#X obj 717 317 oscformat fader11;
+#X obj 785 378 oscformat fader12;
+#X obj 847 317 oscformat fader13;
+#X obj 915 378 oscformat fader14;
+#X text 32 86 Anastasia;
+#X text 179 86 Avita;
+#X text 307 86 Carlo;
+#X text 435 86 Marthe;
+#X text 570 86 Niels;
+#X text 701 86 Thijs;
+#X text 834 86 Vitor;
+#X text 107 111 Asbjorn;
+#X text 244 111 Caitlin;
+#X text 381 111 Kasper;
+#X text 503 111 Mitchell;
+#X text 645 111 Olaf;
+#X text 772 111 Veerle;
+#X text 895 111 Xiaoqing;
+#X text 29 23 VOLUME LEVELS:;
+#X obj 1071 16 cnv 15 400 400 empty empty empty 20 12 0 14 -204786
+-66577 0;
+#X floatatom 1118 286 5 0 0 0 - - -;
+#X floatatom 1236 313 5 0 0 0 - - -;
+#X obj 1118 145 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 1236 145 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 1328 285 5 0 0 0 - - -;
+#X obj 1328 144 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 1105 69 avita;
+#X text 1224 69 avita;
+#X text 1315 69 avita;
+#X obj 1118 313 oscformat mod1;
+#X obj 1236 340 oscformat mod2;
+#X obj 1328 312 oscformat mod3;
+#X text 1106 88 niels;
+#X text 1106 105 veerle;
+#X text 1106 120 xiaoqing;
+#X text 1224 105 veerle;
+#X text 1225 120 xiaoqing;
+#X text 1104 52 anastasia;
+#X text 1088 26 CONTROL PARAMETERS:;
+#X obj 998 272 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 998 333 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 919 25 SYNC ALL:;
+#X obj 998 21 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 91 561 connect edwinvanderheide.nl 55555;
+#X text 986 583 >>> http://www.edwinvanderheide.nl:8000/ssi.m3u <<<
+;
+#X text 987 607 There is a substatial delay of multiple seconds in
+the audio to guarantee good quality streaming.;
+#X text 986 545 In order to enjoy the radio station in good STEREO
+quality go to:;
+#X text 986 460 You can see the screen of the server via the following
+link:;
+#X text 986 484 https://meet.jit.si/SoundSpaceInteractionRadio;
+#X text 986 508 Also the sound is audible there but in low quality
+and MONO.;
+#X text 475 497 >>> http://www.edwinvanderheide.nl:8000/ssi.m3u <<<
+;
+#X text 474 460 The Sound Space and Interaction Pure Data live radio
+station is streamed at:;
+#X text 471 527 The sound is generated in real time and can be controlled
+remotely through this patch. It can be controlled by many people at
+the same time. This means that the settings of your faders don't (have
+to) correspond with the settings on the server(!);
+#X text 472 609 You can press the SYNC ALL button in order to send
+all your volume settings at once.;
+#X connect 0 0 1 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 5 0 88 0;
+#X connect 7 0 9 0;
+#X connect 8 0 10 0;
+#X connect 9 0 2 0;
+#X connect 10 0 2 0;
+#X connect 11 0 7 0;
+#X connect 12 0 8 0;
+#X connect 13 0 37 0;
+#X connect 14 0 38 0;
+#X connect 15 0 13 0;
+#X connect 16 0 14 0;
+#X connect 17 0 39 0;
+#X connect 18 0 40 0;
+#X connect 19 0 17 0;
+#X connect 20 0 18 0;
+#X connect 21 0 41 0;
+#X connect 22 0 42 0;
+#X connect 23 0 21 0;
+#X connect 24 0 22 0;
+#X connect 25 0 43 0;
+#X connect 26 0 44 0;
+#X connect 27 0 25 0;
+#X connect 28 0 26 0;
+#X connect 29 0 45 0;
+#X connect 30 0 46 0;
+#X connect 31 0 29 0;
+#X connect 32 0 30 0;
+#X connect 33 0 47 0;
+#X connect 34 0 48 0;
+#X connect 35 0 33 0;
+#X connect 36 0 34 0;
+#X connect 37 0 2 0;
+#X connect 38 0 2 0;
+#X connect 39 0 2 0;
+#X connect 40 0 2 0;
+#X connect 41 0 2 0;
+#X connect 42 0 2 0;
+#X connect 43 0 2 0;
+#X connect 44 0 2 0;
+#X connect 45 0 2 0;
+#X connect 46 0 2 0;
+#X connect 47 0 2 0;
+#X connect 48 0 2 0;
+#X connect 65 0 74 0;
+#X connect 66 0 75 0;
+#X connect 67 0 65 0;
+#X connect 68 0 66 0;
+#X connect 69 0 76 0;
+#X connect 70 0 69 0;
+#X connect 74 0 2 0;
+#X connect 75 0 2 0;
+#X connect 76 0 2 0;
+#X connect 84 0 33 0;
+#X connect 84 0 7 0;
+#X connect 84 0 13 0;
+#X connect 84 0 17 0;
+#X connect 84 0 21 0;
+#X connect 84 0 25 0;
+#X connect 84 0 29 0;
+#X connect 84 0 85 0;
+#X connect 85 0 34 0;
+#X connect 85 0 8 0;
+#X connect 85 0 14 0;
+#X connect 85 0 18 0;
+#X connect 85 0 22 0;
+#X connect 85 0 26 0;
+#X connect 85 0 30 0;
+#X connect 87 0 84 0;
+#X connect 88 0 1 0;

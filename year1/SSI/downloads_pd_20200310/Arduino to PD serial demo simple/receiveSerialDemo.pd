@@ -1,0 +1,49 @@
+#N canvas 460 94 523 614 10;
+#X obj 73 439 dac~;
+#X obj 73 322 osc~;
+#X obj 74 355 *~ 0.2;
+#X obj 74 383 *~ 1;
+#X msg 62 74 devices;
+#X floatatom 72 266 5 0 0 0 - - -, f 5;
+#X obj 73 297 * 20;
+#X msg 180 325 0;
+#X msg 220 326 1;
+#X obj 221 305 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 180 370 5 0 0 0 - - -, f 5;
+#X msg 210 129 close;
+#X obj 180 347 change;
+#X obj 179 304 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 55 50 Click here to see in pd-window which ports are available
+;
+#X text 130 82 Fill in the number of the available port after "open"
+;
+#X text 13 197 Values between 0 and 253 are used to control the frequency
+of osc~;
+#X obj 72 244 split 0 253;
+#X obj 180 282 sel 254 255;
+#X text 178 247 A value of 254 switches sound off A value of 255 switches
+sound on;
+#X msg 134 101 open 1;
+#X obj 72 159 comport 1 9600;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 1;
+#X connect 3 0 0 0;
+#X connect 4 0 21 0;
+#X connect 5 0 6 0;
+#X connect 6 0 1 0;
+#X connect 7 0 12 0;
+#X connect 8 0 12 0;
+#X connect 9 0 8 0;
+#X connect 10 0 3 1;
+#X connect 11 0 21 0;
+#X connect 12 0 10 0;
+#X connect 13 0 7 0;
+#X connect 17 0 5 0;
+#X connect 18 0 13 0;
+#X connect 18 1 9 0;
+#X connect 18 2 5 0;
+#X connect 20 0 21 0;
+#X connect 21 0 18 0;
