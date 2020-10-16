@@ -64,7 +64,7 @@ def evaluate_recipes(recipes):
 
     # recipe['fitness'] /= len(ingredients_weighted)
 
-  # fitness is the amount of ingredients that also appear in other recipes
+  # fitness = sum (amount of recipes that contain ingredient for every ingredient)
   print([recipe['fitness'] for recipe in recipes])
 
 """We can use this to evaluate the initial population."""
