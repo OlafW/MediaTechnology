@@ -331,6 +331,103 @@
                 }
             ],
             "rating": 0
+        },
+        {
+            "name": "Bad cookie",
+            "type": "bad",
+            "amount": 0,
+            "ingredients": [
+                {
+                    "ingredient": "a",
+                    "class": "base",
+                    "role": "savoury",
+                    "amount": 591.5,
+                    "unit": "ml"
+                },
+                {
+                    "ingredient": "b",
+                    "class": "base",
+                    "role": "savoury",
+                    "amount": 236.6,
+                    "unit": "ml"
+                },
+                {
+                    "ingredient": "c",
+                    "class": "base",
+                    "role": "rising",
+                    "amount": 2.45,
+                    "unit": "ml"
+                },
+                {
+                    "ingredient": "d",
+                    "class": "base",
+                    "role": "binding",
+                    "amount": 1,
+                    "unit": "none"
+                },
+                {
+                    "ingredient": "e",
+                    "class": "flavor",
+                    "role": "salt",
+                    "amount": 2.45,
+                    "unit": "ml"
+                },
+                {
+                    "ingredient": "f",
+                    "class": "flavour",
+                    "role": "sweet",
+                    "amount": 236.6,
+                    "unit": "ml"
+                },
+                {
+                    "ingredient": "g",
+                    "class": "flavour",
+                    "role": "sweet",
+                    "amount": 118.3,
+                    "unit": "ml"
+                },
+                {
+                    "ingredient": "h",
+                    "class": "flavour",
+                    "role": "sweet",
+                    "amount": 4.9,
+                    "unit": "ml"
+                },
+                {
+                    "ingredient": "i",
+                    "class": "flavour",
+                    "role": "sweet",
+                    "amount": 29.6,
+                    "unit": "ml"
+                },
+                {
+                    "ingredient": "j",
+                    "class": "topping",
+                    "role": "sweet",
+                    "amount": 473.2,
+                    "unit": "ml"
+                },
+                {
+                    "ingredient": "k",
+                    "class": "flavour",
+                    "role": "savoury",
+                    "amount": 473.2,
+                    "unit": "ml"
+                },
+                {
+                    "ingredient": "l",
+                    "class": "topping",
+                    "role": "sweet",
+                    "amount": 473.2,
+                    "unit": "ml"
+                }
+            ],
+            "nutrition": [
+                {
+                    "calories": 0
+                }
+            ],
+            "rating": 0
         }
     ]
 }

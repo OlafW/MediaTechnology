@@ -27,14 +27,14 @@ def convert_to_ml(data):
 
     return data
 
+if __name__ == "__main__":
+  infile='data/recipes.json'
+  outfile='data/recipes_converted.json'
 
-infile='recipes.json'
-outfile='recipes_converted.json'
+  with open (infile) as f:
+      data = json.load(f)
 
-with open (infile) as f:
-    data = json.load(f)
+  data = convert_to_ml(data)
 
-data = convert_to_ml(data)
-
-with open(outfile, 'w') as f:
-    json.dump(data, f, indent=4)
+  with open(outfile, 'w') as f:
+      json.dump(data, f, indent=4)
