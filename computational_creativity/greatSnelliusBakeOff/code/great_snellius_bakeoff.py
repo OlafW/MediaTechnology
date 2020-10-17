@@ -30,7 +30,6 @@ Now we can create an initial population, by first defining the population size a
 """
 
 population_size = 20
-
 population = random.choices(recipes, k=population_size)
 
 #pprint.PrettyPrinter(indent=2, depth=2).pprint(population)
@@ -72,16 +71,14 @@ def evaluate_recipes(recipes):
     recipe = recipes[r]
     ingredients = recipe['ingredients']
     recipe_ratio[r] = Counter(i['class'] for i in ingredients)
+    print(recipe_ratio[r])
+    #length of recipe_ratio[r] = amount of classes
 
-
-  pprint.PrettyPrinter(indent=2, depth=2).pprint(recipe_ratio)
 
 
   for r in range(len(recipes)):
     recipe = recipes[r]
     recipe['fitness'] = recipe_similarity[r]
-
-  # return recipe_ratio
 
 
 
