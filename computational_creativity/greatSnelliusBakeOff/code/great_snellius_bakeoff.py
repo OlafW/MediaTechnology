@@ -2,6 +2,7 @@ import json
 import pprint
 import random
 import math
+# import numpy as np
 from collections import Counter
 import recipe_unit_convert
 
@@ -15,17 +16,11 @@ data = recipe_unit_convert.convert_to_ml(data)
 
 recipes = data['recipes']
 
-"""To check what we have loaded we can use the pretty printing library (pprint)."""
-
 # pprint.PrettyPrinter(indent=2, depth=3).pprint(recipes[0])
-
-"""Next we extract all of the ingredients from the recipes, so that we can use them in mutation operators."""
 
 all_ingredients = []
 for recipe in recipes:
   all_ingredients.extend(recipe['ingredients'])
-
-"""To check on the complete list of ingredients, we can use the pprint library to provide formatted list."""
 
 #pprint.PrettyPrinter(indent=2, depth=2).pprint(all_ingredients)
 
@@ -38,34 +33,57 @@ population_size = 20
 
 population = random.choices(recipes, k=population_size)
 
-"""And we can check on the recipes that were selected in the initial population."""
-
 #pprint.PrettyPrinter(indent=2, depth=2).pprint(population)
+
 
 """## Evaluating Recipes (Fitness Function)
 
 The following function defines how individuals are evaluated:
 """
 
-
 def evaluate_recipes(recipes):
+  # Fitness is based on:
+  #   - recipe similarity
+  #   - recipe class proportions
+  #   - unique ingredient combinations?
+
+  recipe_similarity = [0] * len(recipes)
+  recipe_ratio = [0] * len(recipes)
+
+  # Recipe similarity
   # amount of occurences for every unique ingredient
   ingredients_weighted = Counter([ingredients['ingredient'] for ingredients in all_ingredients])
 
-  recipe_weighted = [0] * len(recipes)
-
-  for recipe in recipes:
-    recipe['fitness'] = 0
+  for r in range(len(recipes)):
+    recipe = recipes[r]
     ingredients = recipe['ingredients']
 
-    for ingredients in ingredients:
-      r_i = ingredients['ingredient']
-      recipe['fitness'] += ingredients_weighted[r_i]-1
+    for ingredient in ingredients:
+      r_i = ingredient['ingredient']
+      recipe_similarity[r] += ingredients_weighted[r_i]-1
 
-    # recipe['fitness'] /= len(ingredients_weighted)
+    recipe_similarity[r] = int(recipe_similarity[r] / len(ingredients_weighted) * 100.0)
 
-  # fitness = sum (amount of recipes that contain ingredient for every ingredient)
-  print([recipe['fitness'] for recipe in recipes])
+  #print(recipe_similarity)
+
+
+  # Recipe ratio
+  for r in range(len(recipes)):
+    recipe = recipes[r]
+    ingredients = recipe['ingredients']
+    recipe_ratio[r] = Counter(i['class'] for i in ingredients)
+
+
+  pprint.PrettyPrinter(indent=2, depth=2).pprint(recipe_ratio)
+
+
+  for r in range(len(recipes)):
+    recipe = recipes[r]
+    recipe['fitness'] = recipe_similarity[r]
+
+  # return recipe_ratio
+
+
 
 """We can use this to evaluate the initial population."""
 
@@ -183,7 +201,7 @@ population = sorted(population, reverse = True, key = lambda r: r['fitness'])
 max_fitnesses = []
 min_fitnesses = []
 
-num_runs = 1
+num_runs = 0
 
 for i in range(num_runs):
   R = generate_recipes(population_size, population)
@@ -193,18 +211,18 @@ for i in range(num_runs):
 
 """We can check on the progress of the evolution by plotting the fitness history we captured above. Here we plot both the maximum fitness each population and the range fitnesses (filling between max fitness and min fitness)."""
 
-import matplotlib.pyplot as plt
-
-x  = range(num_runs)
-plt.plot(x, max_fitnesses, label="line L")
-plt.fill_between(x, min_fitnesses, max_fitnesses, alpha=0.2)
-plt.plot()
-
-plt.xlabel("generation")
-plt.ylabel("fitness")
-plt.title("fitness over time")
-plt.legend()
-plt.show()
+# import matplotlib.pyplot as plt
+#
+# x  = range(num_runs)
+# plt.plot(x, max_fitnesses, label="line L")
+# plt.fill_between(x, min_fitnesses, max_fitnesses, alpha=0.2)
+# plt.plot()
+#
+# plt.xlabel("generation")
+# plt.ylabel("fitness")
+# plt.title("fitness over time")
+# plt.legend()
+# plt.show()
 
 """Finally, because the recipe is always sorted according to fitness, the fittest individual will be the one in the first position, so we can print this out."""
 

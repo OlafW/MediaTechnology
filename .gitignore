@@ -4,6 +4,7 @@
 *.obj
 *.wav
 *.mp3
+__pycache__
 ITP_Exam
 RSAI
 SimplePIERRE_tutorial
