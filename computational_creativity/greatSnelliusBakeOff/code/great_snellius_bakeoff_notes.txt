@@ -1,12 +1,13 @@
 to do:
 
-make different classes, remove role
+make different classes, remove role: done
 fitness: novelty
 presentation
-	- name generator 
+	- name generator: done 
 	- readable ingredient list
-get more recipes
+get more recipes!!!!!
 write logbook
+
 
 
 ingredient [name, class, (role) amount, unit]

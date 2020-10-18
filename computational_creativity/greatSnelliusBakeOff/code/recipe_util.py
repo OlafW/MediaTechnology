@@ -7,13 +7,13 @@ def convert_to_ml(recipes):
             unit = ingredient['unit']
             amount = ingredient['amount']
 
-            if (unit == "cup"):
+            if unit == "cup":
                 amount *= 236.6
-            elif (unit == "tsp"):
+            elif unit == "tsp":
                 amount *= 4.9
-            elif (unit == "tbsp"):
+            elif unit == "tbsp":
                 amount *= 14.8
-            elif (unit == "eggs"):
+            elif unit == "eggs":
                 amount *= 45
 
             ingredient['amount'] = amount

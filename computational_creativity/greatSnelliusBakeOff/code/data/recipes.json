@@ -108,8 +108,8 @@
             "yield": 15,
 
             "ingredients": [
-                {"ingredient": "flour", "class": "base", "amount": 0, "unit": "cup"},
-                {"ingredient": "butter", "class": "base", "amount": 0, "unit": "cup"},
+                {"ingredient": "flour", "class": "base", "amount": 2, "unit": "cup"},
+                {"ingredient": "butter", "class": "base", "amount": 0.5, "unit": "cup"},
                 {"ingredient": "baking soda", "class": "rising", "amount": 0.25, "unit": "tsp"},
                 {"ingredient": "egg", "class": "binding", "amount": 2, "unit": "eggs"},
 
