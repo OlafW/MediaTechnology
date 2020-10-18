@@ -2,38 +2,32 @@
     "recipes": [
         {
             "name": "Classic Chocolate Chip",
-            "type": "flavour",
-            "amount": 14,
+            "num_cookies": 14,
 
             "ingredients": [
-                {"ingredient": "flour", "class": "base", "role": "savoury", "amount": 2.5, "unit": "cup"},
-                {"ingredient": "butter", "class": "base", "role": "savoury", "amount": 1, "unit": "cup"},
-                {"ingredient": "egg", "class": "base", "role": "binding", "amount": 2, "unit": "none"},
-                {"ingredient": "baking soda", "class": "base", "role": "rising", "amount": 1, "unit": "tsp"},
+                {"ingredient": "flour", "class": "base", "amount": 2.5, "unit": "cup"},
+                {"ingredient": "butter", "class": "base", "amount": 1, "unit": "cup"},
+                {"ingredient": "egg", "class": "binding", "amount": 2, "unit": "eggs"},
+                {"ingredient": "baking soda", "class": "rising", "amount": 1, "unit": "tsp"},
 
-                {"ingredient": "salt", "class": "flavour", "role": "sweet", "amount": 1, "unit": "tsp"},
+                {"ingredient": "salt", "class": "flavour", "role": "salt", "amount": 1, "unit": "tsp"},
                 {"ingredient": "brown sugar", "class": "flavour", "role": "sweet", "amount": 1.25, "unit": "cup"},
                 {"ingredient": "white sugar", "class": "flavour", "role": "sweet", "amount": 0.75, "unit": "cup"},
                 {"ingredient": "vanilla extract", "class": "flavour", "role": "sweet", "amount": 2, "unit": "tsp"},
                 {"ingredient": "chocolate", "class": "flavour", "role": "sweet", "amount": 1, "unit": "tbsp"}
-            ],
-            "nutrition": [
-                {"calories": 85}
-            ],
-            "rating": 0
+            ]
         },
 
         {
             "name": "Salted Chocolate",
-            "type": "salt",
-            "amount": 12,
+            "num_cookies": 12,
 
             "ingredients": [
 
                 {"ingredient": "flour", "class": "base", "role": "savoury", "amount": 1, "unit": "cup"},
                 {"ingredient": "butter", "class": "base", "role": "savoury", "amount": 0.5, "unit": "cup"},
-                {"ingredient": "egg", "class": "base", "role": "binding", "amount": 2, "unit": "none"},
-                {"ingredient": "baking soda", "class": "base", "role": "rising", "amount": 0.5, "unit": "tsp"},
+                {"ingredient": "egg", "class": "binding", "amount": 2, "unit": "eggs"},
+                {"ingredient": "baking soda", "class": "rising", "amount": 0.5, "unit": "tsp"},
 
                 {"ingredient": "brown sugar", "class": "flavour", "role": "sweet", "amount": 7, "unit": "tbsp"},
                 {"ingredient": "white sugar", "class": "flavour", "role": "sweet", "amount": 0.5, "unit": "cup"},
@@ -42,49 +36,38 @@
                 {"ingredient": "cacao powder", "class": "flavour", "role": "sweet", "amount": 0.25, "unit": "cup"},
                 {"ingredient": "chocolate", "class": "flavour", "role": "sweet", "amount": 0.75, "unit": "cup"}
 
-            ],
-            "nutrition": [
-                {"calories": 236.4}
-            ],
-            "rating": 0
+            ]
         },
 
         {
             "name": "Honey Whole Wheat Peanut Butter",
-            "type": "savoury",
-            "amount": 10,
+            "num_cookies": 10,
 
             "ingredients": [
-                {"ingredient": "flour", "class": "base", "role": "savoury", "amount": 1, "unit": "cup"},
-                {"ingredient": "egg", "class": "base", "role": "binding", "amount": 1, "unit": "none"},
-                {"ingredient": "baking soda", "class": "base", "role": "rising", "amount": 0.5, "unit": "tsp"},
-                {"ingredient": "yoghurt", "class": "base", "role": "savoury", "amount": 0.25, "unit": "cup"},
+                {"ingredient": "flour", "class": "base", "amount": 1, "unit": "cup"},
+                {"ingredient": "egg", "class": "binding", "amount": 1, "unit": "eggs"},
+                {"ingredient": "baking soda", "class": "rising", "amount": 0.5, "unit": "tsp"},
+                {"ingredient": "yoghurt", "class": "base", "amount": 0.25, "unit": "cup"},
+                {"ingredient": "peanut butter", "class": "base", "amount": 0.66, "unit": "cup"},
 
-                {"ingredient": "peanut butter", "class": "flavour", "role": "sweet", "amount": 0.66, "unit": "cup"},
                 {"ingredient": "salt", "class": "flavour", "role": "salt", "amount": 0.125, "unit": "tsp"},
-
                 {"ingredient": "brown sugar", "class": "flavour", "role": "sweet", "amount": 0.25, "unit": "cup"},
                 {"ingredient": "honey", "class": "flavour", "role": "sweet", "amount": 0.5, "unit": "cup"},
                 {"ingredient": "vanilla extract", "class": "flavour", "role": "sweet", "amount": 1, "unit": "tsp"}
-            ],
-            "nutrition": [
-                {"calories": 96.1}
-            ],
-            "rating": 0
+            ]
         },
 
         {
             "name": "Cranberry Orange",
-            "type": "flavour",
-            "amount": 48,
+            "num_cookies": 48,
 
             "ingredients": [
-                {"ingredient": "flour", "class": "base", "role": "savoury", "amount": 2.5, "unit": "cup"},
-                {"ingredient": "butter", "class": "base", "role": "savoury", "amount": 1, "unit": "cup"},
-                {"ingredient": "baking soda", "class": "base", "role": "rising", "amount": 0.5, "unit": "tsp"},
-                {"ingredient": "egg", "class": "base", "role": "binding", "amount": 1, "unit": "none"},
+                {"ingredient": "flour", "class": "base", "amount": 2.5, "unit": "cup"},
+                {"ingredient": "butter", "class": "base", "amount": 1, "unit": "cup"},
+                {"ingredient": "baking soda", "class": "rising", "amount": 0.5, "unit": "tsp"},
+                {"ingredient": "egg", "class": "binding", "amount": 1, "unit": "eggs"},
 
-                {"ingredient": "salt", "class": "flavor", "role": "salt", "amount": 0.5, "unit": "tsp"},
+                {"ingredient": "salt", "class": "flavour", "role": "salt", "amount": 0.5, "unit": "tsp"},
                 {"ingredient": "white sugar", "class": "flavour", "role": "sweet", "amount": 1, "unit": "cup"},
                 {"ingredient": "brown sugar", "class": "flavour", "role": "sweet", "amount": 0.5, "unit": "cup"},
                 {"ingredient": "orange zest", "class": "flavour", "role": "sweet", "amount": 1, "unit": "tsp"},
@@ -93,38 +76,29 @@
                 {"ingredient": "cranberries", "class": "topping", "role": "sweet", "amount": 2, "unit": "cup"},
                 {"ingredient": "walnuts", "class": "flavour", "role": "savoury", "amount": 2, "unit": "cup"},
                 {"ingredient": "powdered sugar", "class": "topping", "role": "sweet", "amount": 2, "unit": "cup"}
-            ],
-            "nutrition": [
-                {"calories": 110.2}
-            ],
-            "rating": 0
+            ]
         },
 
         {
             "name": "Bad cookie",
-            "type": "bad",
-            "amount": 0,
+            "num_cookies": 48,
 
             "ingredients": [
-                {"ingredient": "a", "class": "base", "role": "savoury", "amount": 2.5, "unit": "cup"},
-                {"ingredient": "b", "class": "base", "role": "savoury", "amount": 1, "unit": "cup"},
-                {"ingredient": "c", "class": "base", "role": "rising", "amount": 0.5, "unit": "tsp"},
-                {"ingredient": "d", "class": "base", "role": "binding", "amount": 1, "unit": "none"},
+                {"ingredient": "a", "class": "base", "role": "savoury", "amount": 0, "unit": "cup"},
+                {"ingredient": "b", "class": "base", "role": "savoury", "amount": 0, "unit": "cup"},
+                {"ingredient": "c", "class": "base", "role": "rising", "amount": 0, "unit": "tsp"},
+                {"ingredient": "d", "class": "base", "role": "binding", "amount": 0, "unit": "eggs"},
 
-                {"ingredient": "e", "class": "flavor", "role": "salt", "amount": 0.5, "unit": "tsp"},
+                {"ingredient": "e", "class": "flavour", "role": "salt", "amount": 0, "unit": "tsp"},
                 {"ingredient": "f", "class": "flavour", "role": "sweet", "amount": 1, "unit": "cup"},
                 {"ingredient": "g", "class": "flavour", "role": "sweet", "amount": 0.5, "unit": "cup"},
                 {"ingredient": "h", "class": "flavour", "role": "sweet", "amount": 1, "unit": "tsp"},
                 {"ingredient": "i", "class": "flavour", "role": "sweet", "amount": 2, "unit": "tbsp"},
+                {"ingredient": "k", "class": "flavour", "role": "savoury", "amount": 0, "unit": "cup"},
 
-                {"ingredient": "j", "class": "topping", "role": "sweet", "amount": 2, "unit": "cup"},
-                {"ingredient": "k", "class": "flavour", "role": "savoury", "amount": 2, "unit": "cup"},
-                {"ingredient": "l", "class": "topping", "role": "sweet", "amount": 2, "unit": "cup"}
-            ],
-            "nutrition": [
-                {"calories": 0}
-            ],
-            "rating": 0
+                {"ingredient": "j", "class": "topping", "role": "sweet", "amount": 5, "unit": "cup"},
+                {"ingredient": "l", "class": "topping", "role": "sweet", "amount": 5, "unit": "cup"}
+            ]
         }
     ]
 }
