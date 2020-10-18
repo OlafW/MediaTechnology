@@ -1,0 +1,25 @@
+to do:
+
+make different classes, remove role
+fitness: novelty
+presentation
+	- name generator
+	- readable ingredient list
+get more recipes
+write logbook
+
+
+ingredient [name, class, amount, unit]
+
+class:
+	base
+	binding
+	rising
+	flavour
+	topping
+
+roles:
+	savoury	
+	sweet
+	salt
+	fat
