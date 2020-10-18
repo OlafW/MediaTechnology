@@ -3,13 +3,13 @@ to do:
 make different classes, remove role
 fitness: novelty
 presentation
-	- name generator
+	- name generator 
 	- readable ingredient list
 get more recipes
 write logbook
 
 
-ingredient [name, class, amount, unit]
+ingredient [name, class, (role) amount, unit]
 
 class:
 	base
@@ -18,7 +18,7 @@ class:
 	flavour
 	topping
 
-roles:
+roles (not used):
 	savoury	
 	sweet
 	salt

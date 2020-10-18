@@ -2,7 +2,7 @@
     "recipes": [
         {
             "name": "Classic Chocolate Chip",
-            "num_cookies": 14,
+            "yield": 14,
 
             "ingredients": [
                 {"ingredient": "flour", "class": "base", "amount": 2.5, "unit": "cup"},
@@ -20,7 +20,7 @@
 
         {
             "name": "Salted Chocolate",
-            "num_cookies": 12,
+            "yield": 12,
 
             "ingredients": [
 
@@ -41,7 +41,7 @@
 
         {
             "name": "Honey Whole Wheat Peanut Butter",
-            "num_cookies": 10,
+            "yield": 10,
 
             "ingredients": [
                 {"ingredient": "flour", "class": "base", "amount": 1, "unit": "cup"},
@@ -59,7 +59,7 @@
 
         {
             "name": "Cranberry Orange",
-            "num_cookies": 48,
+            "yield": 48,
 
             "ingredients": [
                 {"ingredient": "flour", "class": "base", "amount": 2.5, "unit": "cup"},
@@ -80,24 +80,49 @@
         },
 
         {
-            "name": "Bad cookie",
-            "num_cookies": 48,
+            "name": "Best Browny",
+            "yield": 16,
 
             "ingredients": [
-                {"ingredient": "a", "class": "base", "role": "savoury", "amount": 0, "unit": "cup"},
-                {"ingredient": "b", "class": "base", "role": "savoury", "amount": 0, "unit": "cup"},
-                {"ingredient": "c", "class": "base", "role": "rising", "amount": 0, "unit": "tsp"},
-                {"ingredient": "d", "class": "base", "role": "binding", "amount": 0, "unit": "eggs"},
+                {"ingredient": "flour", "class": "base", "amount": 0.5, "unit": "cup"},
+                {"ingredient": "butter", "class": "base", "amount": 0.5, "unit": "cup"},
+                {"ingredient": "baking soda", "class": "rising", "amount": 0.25, "unit": "tsp"},
+                {"ingredient": "egg", "class": "binding", "amount": 2, "unit": "eggs"},
 
-                {"ingredient": "e", "class": "flavour", "role": "salt", "amount": 0, "unit": "tsp"},
-                {"ingredient": "f", "class": "flavour", "role": "sweet", "amount": 1, "unit": "cup"},
-                {"ingredient": "g", "class": "flavour", "role": "sweet", "amount": 0.5, "unit": "cup"},
-                {"ingredient": "h", "class": "flavour", "role": "sweet", "amount": 1, "unit": "tsp"},
-                {"ingredient": "i", "class": "flavour", "role": "sweet", "amount": 2, "unit": "tbsp"},
-                {"ingredient": "k", "class": "flavour", "role": "savoury", "amount": 0, "unit": "cup"},
+                {"ingredient": "salt", "class": "flavour", "role": "salt", "amount": 0.25, "unit": "tsp"},
+                {"ingredient": "white sugar", "class": "flavour", "role": "sweet", "amount": 1, "unit": "cup"},
+                {"ingredient": "vanilla extract", "class": "flavour", "role": "sweet", "amount": 1, "unit": "tsp"},
+                {"ingredient": "cocoa powder", "class": "topping", "role": "sweet", "amount": 0.33, "unit": "cup"},
 
-                {"ingredient": "j", "class": "topping", "role": "sweet", "amount": 5, "unit": "cup"},
-                {"ingredient": "l", "class": "topping", "role": "sweet", "amount": 5, "unit": "cup"}
+                {"ingredient": "cocoa powder", "class": "topping", "role": "sweet", "amount": 3, "unit": "tbsp"},
+                {"ingredient": "honey", "class": "topping", "role": "sweet", "amount": 1, "unit": "tbsp"},
+                {"ingredient": "cocoa powder", "class": "topping", "role": "sweet", "amount": 0.33, "unit": "tbsp"},
+                {"ingredient": "vanilla extract", "class": "topping", "role": "sweet", "amount": 1, "unit": "tsp"},
+                {"ingredient": "powdered sugar", "class": "topping", "role": "sweet", "amount": 1, "unit": "cup"}
+
+            ]
+        },
+
+        {
+            "name": "Carrot Cake",
+            "yield": 15,
+
+            "ingredients": [
+                {"ingredient": "flour", "class": "base", "amount": 0, "unit": "cup"},
+                {"ingredient": "butter", "class": "base", "amount": 0, "unit": "cup"},
+                {"ingredient": "baking soda", "class": "rising", "amount": 0.25, "unit": "tsp"},
+                {"ingredient": "egg", "class": "binding", "amount": 2, "unit": "eggs"},
+
+                {"ingredient": "salt", "class": "flavour", "role": "salt", "amount": 0.25, "unit": "tsp"},
+                {"ingredient": "white sugar", "class": "flavour", "role": "sweet", "amount": 1, "unit": "cup"},
+                {"ingredient": "vanilla extract", "class": "flavour", "role": "sweet", "amount": 1, "unit": "tsp"},
+                {"ingredient": "cocoa powder", "class": "topping", "role": "sweet", "amount": 0.33, "unit": "cup"},
+
+                {"ingredient": "cocoa powder", "class": "topping", "role": "sweet", "amount": 3, "unit": "tbsp"},
+                {"ingredient": "honey", "class": "topping", "role": "sweet", "amount": 1, "unit": "tbsp"},
+                {"ingredient": "cocoa powder", "class": "topping", "role": "sweet", "amount": 0.33, "unit": "tbsp"},
+                {"ingredient": "vanilla extract", "class": "topping", "role": "sweet", "amount": 1, "unit": "tsp"},
+                {"ingredient": "powdered sugar", "class": "topping", "role": "sweet", "amount": 1, "unit": "cup"}
             ]
         }
     ]

@@ -1,4 +1,3 @@
-# import json
 
 def convert_to_ml(recipes):
     for recipe in recipes:
@@ -20,6 +19,7 @@ def convert_to_ml(recipes):
             ingredient['amount'] = amount
 
     return recipes
+
 
 def convert_from_ml(recipes):
     for recipe in recipes:
@@ -43,14 +43,15 @@ def convert_from_ml(recipes):
     return recipes
 
 
-def normalise_ml(recipes, norm_cookies=10):
+def normalise_ml(recipes, norm_yield=10):
   for recipe in recipes:
     ingredients = recipe['ingredients']
 
     for ingredient in ingredients:
-      ingredient['amount'] *= norm_cookies / recipe['num_cookies']
+      ingredient['amount'] *= norm_yield / recipe['yield']
 
   return recipes
+
 
 def avg_class_ratio(recipes):
   num_class = 5
