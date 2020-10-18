@@ -14,7 +14,7 @@ def convert_to_ml(recipes):
                 amount *= 4.9
             elif (unit == "tbsp"):
                 amount *= 14.8
-            elif (unit == "egss"):
+            elif (unit == "eggs"):
                 amount *= 45
 
             ingredient['amount'] = amount
@@ -35,7 +35,7 @@ def convert_from_ml(recipes):
                 amount /= 4.9
             elif (unit == "tbsp"):
                 amount /= 14.8
-            elif (unit == "egss"):
+            elif (unit == "eggs"):
                 amount /= 45
 
             ingredient['amount'] = amount

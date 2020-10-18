@@ -14,10 +14,17 @@ with open(recipefile) as json_file:
 recipes = data['recipes']
 recipes = recipe_util.convert_to_ml(recipes)
 
+#normalise recipes
 norm_cookies = 10
 recipes = recipe_util.normalise_ml(recipes, norm_cookies)
-
 #pprint.PrettyPrinter(indent=2, depth=4).pprint(recipes)
+
+
+# All ingredient classes and their 'optimal' weighting (%)
+num_class = 5
+ingredient_class = [['base', 0.4], ['binding', 0.05],
+                    ['rising', 0.025], ['flavour', 0.325], ['topping', 0.2]]
+
 
 all_ingredients = []
 for recipe in recipes:
@@ -61,11 +68,6 @@ def evaluate_recipes(recipes):
     recipe_similarity[r] = recipe_similarity[r] / len(ingredients_weighted)
 
   # - Recipe ingredient ratio
-  num_class = 5
-  # All ingredient classes and their 'optimal' weighting
-  ingredient_class = [['base', 0.4], ['binding', 0.1],
-                      ['rising', 0.1], ['flavour', 0.3], ['topping', 0.1]]
-
   for r in range(len(recipes)):
     recipe = recipes[r]
     ingredients = recipe['ingredients']
@@ -88,7 +90,6 @@ def evaluate_recipes(recipes):
   for r in range(len(recipes)):
     recipe = recipes[r]
     recipe['fitness'] = int((recipe_similarity[r] + recipe_ratio[r])/2 * 100.0)
-    # print(recipe['fitness'])
 
 """We can use this to evaluate the initial population."""
 
@@ -257,7 +258,7 @@ for i in range(num_runs):
   min_fitnesses.append(population[-1]['fitness'])
 
 
-#convert back from ml to cup/tsp
+#convert back from amount in ml to original amount
 population = recipe_util.convert_from_ml(population)
 
 """We can check on the progress of the evolution by plotting the fitness history we captured above. Here we plot both the maximum fitness each population and the range fitnesses (filling between max fitness and min fitness)."""
