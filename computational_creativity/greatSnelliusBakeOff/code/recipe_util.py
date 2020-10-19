@@ -1,61 +1,63 @@
+import copy
 
 def convert_to_ml(r):
-  recipes = r.deepcopy()
+  recipes = copy.deepcopy(r)
 
-    for recipe in recipes:
-        ingredients = recipe['ingredients']
+  for recipe in recipes:
+      ingredients = recipe['ingredients']
 
-        for ingredient in ingredients:
-            unit = ingredient['unit']
-            amount = float(ingredient['amount'])
+      for ingredient in ingredients:
+          unit = ingredient['unit']
+          amount = float(ingredient['amount'])
 
-            if unit == 'cup':
-                amount *= 236.6
-            elif unit == 'tsp':
-                amount *= 4.9
-            elif unit == 'tbsp':
-                amount *= 14.8
-            elif unit == 'eggs':
-                amount *= 45.0
+          if unit == 'cup':
+              amount *= 236.6
+          elif unit == 'tsp':
+              amount *= 4.9
+          elif unit == 'tbsp':
+              amount *= 14.8
+          elif unit == 'eggs':
+              amount *= 45.0
 
-            ingredient['amount'] = amount
+          ingredient['amount'] = amount
 
-    return recipes
+  return recipes
 
 
 def convert_from_ml(r):
-    recipes = r.deepcopy()
+  recipes = copy.deepcopy(r)
 
-    for recipe in recipes:
-        ingredients = recipe['ingredients']
+  for rr in recipes:
+      recipe = copy.deepcopy(rr)
+      ingredients = recipe['ingredients']
 
-        for ingredient in ingredients:
-            # ingredient = i.copy()
-            unit = ingredient['unit']
-            amount = ingredient['amount']
+      for ingredient in ingredients:
+        unit = ingredient['unit']
+        amount = ingredient['amount']
 
-            if unit == 'cup':
-                amount /= 236.6
-            elif unit == 'tsp':
-                amount /= 4.9
-            elif unit == 'tbsp':
-                amount /= 14.8
-            elif unit == 'eggs':
-                amount /= 45.0
+        if unit == 'cup':
+            amount /= 236.6
+        elif unit == 'tsp':
+            amount /= 4.9
+        elif unit == 'tbsp':
+            amount /= 14.8
+        elif unit == 'eggs':
+            amount /= 45.0
 
-            ingredient['amount'] = amount
+        ingredient['amount'] = amount
 
-    return recipes
+      rr = copy.deepcopy(recipe)
+
+  return recipes
 
 
 def normalise_ml(r, norm_yield):
-  recipes = r.deepcopy()
+  recipes = copy.deepcopy(r)
 
   for recipe in recipes:
     ingredients = recipe['ingredients']
 
     for ingredient in ingredients:
-      # ingredient = i.copy()
       ingredient['amount'] *= norm_yield / recipe['yield']
 
   return recipes

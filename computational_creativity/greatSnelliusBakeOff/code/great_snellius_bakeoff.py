@@ -12,12 +12,13 @@ with open(recipefile) as json_file:
 
 # convert the units in the recipe to mL
 recipes = data['recipes']
-recipes = recipe_util.convert_to_ml(recipes)
-# pprint.PrettyPrinter(indent=2, depth=4).pprint(recipes)
+# recipes = recipe_util.convert_to_ml(recipes)
+# pprint.PrettyPrinter(indent=2, depth=4).pprint(recipes[0])
+
 
 #normalise recipes
 norm_yield = 25
-recipes = recipe_util.normalise_ml(recipes, norm_yield)
+# recipes = recipe_util.normalise_ml(recipes, norm_yield)
 # pprint.PrettyPrinter(indent=2, depth=4).pprint(recipes)
 
 # All ingredient classes and their average weighting (%)
@@ -197,9 +198,10 @@ def normalise_recipe(r):
       unique_ingredients[i['ingredient']] = i.copy()
   r['ingredients'] = list(unique_ingredients.values())
 
-  for ingredient in r['ingredients']:
+
+  # for ingredient in r['ingredients']:
     # ingredient = i.copy()
-    ingredient['amount'] *= norm_yield / r['yield']
+    # ingredient['amount'] *= norm_yield / r['yield']
 
   # sum_amounts = sum([i['amount'] for i in r['ingredients']])
   # scale = 1000 / sum_amounts
@@ -284,30 +286,37 @@ for i in range(num_runs):
 
 
 # Convert back from amount in ml to original amount
-population = recipe_util.convert_from_ml(population)
+# population = recipe_util.convert_from_ml(population)
 
 # Generate recipe names
 population = generate_recipe_names(population)
 # print([p['name'] for p in population])
 
-"""We can check on the progress of the evolution by plotting the fitness history we captured above. Here we plot both the maximum fitness each population and the range fitnesses (filling between max fitness and min fitness)."""
 
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
+#
+# x  = range(num_runs)
+# plt.plot(x, max_fitnesses, label="line L")
+# plt.fill_between(x, min_fitnesses, max_fitnesses, alpha=0.2)
+# plt.plot()
+#
+# plt.xlabel("generation")
+# plt.ylabel("fitness")
+# plt.title("fitness over time")
+# plt.legend()
+# plt.show()
 
-x  = range(num_runs)
-plt.plot(x, max_fitnesses, label="line L")
-plt.fill_between(x, min_fitnesses, max_fitnesses, alpha=0.2)
-plt.plot()
-
-plt.xlabel("generation")
-plt.ylabel("fitness")
-plt.title("fitness over time")
-plt.legend()
-plt.show()
-
-print("Generated recipe: ", population[0]['name'], '\n')
 r_ingredients = population[0]['ingredients']
 pprint.sorted = lambda x, key=None: x
 
+best_recipe = population[0]
+print("Generated recipe:", best_recipe['name'], '\n')
+print("Ingredients:")
+best_ingredients = best_recipe['ingredients']
 
-pprint.PrettyPrinter(indent=2, depth=4).pprint(population[0])
+ingr_amt_unit = [[best_ingredients[i]['ingredient'],
+                  'amount: ' + str(round(best_ingredients[i]['amount'], 2)) + ' ' +
+                  str(best_ingredients[i]['unit']) ] for i in range (len(best_ingredients))]
+
+
+pprint.PrettyPrinter(indent=4, depth=2).pprint(ingr_amt_unit)
