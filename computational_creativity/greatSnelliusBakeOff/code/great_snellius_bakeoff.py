@@ -13,12 +13,13 @@ with open(recipefile) as json_file:
 # convert the units in the recipe to mL
 recipes = data['recipes']
 recipes = recipe_util.convert_to_ml(recipes)
-
-#normalise recipes
-norm_yield = 10
-recipes = recipe_util.normalise_ml(recipes, norm_yield)
 # pprint.PrettyPrinter(indent=2, depth=4).pprint(recipes)
 
+
+#normalise recipes
+norm_yield = 25
+recipes = recipe_util.normalise_ml(recipes, norm_yield)
+# pprint.PrettyPrinter(indent=2, depth=4).pprint(recipes)
 
 # All ingredient classes and their average weighting (%)
 avg_class_ratio = recipe_util.avg_class_ratio(recipes)
@@ -33,12 +34,6 @@ for recipe in recipes:
 
 ingredients_weighted = Counter([ingredients['ingredient'] for ingredients in all_ingredients])
 
-
-# Init population
-population_size = 20
-population = random.choices(recipes, k=population_size)
-
-#pprint.PrettyPrinter(indent=2, depth=2).pprint(population)
 
 
 """## Evaluating Recipes (Fitness Function)
@@ -84,24 +79,21 @@ def evaluate_recipes(recipes):
             class_weight[c] += i['amount']
 
     for c in range(num_class):
-      class_weight[c] = 1 - abs((class_weight[c]/total_weight) - avg_class_ratio[c][1])
+      # class_weight[c] = 1 - abs(class_weight[c]/total_weight - avg_class_ratio[c][1])
+
+      if class_weight[c] <= avg_class_ratio[c][1]:
+        class_weight[c] /= avg_class_ratio[c][1]
+      else:
+        class_weight[c] = avg_class_ratio[c][1] / class_weight[c]
 
     recipe_ratio[r] = sum(class_weight) / num_class
+
+  # print(recipe_ratio)
 
   # set the fitness for each recipe
   for r in range(len(recipes)):
     recipe = recipes[r]
     recipe['fitness'] = int((recipe_similarity[r] + recipe_ratio[r]) / 2 * 100.0)
-
-  # print([r['fitness'] for r in recipes])
-
-
-"""We can use this to evaluate the initial population."""
-
-evaluate_recipes(population)
-population = sorted(population, reverse = True, key = lambda r: r['fitness'])
-
-#pprint.PrettyPrinter(indent=2, depth=2).pprint(population)
 
 
 # Calculate the mean and std for each unique ingredient
@@ -141,11 +133,8 @@ def select_recipe(recipes):
     f -= recipe['fitness']
   return recipes[-1]
 
-"""## Genetic Operators
 
-The following functions implement the genetic operators of crossover and mutation. Crossover takes two recipes and combines them by choosing a point on each genotype (recipe) to split each list into two, and joining the first sublist from one genotype with the second sublist of the second genotype.
-"""
-
+"""## Genetic Operators"""
 
 def crossover_recipes(r1, r2):
   global recipe_number
@@ -156,6 +145,7 @@ def crossover_recipes(r1, r2):
 
   r = dict()
   r['ingredients'] = r1a + r2b
+  r['yield'] = round((r1['yield'] + r2['yield']) / 2)
 
   return r
 
@@ -163,6 +153,7 @@ def crossover_recipes(r1, r2):
 
 def mutate_recipe(r, mean_std):
   m = random.randint(0, 3)
+
   if m == 0:
     i = random.randint(0, len(r['ingredients'])-1)
     r['ingredients'][i] = r['ingredients'][i].copy()
@@ -193,12 +184,13 @@ def mutate_recipe(r, mean_std):
     if len(r['ingredients']) > 1:
       r['ingredients'].remove(random.choice(r['ingredients']))
 
-"""The following function is domain-specific and normalises a generated recipe by removing duplicate ingredients (combining the amounts of all instances of an ingredient) and rescaling the volume of ingredients listed to 1 litre (1000 units)."""
 
+# Combine same ingredients and normalise based on yield
 def normalise_recipe(r):
   unique_ingredients = dict()
 
   for i in r['ingredients']:
+
     if i['ingredient'] in unique_ingredients:
       n = unique_ingredients[i['ingredient']]
       n['amount'] += i['amount']
@@ -206,11 +198,17 @@ def normalise_recipe(r):
       unique_ingredients[i['ingredient']] = i.copy()
   r['ingredients'] = list(unique_ingredients.values())
 
-  sum_amounts = sum([i['amount'] for i in r['ingredients']])
-  scale = 1000 / sum_amounts
+  for ingredient in r['ingredients']:
+    # ingredient = i.copy()
+    ingredient['amount'] *= norm_yield / r['yield']
 
-  for i in r['ingredients']:
-    i['amount'] = max(1, math.floor(i['amount'] * scale))
+  # sum_amounts = sum([i['amount'] for i in r['ingredients']])
+  # scale = 1000 / sum_amounts
+  #
+  # for i in r['ingredients']:
+  #   i['amount'] = max(1, math.floor(i['amount'] * scale))
+
+
 
 """## Generating Recipes
 
@@ -269,6 +267,7 @@ def generate_recipe_names(recipes):
 To run the genetic algorithm, we repeat here the code to set up and evaluated an initial population, before running the evolutionary process for a number of steps.
 """
 
+population_size = 20
 population = random.choices(recipes, k=population_size)
 evaluate_recipes(population)
 population = sorted(population, reverse = True, key = lambda r: r['fitness'])
@@ -285,9 +284,12 @@ for i in range(num_runs):
   min_fitnesses.append(population[-1]['fitness'])
 
 
-# convert back from amount in ml to original amount
-population = recipe_util.convert_from_ml(population)
+# Convert back from amount in ml to original amount
+
+
+# Generate recipe names
 population = generate_recipe_names(population)
+# print([p['name'] for p in population])
 
 """We can check on the progress of the evolution by plotting the fitness history we captured above. Here we plot both the maximum fitness each population and the range fitnesses (filling between max fitness and min fitness)."""
 
@@ -304,7 +306,13 @@ plt.title("fitness over time")
 plt.legend()
 plt.show()
 
-"""Finally, because the recipe is always sorted according to fitness, the fittest individual will be the one in the first position, so we can print this out."""
+print("Generated recipe: ", population[0]['name'], '\n')
+r_ingredients = population[0]['ingredients']
+pprint.sorted = lambda x, key=None: x
 
-# pprint.PrettyPrinter(indent=2, depth=4).pprint(population)
-print([p['name'] for p in population])
+
+pprint.PrettyPrinter(indent=2, depth=4).pprint(population[0])
+print()
+population = recipe_util.convert_from_ml(population)
+
+pprint.PrettyPrinter(indent=2, depth=4).pprint(population[0])

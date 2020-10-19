@@ -3,18 +3,19 @@ def convert_to_ml(recipes):
     for recipe in recipes:
         ingredients = recipe['ingredients']
 
-        for ingredient in ingredients:
+        for i in ingredients:
+            ingredient = i.copy()
             unit = ingredient['unit']
-            amount = ingredient['amount']
+            amount = float(ingredient['amount'])
 
-            if unit == "cup":
+            if unit == 'cup':
                 amount *= 236.6
-            elif unit == "tsp":
+            elif unit == 'tsp':
                 amount *= 4.9
-            elif unit == "tbsp":
+            elif unit == 'tbsp':
                 amount *= 14.8
-            elif unit == "eggs":
-                amount *= 45
+            elif unit == 'eggs':
+                amount *= 45.0
 
             ingredient['amount'] = amount
 
@@ -25,29 +26,31 @@ def convert_from_ml(recipes):
     for recipe in recipes:
         ingredients = recipe['ingredients']
 
-        for ingredient in ingredients:
+        for i in ingredients:
+            ingredient = i.copy()
             unit = ingredient['unit']
             amount = ingredient['amount']
 
-            if (unit == "cup"):
+            if unit == 'cup':
                 amount /= 236.6
-            elif (unit == "tsp"):
+            elif unit == 'tsp':
                 amount /= 4.9
-            elif (unit == "tbsp"):
+            elif unit == 'tbsp':
                 amount /= 14.8
-            elif (unit == "eggs"):
-                amount /= 45
+            elif unit == 'eggs':
+                amount /= 45.0
 
             ingredient['amount'] = amount
 
     return recipes
 
 
-def normalise_ml(recipes, norm_yield=10):
+def normalise_ml(recipes, norm_yield):
   for recipe in recipes:
     ingredients = recipe['ingredients']
 
-    for ingredient in ingredients:
+    for i in ingredients:
+      ingredient = i.copy()
       ingredient['amount'] *= norm_yield / recipe['yield']
 
   return recipes
