@@ -1,10 +1,11 @@
 
-def convert_to_ml(recipes):
+def convert_to_ml(r):
+  recipes = r.deepcopy()
+
     for recipe in recipes:
         ingredients = recipe['ingredients']
 
-        for i in ingredients:
-            ingredient = i.copy()
+        for ingredient in ingredients:
             unit = ingredient['unit']
             amount = float(ingredient['amount'])
 
@@ -22,12 +23,14 @@ def convert_to_ml(recipes):
     return recipes
 
 
-def convert_from_ml(recipes):
+def convert_from_ml(r):
+    recipes = r.deepcopy()
+
     for recipe in recipes:
         ingredients = recipe['ingredients']
 
-        for i in ingredients:
-            ingredient = i.copy()
+        for ingredient in ingredients:
+            # ingredient = i.copy()
             unit = ingredient['unit']
             amount = ingredient['amount']
 
@@ -45,12 +48,14 @@ def convert_from_ml(recipes):
     return recipes
 
 
-def normalise_ml(recipes, norm_yield):
+def normalise_ml(r, norm_yield):
+  recipes = r.deepcopy()
+
   for recipe in recipes:
     ingredients = recipe['ingredients']
 
-    for i in ingredients:
-      ingredient = i.copy()
+    for ingredient in ingredients:
+      # ingredient = i.copy()
       ingredient['amount'] *= norm_yield / recipe['yield']
 
   return recipes

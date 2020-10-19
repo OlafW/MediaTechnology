@@ -15,7 +15,6 @@ recipes = data['recipes']
 recipes = recipe_util.convert_to_ml(recipes)
 # pprint.PrettyPrinter(indent=2, depth=4).pprint(recipes)
 
-
 #normalise recipes
 norm_yield = 25
 recipes = recipe_util.normalise_ml(recipes, norm_yield)
@@ -285,7 +284,7 @@ for i in range(num_runs):
 
 
 # Convert back from amount in ml to original amount
-
+population = recipe_util.convert_from_ml(population)
 
 # Generate recipe names
 population = generate_recipe_names(population)
@@ -310,9 +309,5 @@ print("Generated recipe: ", population[0]['name'], '\n')
 r_ingredients = population[0]['ingredients']
 pprint.sorted = lambda x, key=None: x
 
-
-pprint.PrettyPrinter(indent=2, depth=4).pprint(population[0])
-print()
-population = recipe_util.convert_from_ml(population)
 
 pprint.PrettyPrinter(indent=2, depth=4).pprint(population[0])
