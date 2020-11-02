@@ -8,56 +8,64 @@
 #X obj 91 57 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X floatatom 447 47 5 0 0 0 - - -;
-#X obj 581 706 dac~;
-#X obj 600 636 tabread4~ buffer;
+#X obj 502 912 dac~;
+#X obj 592 893 tabread4~ buffer;
 #X obj 390 89 *~ 1;
 #X obj 295 140 - 100;
 #X obj 296 170 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
-#X obj 505 570 line~;
-#X obj 582 661 *~;
+#X obj 497 827 line~;
+#X obj 574 918 *~;
 #X obj 389 319 tabwrite~ buffer;
-#X msg 506 524 \$1 5;
+#X msg 498 781 \$1 5;
 #X obj 578 134 env~;
 #X obj 578 173 >;
 #X obj 751 133 rmstodb;
 #X obj 578 242 sel 1;
 #X floatatom 751 162 5 0 0 0 - - -;
 #X obj 755 59 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4400 1;
+-1 -1 2500 1;
 #X obj 751 82 / 127;
 #X obj 578 337 delay 1000;
-#X obj 600 609 line~;
-#X obj 659 397 delay 1000;
+#X obj 592 866 line~;
+#X obj 689 398 delay 1000;
 #X obj 578 201 spigot 1;
-#X obj 746 283 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 746 283 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X msg 659 457 1;
+#X msg 626 641 1;
 #X obj 578 363 t b b b, f 12;
-#X msg 506 454 1;
-#X obj 659 426 t b b;
-#X msg 691 453 0;
+#X msg 498 754 1;
+#X obj 626 610 t b b;
+#X msg 658 640 0;
 #X obj 578 268 t b b b;
 #X obj 751 109 pow 2;
 #X msg 624 300 0;
 #X text 895 56 env treshold in dB;
 #X obj 753 32 loadmess 25;
 #X text 113 59 Turn on DAC;
-#X obj 808 487 array size buffer;
-#X floatatom 808 347 5 0 0 0 - - -;
-#X obj 808 373 t f f;
-#X msg 600 580 0 \, \$1 \$2;
-#X obj 840 399 * 1000;
-#X obj 808 450 * 44100;
+#X obj 881 483 array size buffer;
+#X floatatom 881 343 5 0 0 0 - - -;
+#X obj 881 369 t f f;
+#X msg 592 837 0 \, \$1 \$2;
+#X obj 913 395 * 1000;
+#X obj 881 446 * 44100;
 #X text 802 210 When level of incoming audio > threshold: - Start recording
 n seconds of audio and disable volume tracking. After recording \,
 playback the sound. After playback \, enable volume tracking again.
 ;
-#X obj 809 321 loadmess 2;
-#X obj 600 517 f;
-#X obj 653 516 f;
-#X obj 600 553 pack f f;
-#X obj 597 395 t b b;
-#X text 789 297 amount of seconds to record;
+#X obj 882 317 loadmess 2;
+#X obj 593 785 f;
+#X obj 646 784 f;
+#X obj 592 810 pack f f;
+#X obj 595 400 t b b, f 8;
+#X text 862 293 amount of seconds to record;
+#X obj 626 586 gate 2, f 13;
+#X obj 790 443 tgl 15 0 empty empty loop 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 714 488 sel 1;
+#X msg 764 508 0;
+#X obj 626 562 + 1;
+#X obj 714 450 t f f;
+#X obj 714 512 t b b;
 #X connect 1 0 7 0;
 #X connect 3 0 2 0;
 #X connect 4 0 7 1;
@@ -79,7 +87,7 @@ playback the sound. After playback \, enable volume tracking again.
 #X connect 20 0 32 0;
 #X connect 21 0 27 0;
 #X connect 22 0 6 0;
-#X connect 23 0 29 0;
+#X connect 23 0 50 1;
 #X connect 24 0 17 0;
 #X connect 25 0 24 1;
 #X connect 26 0 25 0;
@@ -111,3 +119,13 @@ playback the sound. After playback \, enable volume tracking again.
 #X connect 47 0 40 0;
 #X connect 48 0 45 0;
 #X connect 48 1 46 0;
+#X connect 50 0 29 0;
+#X connect 50 1 27 0;
+#X connect 51 0 55 0;
+#X connect 52 0 56 0;
+#X connect 53 0 25 0;
+#X connect 54 0 50 0;
+#X connect 55 0 52 0;
+#X connect 55 1 54 0;
+#X connect 56 0 50 1;
+#X connect 56 1 53 0;
