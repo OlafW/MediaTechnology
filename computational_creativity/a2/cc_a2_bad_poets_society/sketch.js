@@ -1,12 +1,34 @@
 let riMarkov, data;
-
-const N_Markov = 4;
-
-let stanza = [1, 2, 3, 4, 1];
 let elfje = [];
-let maxTries = 50;
+
+const stanza = [1, 2, 3, 4, 1];
+const maxTries = 50;
 
 let firstPress = false;
+let startGeneration = false;
+let showGeneratingText = false;
+
+
+//------------Parameter Settings------------------//
+
+/*
+    N_Markov: the length of each n-gram stored in the RiMarkov model
+    Possible values: (2-10)
+*/
+const N_Markov = 5;
+
+/*
+    completionContexts: determines what to take into account when generating a new sentence
+    - ALL: all lines generated so far
+    - PREV_SENTENCE: only the previous sentence
+    - LAST_WORD: only the last word of the previous sentence
+*/
+const completionContexts = ["ALL", "PREV_SENTENCE", "LAST_WORD"];
+const setContext = completionContexts[2];
+
+//-----------------------------------------------//
+
+
 
 function preload() {
     data = loadStrings("./data/manual1.txt");
@@ -25,23 +47,44 @@ function setup() {
 
 
 function generateElfje() {
+    let unwantedLastPos = ["dt", "vbz", "vbp", "to", "cc", "in", "prp$", "cd"];
+
     for (let i = 0; i < stanza.length; i++) {
         let line;
         let tries = 0;
         let failedCompletion = false;
 
-        let completionContext = elfje.join(' ');
-        // let completetionContext = elfje[i-1];
-
         if (i > 0) {
+            let completionContext;
+
+            switch (setContext) {
+                case "ALL":
+                completionContext = elfje.join(' ');
+                break;
+
+                case "PREV_SENTENCE":
+                completionContext = elfje[i-1];
+                break;
+
+                case "LAST_WORD":
+                let prevTokens= RiTa.tokenize(elfje[i-1]);
+
+                if (i == 4) completionContext = prevTokens[prevTokens.length-2];
+                else        completionContext = prevTokens[prevTokens.length-1];
+
+                break;
+            }
+
             line = generateNumWordsFromCompletion(stanza[i], completionContext);
+
             if (line == -1) {
                 failedCompletion = true;
             }
             else {
                 let last_token = RiTa.tokenize(line).length-1;
 
-                while (containsUnwantedPos(line, [last_token]) && tries < maxTries && !failedCompletion) {
+                while (containsUnwantedPos(line, [last_token], unwantedLastPos) &&
+                       tries < maxTries && !failedCompletion) {
                     line = generateNumWordsFromCompletion(stanza[i], completionContext);
 
                     if (line == -1) failedCompletion = true;
@@ -49,22 +92,28 @@ function generateElfje() {
                 }
             }
         }
+
+        if (tries >= maxTries) {
+            failedCompletion = true;
+            print("too many tries for", i, "at completion()");
+        }
         tries = 0;
 
         if (i == 0 || failedCompletion) {
+            if (failedCompletion) {
+                print("Failed completion at line " + i);
+            }
+
             line = generateNumWords(stanza[i]);
             let last_token = RiTa.tokenize(line).length-1;
 
-            while (containsUnwantedPos(line, [last_token]) && tries < maxTries) {
+            while (containsUnwantedPos(line, [last_token], unwantedLastPos) && tries < maxTries) {
                 line = generateNumWords(stanza[i]);
                 tries++;
             }
         }
+        if (tries >= maxTries) print("too many tries for ", i, "at generate() ");
 
-        line = line.replaceAll(".", ",");
-
-        if (tries >= maxTries) print("too many tries for ", i);
-        tries = 0;
 
         if (i == 3) {
             if (RiTa.isPunctuation(line.charAt(line.length-1))) {
@@ -73,26 +122,7 @@ function generateElfje() {
             else if (!line.endsWith("?")) line += "?";
         }
 
-        // else if (i == 4) {
-        //     let oneLiner = RiTa.stripPunctuation(elfje[3]);
-        //     let completions = riMarkov.getCompletions(RiTa.tokenize(oneLiner));
-        //
-        //     for (let i = 0; i < completions.length; i++) {
-        //         let c = completions[i];
-        //         let pos = RiTa.getPosTags(c);
-        //
-        //         if (/nn.*/.test(pos) || pos == "jj" ||
-        //             pos == "rb" || tries >= maxTries) {
-        //             line = c.toLowerCase();
-        //             // print(line);
-        //             break;
-        //         }
-        //         tries++;
-        //     }
-        // }
-
-        if (tries >= maxTries) print("too many tries for ", i);
-
+        line = line.replaceAll(".", ",");
         elfje[i] = line;
     }
 
@@ -101,24 +131,20 @@ function generateElfje() {
     }
 }
 
-
-function containsUnwantedPos(sentence, tokens=[]) {
+function containsUnwantedPos(sentence, tokens=[], unwantedPos) {
     if (tokens.length == 0) {
         for (let i = 0; i < sentence.length; i++) {
             tokens[i] = i;
         }
     }
 
-    let unwantedPos = ["dt", "vbz", "vbp", "to", "cc", "in", "prp$", "."];
-    let contains_pos = false;
-
     let pos = RiTa.getPosTags(sentence);
-    let token = RiTa.tokenize(sentence);
+    let contains_pos = false;
 
     for (let i = 0; i < tokens.length; i++) {
         for (let j = 0; j < unwantedPos.length; j++) {
+
             if (pos[tokens[i]] == unwantedPos[j]) {
-                // print(token[tokens[i]]);
                 contains_pos = true;
                 break;
             }
@@ -132,7 +158,9 @@ function generateNumWords(N) {
     let words = " ";
     let tries = 0;
 
-    while ((RiTa.tokenize(words).length != N || (words == "" || words == " ")) && tries < maxTries) {
+    while ((RiTa.tokenize(RiTa.stripPunctuation(words)).length != N ||
+            (words == "" || words == " ")) && tries < maxTries) {
+
         words = riMarkov.generateTokens(N);
         words = RiTa.untokenize(words);
         words = RiTa.trimPunctuation(words);
@@ -148,33 +176,41 @@ function generateNumWordsFromCompletion(N, prevLine) {
     let tokens = RiTa.tokenize(RiTa.stripPunctuation(prevLine));
     let completions = riMarkov.getCompletions(tokens);
 
-    let words = "";
+    let words = " ";
     let tries = 0;
+    // if (completions.length == 0) print("stop at first try");
 
-    while (tries < maxTries && completions.length > 0 &&
-           (RiTa.tokenize(words).length != N || (words == "" || words == " "))) {
+    while ((RiTa.tokenize(RiTa.stripPunctuation(words)).length != N || (words == "" || words == " ")) &&
+            tries < maxTries && completions.length > 0) {
 
         let rw = int(pow(random(1), 2) * completions.length);
         let w = completions[rw];
+        w = completions[0];
 
-        if (w != ".") {
-            if (RiTa.isPunctuation(w)) {
+        if (RiTa.isPunctuation(w)) {
+            let wordsTokenized = RiTa.tokenize(words);
+            let tokenStripped = RiTa.tokenize(RiTa.stripPunctuation(words));
+
+            if (!RiTa.isPunctuation(wordsTokenized[wordsTokenized.length-1]) &&
+                tokenStripped != "") {
+
                 words += w;
             }
-            else words += " " + w;
         }
+        else words += " " + w;
 
-        words = RiTa.trimPunctuation(words);
-        // print(prevLine + words);
 
-        tokens = RiTa.tokenize(RiTa.stripPunctuation(prevLine + words))
+        tokens = RiTa.tokenize(RiTa.stripPunctuation(words));
+        // tokens = RiTa.tokenize(RiTa.stripPunctuation(prevLine + words));
+
         completions = riMarkov.getCompletions(tokens);
 
+        // if (completions.length == 0) print("stop at", tries);
         tries++;
     }
 
-    if (RiTa.tokenize(words).length != N) {
-        print("FAILED: generateNumWordsFromCompletion()");
+    if (RiTa.tokenize(RiTa.stripPunctuation(words)).length != N ||
+        words == "" || words == " " || tries >= maxTries) {
         return -1;
     }
     else {
@@ -188,25 +224,45 @@ function generateNumWordsFromCompletion(N, prevLine) {
 function draw() {
     background(255);
 
-    // noFill();
-    // stroke(0);
-    // rect(width/2, height/2, 500, 500);
-
     fill(0);
     noStroke();
-    textSize(40);
     textAlign(CENTER, CENTER);
 
     if (!firstPress) {
         textSize(30);
-        text("Click to generate a new Elfje", width/2, height/2);
+        textStyle(ITALIC);
+
+        let introText = "manuals...\n" +
+                        "they exist\n" +
+                        "for every click\n" +
+                        "Is it clear now?\n" +
+                        "confusion\n";
+
+        text(introText, width/2, height/2);
     }
+
+    else if (showGeneratingText && !startGeneration) {
+        textSize(30);
+        textStyle(ITALIC);
+        text("generating....", width/2, height/2);
+        startGeneration = true;
+    }
+
+    else if (startGeneration) {
+        generateElfje();
+
+        showGeneratingText = false;
+        startGeneration = false;
+    }
+
     else {
+        textSize(40);
+        textStyle(NORMAL);
         text(elfje.join(' '), width/2, height/2);
     }
 }
 
 function mousePressed() {
-    generateElfje();
     firstPress = true;
+    showGeneratingText = true;
 }

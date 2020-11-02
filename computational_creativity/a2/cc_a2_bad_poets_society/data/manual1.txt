@@ -33,9 +33,9 @@ The appliance may not be cleaned or maintained by children,
 unless this is done under supervision.
 Only use materials that are suitable for use in the oven/microwave.
 Regularly clean the appliance and remove food residues.
-English
+
 1 safety instructions
-20 English
+20
 Keep an eye on the appliance when heating food in a plastic or
 paper container using the microwave mode. It could combust
 spontaneously.
@@ -77,7 +77,7 @@ If the connecting cable is damaged, it may only be replaced by
 the manufacturer, its service organisation or similarly qualified
 persons, in order to prevent hazardous situations.
 The electrical connection must meet national and local regulations.
-English 21
+
 The socket and plug must always be within reach.
 The appliance may not be connected to the mains supply
 via a power strip or extension cord. If this is not observed,
@@ -118,7 +118,7 @@ Never submerge the appliance, cord or plug in water.
 This appliance is only suitable for household use. If the appliance
 is not used as intended, no compensation can be claimed in case
 of defects or accidents and the warranty will be invalidated.
-22 English
+22
 Be careful with the following materials and make sure that they
 may be used in the appliance when using the microwave mode:
 - aluminium foil yes
@@ -145,7 +145,7 @@ government regulations.
 Use small pieces to prevent thinner sections of chicken, for example, from getting cooked too quickly.
 Use non-decorated kitchen paper to cover food and absorb fat.
 Remove the cover and make sure the jar is not heated too long. The glass may burst.
-English 23
+
 1. Operating panel
 2. Door handle
 3. Door
@@ -161,7 +161,7 @@ English 23
 5
 6
 7
-24 English
+24
 8. Mode knob
 9. Preheating key
 10. On/off key
@@ -175,7 +175,7 @@ English 23
 8 9 10 11 12 13 14
 17 16
 15
-English 25
+
 4 setting the clock
 When you insert the plug in the socket, 00:00 starts to flash and a sound signal can be heard.
 Turn the adjusting knob to the left or right to set the correct time (24 hour clock).
@@ -202,7 +202,7 @@ Press the key and turn the adjusting knob to set the required time - 60 minutes.
 Press the key to start the oven.
 Allow the appliance to cool down after these 60 minutes and clean the interior once more with warm water and a mild
 cleaning agent. Properly rinse with water only and dry.
-26 English
+26
 5 general operation
 The microwave oven can be used for microwave alone or microwave in combination with an oven mode.
 Always use heat resistant oven dishes made of pottery, glass or plastic. These materials allow the microwaves to
@@ -228,7 +228,7 @@ The steps for setting the time are as follows:
 Attention: If the preparation or heating process is interrupted by opening the door, press the key once more to
 continue the process.
 Press the key to pause the microwave oven. Press the key once more to continue the process.
-It is always possible to adjust the preparation time. Press the key and turn the adjustingknob to adjust the time.
+It is always possible to adjust the preparation time. Press the key and turn the adjusting knob to adjust the time.
 It is always possible to adjust the power. Press the key and turn the adjusting knob to adjust the power.
 Press the key to switch off the microwave oven or cancel a mode or possibly select another.
 If the door is opened during preparation, it is possible that the fan remains active.
@@ -248,7 +248,7 @@ automatic menus
 defrost positions
 ADJUSTING KNOB
 By turning the adjusting knob to the left or right, you can adjust preparation time, temperature or wattage.
-English 27
+
 using the combination positions: microwave with oven
 When using the microwave in combination with an oven mode, several modes are used at the same time. By using the
 microwave, a dish is ready sooner, and the dish is also nicely browned.
@@ -266,7 +266,7 @@ Press the key to start the microwave oven.
 Attention: If the preparation or heating process is interrupted by opening the door, press the key once more to
 continue the process.
 Press the key to pause the microwave oven. Press the key once more to continue the process.
-It is always possible to adjust the preparation time. Press the key and turn the adjustingknob to adjust the time.
+It is always possible to adjust the preparation time. Press the key and turn the adjusting knob to adjust the time.
 It is always possible to adjust the power. Press the key and turn the adjusting knob to adjust the power.
 It is always possible to adjust the temperature. Press the key and turn the adjusting knob to adjust the temperature.
 Press the key to switch off the microwave oven or cancel a mode or possibly select another.
@@ -286,36 +286,36 @@ Press the key to start the microwave oven. The oven starts to heat up.
 Attention: If the baking or heating process is interrupted by opening the door, press the key once more to continue
 the process.
 Press the key to pause the microwave oven. Press the key once more to continue the process.
-It is always possible to adjust the preparation time. Press the key and turn the adjustingknob to adjust the time.
+It is always possible to adjust the preparation time. Press the key and turn the adjusting knob to adjust the time.
 It is always possible to adjust the temperature. Press the key and turn the adjusting knob to adjust the temperature.
 Press the key to switch off the microwave oven or cancel a mode or possibly select another.
 If the door is opened during baking, it is possible that the fan remains active.
 using the oven positions
-28 English
+28
 The microwave oven has 13 automatic preparation programmes. You only need to select the programme and set the weight.
 The power, time and temperature are already set.
 Press the key to switch on the microwave oven.
-Turn the mode knob to the right until the first programme number P01 appears in the display.
+Turn the mode knob to the right until the first programme number 1 appears in the display.
 Press the key to be able to adapt the programme and use the adjusting knob to select the required programme
 number.
 Press the key to be able to adjust the weight. Turn the adjusting knob to the left or right to set the correct weight.
 Press the key to start the microwave oven.
 Programme Type Type of food
-P01 Vegetables Fresh vegetables
-P02 Side dishes Potatoes - cooked (peeled)
-P03 Side dishes Baked potatoes
+1 Vegetables Fresh vegetables
+2 Side dishes Potatoes - cooked (peeled)
+3 Side dishes Baked potatoes
 Turn or shake the potatoes when you
 hear a sound signal. The microwave oven
 automatically goes on to the next phase.
-P04 Chicken/fish Pieces of chicken/fish
+4 Chicken/fish Pieces of chicken/fish
 Turn over the pieces of chicken/fish when you
 hear a sound signal. The microwave oven
 automatically goes on to the next phase.
-P05 Baking Cake
-P06 Baking Apple pie
-P07 Baking Quiche
-P08 Heating Drinks/soup
-P09 Heating A plate of food
+5 Baking Cake
+6 Baking Apple pie
+7 Baking Quiche
+8 Heating Drinks/soup
+9 Heating A plate of food
 P10 Heating Sauce/mash pot/oven dish
 P11 Ready-made Frozen pizza
 P12 Ready-made Frozen oven fries
@@ -328,7 +328,7 @@ When using these programmes, the microwave oven is preheated. During preheating,
 says . After preheating, a sound signal can be heard and flashes. Place the dish.
 These programmes only use the microwave mode.
 automatic preparation programmes
-English 29
+
 defrosting
 There are two defrosting programmes. You only need to select the programme, choose the weight and the time is
 programmed automatically.
@@ -370,7 +370,7 @@ Press down both the and key for 3 seconds. A beep sounds and the symbol indicate
 been activated.
 Deactivating the child lock:
 Press down both the and key for 3 seconds. A beep sounds and the symbol disappears. The child lock is deactivated.
-30 English
+30
 6 cleaning and maintenance
 Switch off the appliance if you want to clean it and allow it to cool down fully. The appliance should not be cleaned with
 a steam cleaner or high pressure cleaner.
@@ -414,12 +414,12 @@ Unable to achieve a particular setting.
 Check in the manual whether the required setting is possible.
 Possibly there is a limit in relation to microwave power at
 a particular setting.
-E1 appears in the display Contact the Inventum customer service.
-E4 appears in the display Contact the Inventum customer service.
+E1 appears in the display Contact the  customer service.
+E4 appears in the display Contact the  customer service.
 E11 appears in the display There is moisture in the operating panel. Allow it to dry before
 you continue to use the appliance.
-E17 appears in the display Contact the Inventum customer service.
-English 31
+E17 appears in the display Contact the  customer service.
+
 8 installation instruction
 Safety during use is only guaranteed if the assembly has taken place in a technically correct way and in accordance with
 these installation instructions. The installer is liable for damage caused by incorrect assembly.
@@ -440,7 +440,7 @@ Attention: any change to the appliance, including replacement of the power suppl
 a certified installer.
 OVERALL DIMENSIONS
 The figures below show the dimensions of the recesses in mm.
-32 English
+32
 BUILDING IN THE MICROWAVE OVEN
 Check that the kitchen furniture and recess meet the set requirements in relation
 to dimensions.
@@ -578,7 +578,7 @@ Avoid excessive thermal stress on the mains cable from extreme heat or cold. Do 
 (e.g. via the respective circuit breaker) and then carefully pull the mains plug from the mains socket. Never use the product if the mains cable is damaged.
 To prevent risks, damaged power cables may only be replaced by the manufacturer, a professional workshop appointed by the manufacturer, or a similarly qualified person.
 Never plug in or unplug the mains plug when your hands are wet.
-Neverpouranyliquidsoverelectricaldevicesorputobjectsfilledwithliquidrightnexttothe device. If liquid or an object enters the interior of the device nevertheless, first power down the respective socket (e.g. switch off circuit breaker) and then pull the mains plug from the mains socket. Do not operate the product anymore afterwards, but take it to a specialist workshop.
+ device. If liquid or an object enters the interior of the device nevertheless, first power down the respective socket (e.g. switch off circuit breaker) and then pull the mains plug from the mains socket. Do not operate the product anymore afterwards, but take it to a specialist workshop.
 Never use the product immediately after it has been brought from a cold room into a warm one. The condensation generated could destroy the product. Allow the device to reach room temperature before connecting and using it. This may take several hours.
 Do not place any objects on the device.
 Do not cover the device's ventilation openings.
@@ -603,22 +603,6 @@ The product may be maintenanced or repaired by a qualified professional only.
 It is prohibited to turn on the device without any food or drink in the cooking chamber (exception: convection operation with preheating).
     26
 
-9. Product overview
- 12
-        POWER
-3 24
-3
-4
-      15
-Zeit 0 Auftauen(kg)
-01
-2
-0.2 35 3
-30 4 25 5 20 6
-15 7 0.4 10 10 9 8
-0.8
-0.6
-                       987 65
 1 Glass tray
 2 Illumination
 3 Rotary power control
@@ -683,7 +667,7 @@ û= not suitable
   Non-heat-resistant glass
   û
  Heat-resistant ceramic
-  
+
   Microwave-safe plastic dish
 
  Paper towel
@@ -746,4 +730,1462 @@ Nominal input power ................. 1050 W
 Nominal output power............... 700 W
 Microwave frequency............... 2450 MHz
 Cooking chamber volume ......... approx. 14 L
-Glass tray Ø................................. 255 mm
+
+
+First carefully read the instruction manual in full prior
+to using the appliance and store the manual in a safe place
+for future reference.
+Only use this appliance for the purposes described in the instruction manual.
+This appliance is only suitable for household use.
+The appliance may be used by children of 8 years and older and
+persons with a limited physical, sensory or mental capacity or lack
+of experience or knowledge, provided they use the appliance
+under supervision or have been instructed about its safe use
+and understand the hazards involved.
+Children must not play with the appliance.
+The appliance may not be cleaned or maintained by children
+younger than 8 years of age, unless this is done under supervision.
+Keep the appliance and cable out of reach of children younger than
+8 years of age.
+Strict supervision is required if the appliance is used by or near
+children.
+Keep hands, feet, loose-fitting clothes, hair and animals out of reach
+of the rotating brush. This is to prevent injury to skin, eyes or ears,
+for example.
+This appliance is intended for household and similar use, such as:
+- in staff kitchens, shops, offices and other work environments;
+- by guests of hotels, motels and other residential environments;
+- in Bed&Breakfast type environments;
+- farms.
+Caution: the appliance may not be used with an external timer
+or a separate remote control.
+Only connect the appliance to alternate current, to an earthed wall
+socket, with a mains voltage that corresponds with the information
+provided on the information plate of the appliance.
+Never bend the power cord sharply or allow it to run across hot parts.
+Do not use the appliance if the plug, cord or appliance are damaged,
+or if the appliance no longer functions properly or if it is damaged
+in any other way. In that case, consult the shop or our customer
+service. Never replace the plug or cord yourself.
+The use of accessories not recommended or sold by
+may cause fire, electrical shocks or injuries.
+
+1 safety instructions
+12
+The brush and vacuum cleaner were specially designed for use
+on carpets and hard floors. In rare cases, and depending on the
+type of floor, it is possible that scratches are made in the surface
+to be cleaned.  is not responsible for any damage made
+on the floor. If necessary, a special parquet brush is available via the
+ webshop.
+If the appliance is not being used or if parts or accessories must
+be mounted or removed or if the appliance is being cleaned,
+fully switch off the appliance and remove the plug from the socket.
+Do not leave the appliance unattended when it is in operation.
+Never place the appliance near appliances that give off heat,
+such as ovens, gas cookers, hotplates, etc.
+Do not use the appliance outdoors or on a wet surface and do not use
+it for picking up moisture.
+Do not pick up lightly flammable materials.
+Do not pick up burning materials such as cigarettes, matches or ash.
+Always make sure the appliance is placed on an even, flat surface
+and is only used indoors.
+Do not stand on the cord while using the appliance.
+Ensure that the cord cannot wrap itself around arms or legs during use.
+Do not use the appliance for cleaning animals or people.
+If the appliance is not used as intended or if the instructions in the
+manual are not observed, no compensation can be claimed in case
+of defects or accidents and the warranty will be invalidated.
+Correct installation and maintenance of the motor filter,  filter
+and dust bag in accordance with the instructions in the manual
+is necessary to prevent defects in the appliance. In case of defects
+caused by incorrect use or not placing the dust bag and filters,
+the warranty becomes invalid.
+Always pull the entire cord out of the appliance when it is being
+used for more than 30 minutes at a time, to prevent the cord
+from overheating.
+Never submerge the appliance, cord or plug in water.
+Make sure that children are unable to touch the cable or appliance.
+Do not allow the cable to run over sharp edges, hot components
+or other sources of heat.
+Do not pull the cord and/or appliance to remove the plug from the
+wall socket. Never touch the appliance with wet or damp hands.
+If you decide to cease using the appliance due to a defect,
+we recommend cutting off the cord after removing the plug
+from the wall socket.
+
+Small household appliances do not belong in the dustbin.
+Take them to the waste processing department concerned
+of your municipality.
+14
+2 product description
+1. Handle
+2. Hose connection
+3. Dust bag full indicator
+4. Knob to set the suction power MIN - MAX
+5. On/off pedal
+6.  filter - under the grille
+7. Cord winding system
+8. Pedal for automatic cord winding
+9. Hose
+10. Handle
+11. Slider for additional suction power control
+12. Snap-on system for connecting the tube to the hose or disconnecting it
+13. Slide button to adjust tube length
+14. Telescopic tube
+15. Floor nozzle with button for retracting and extending the brushes /
+16. Handle of dust bag compartment cover
+17. Storage compartment for accessories
+
+3 before first use
+Follow these instructions when using the vacuum cleaner for the first time: Carefully remove the vacuum cleaner from the packaging
+and remove all traces of packaging from the device and any promotional stickers. Keep the packaging (plastic bags and cardboard)
+out of the reach of children. After unpacking the vacuum cleaner, check the device for external damage that may have occurred
+during transport. Place the vacuum cleaner on a secure, dry and level surface.
+4 assembly
+Make sure the vacuum cleaner is unplugged before (dis)assembling any parts.
+HOSE
+Connecting the hose to the appliance: insert the hose end into the hose socket at the front cover and then lock it by turning it
+clockwise until you hear a click.
+Disconnecting the hose from the appliance: make sure the vacuum cleaner is unplugged. Turn the hose end counter clockwise to
+disconnect it from the appliance.
+TELESCOPIC TUBE
+1. Connect the handle of the hose into the telescopic tube until it clicks.
+2. Set the telescopic tube to the desired length. To do this, pull the slide button upwards and pull the top part of the tube out of the
+bottom part to make it longer. Release the slide button and let the tube snap into place.
+3. Attach the floor nozzle by firmly sliding the tube into the nozzle.
+4. Disconnect the hose from the tube press the button of the click system and pull the hose handle out of the tube.
+ACCESSORIES
+Connect the different nozzle tools to the tube or the handle of the hose for different cleaning purposes
+by firmly sliding the handle into the nozzle.
+1. Round nozzle: can be used to clean furniture, corners of the sealing and blinds
+2. Upholstery nozzle: can be used to clean matrasses, seats of chairs and pillows
+3. Crevice nozzle: can be used to clean corners and tight areas which cannot be reached with
+the combi-brush
+4. Parquet brush: the parquet brush is provided with real natural hair. The long soft hairs prevent scratches
+on the floor. The parquet brush is suitable for parquet floors, laminate or wood floors and all other
+smooth and hard floors.
+5 use
+Check that the voltage stated on the device's information plate matches the voltage used in your region.
+TURNING THE VACUUM CLEANER ON
+1. Place the vacuum cleaner on a dry and level floor.
+2. Pull out the cord by the plug and insert the plug into a power socket.
+3. Turn the vacuum cleaner on by pressing the on/off foot pedal .
+4. Depending on the surface you want to vacuum, you can adjust the suction power. Turn the suction power button left or right in
+between the min and max indicators.
+Minimum power level: for delicate materials
+Medium power level: furniture, carpets and matresses
+Maximum power level: tiles, wood or other hard floors
+5. Depending on the type of floor you want to vacuum, you can adjust the floor nozzle.
+ For cleaning hard floors, make sure the brushes in the floor nozzle are down.
+ For cleaning carpeting or a carpet, make sure that the brushes in the floor nozzle are retracted.
+When it is hard to move the brush over the surface you can decrease the suction power with the button to set the suction
+power min - max or open the the additional suction power control on the handle of the hose.
+TURNING THE VACUUM CLEANER OFF
+1. Turn the vacuum cleaner off by pressing the on/off foot pedal .
+2. Unplug the vacuum cleaner, hold the plug and automatically rewind the cord by pressing the cord rewinding foot pedal . Guide
+the cord with your hand to prevent possible damage. The power cord will be drawn in the vacuum cleaner.
+16
+1 2
+3
+4
+6 maintenance
+Check the hose, dust bag and filters regularly to prevent any problems. If the hose is clogged, empty it. Replace the dust bag when
+it is full and clean or replace the filters when they are dirty.
+DUST BAGS AND FILTERS
+The disposable dust bag and the motor filter play an important part in the efficiency of the vacuum cleaner. The dust bag is for
+capturing the dirt, but the motor filter needs to be porous enough to allow air to pass through at the same time.
+When the dust bag or motor filter is clogged, no air can pass through the cleaner and the vacuum cleaner will not clean, regardless
+how powerful the unit is.
+Therefore change the dust bag frequently and replace the motor filter every four dust bags, to ensure the vacuum cleaner
+to operate at maximum efficiency. The air flow can be restricted very quickly by some fine particles and will decrease the
+performance even before the dust bag appears to be full. Therefore, the dust bag and motor filter may need to be changed more
+often when vacuuming carpet cleaners, powder, plaster dust or other fine substances.
+REPLACING THE DUST BAG AND REPLACING THE MOTOR FILTER
+Make sure to turn off and unplug the vacuum cleaner before replacing the dust bag or the motor filter.
+Do not use the vacuum cleaner without a motor filter or dust bag.
+Change the dust bag when the full dust bag indicator turns red or when the dust bag appears to be
+full.
+Open the dust bag compartment by pushing the clip upwards and lift the lid.
+The motor filter [1] should be replaced every four dust bags. Take out the motor filter by sliding it
+upwards. Now you can replace it with a new one.
+Slide the full dust bag carefully out of the dust bag frame [2] and dispose of it.
+Slide a new dust bag [3] in the dust bag frame.
+Close the dust bag compartment and push the lid back into place. The opening of the dust bag is
+automatically pushed into the right position when closing the lid. The lid of the dust bag compartment
+cannot be closed if the dust bag is not in place. If the lid cannot be closed, replace the dust bag again
+according to the instructions.
+CLEANING OR REPLACING THE  FILTER
+The  filter cleans the air one last time before it leaves the vacuum cleaner. Clean the  filter at least
+once per six months or when it is very dirty. Replace a damaged  filter with a new original  filter.
+Open the grid [4] that covers the  filter by pushing the clip.
+Pull the clip back and take out the  filter [5].
+Rinse the  filter under lukewarm water and let it air dry completely. Do not use any cleaning agents or
+brushes.
+Put the  filter back into place, when dry, or replace it by a new one.
+Replace the grid. Make sure that the grid is properly placed.
+Attention
+Use the vacuum cleaner only when the filters and a dust bag are in place. If not, it can lead to loss of
+suction power or damage to the motor.
+Unplug the vacuum cleaner before cleaning or replacing the filters.
+Torn filters or filters that do not fit properly can cause damage to the engine. Replace a damaged filter
+by an original new one.
+Do not clean the filters in a dishwasher.
+Do not use a hair dryer to dry the filters.
+STORAGE
+The vacuum cleaner can be stored in two ways. At the back - parking position - or at the bottom, uses less
+space.
+Rewind the cord by pressing the cord rewinding foot pedal .
+Push the slide button on the telescopic tube upwards and push the telescopic tube together to make it
+shorter. Release the slide button and let the tube snap into place.
+Slide the floor nozzle in the attachment at the back of the device - parking position - or place the vacuum
+cleaner upright and slide the floor nozzle in the attachment [6] at the bottom of the appliance.
+
+3
+4
+1
+2
+1
+5
+6
+18
+Problem Possible cause Solution
+The suction has decreased. The dust bag is full. Remove the full dust bag and place a new one.
+The filters are clogged. Replace the motor filter for a new one or clean
+the  filter according to the instructions.
+The button for the suction power is not set
+to max or the extra suction power control
+on the handle is open.
+Set the suction power to maximum or close the
+control for extra suction power on the handle
+of the hose.
+It is hard to move the brush over
+the surface.
+The suction power is set too high. Decrease the suction power or open the extra
+suction power control on the handle.
+The button on the brush is set on the wrong
+setting.
+Make sure the brushes are retracted on carpet.
+Make sure the brushes are down on a hard floor.
+The vacuum cleaner makes
+more noise.
+The tube or hose is clogged. Disconnect the tube and the hose and empty
+them.
+The motor filter or  filter is clogged. Replace the motor filter.
+Clean or replace the  filter.
+The dust bag is full. Remove the full dust bag and place a new one.
+The dust bag compartment
+cannot be closed.
+There is no dust bag in place or placed
+incorrectly.
+Place the dust bag (again) according to the
+instructions and close the compartment.
+7 frequently asked questions
+Contents
+1 Introduction
+2 Safety
+3 Product fiche
+4 Description
+5 Operation
+6 Cleaning and maintenance
+7 Extra information
+8 Troubleshooting
+9 General terms and conditions of service and warranty
+1 Introduction
+HOW TO USE THIS DOCUMENT
+1. Read this document completely. Make sure that you know and understand all the instructions.
+2. Obey the safety instructions to prevent injury and/or damage to the appliance and its surroundings.
+3. Do the procedures completely and in the given sequence.
+4. Keep this document in a safe area for future use. This document is a part of the appliance.
+SYMBOLS USED IN THIS DOCUMENT
+Safety symbol Function Description
+Warning "Warning" means that injury or death
+is possible if you do not obey the
+instructions.
+Caution "Caution" means that damage to the
+appliance is possible if you do not
+obey the instructions.
+Note "Note" is used to give additional
+information.
+2 Safety
+GENERAL SAFETY INSTRUCTIONS
+Fully read the instruction manual prior to using the appliance.
+Carefully store the instruction manual for future reference.
+Only use this appliance for the purposes described in the
+instruction manual. If the appliance is used for other purposes
+the full responsibility of any consequences lies with the user.
+Any damages to the appliance or other products are not covered
+by the warranty.
+32
+If the safety instructions and warnings are not observed, the
+manufacturer cannot be held liable for any resulting damage.
+Make sure that the appliance is placed out of reach of children.
+Children are not always able to understand potential risks.
+Teach children how to handle electrical appliances in a
+responsible way.
+This appliance cannot be used by children from 0 to 8 years.
+This appliance can be used by children aged from 8 years and
+above and persons with reduced physical sensory or mental
+capabilities or lack of experience and knowledge if they have
+been given supervision or instruction concerning use of
+appliance in a safe way and understand the hazards involved.
+Keep the appliance and the mains cable out of reach of children
+younger than 8 years.
+Children are not allowed to perform cleaning and maintenance.
+Do not let children play with the appliance.
+DELIVERY
+Do a check for damage to the packaging or the appliance that
+resulted during transportation.
+Do not use a damaged appliance. Contact your supplier.
+Dispose of the packaging materials according to local
+regulations.
+Keep the packaging material out of reach from children. Danger
+of suffocation.
+INSTALLATION
+This appliance should be installed and repaired by an authorized
+service only.
+Place and connect the appliance according to the installation
+regulations.
+Make sure that the appliance is not plugged in during
+placement.
+
+Check whether the indoor electrical fuse system is connected
+according to the regulations.
+All electrical connections must match the values of the rating
+plate.
+If the mains cable is damaged, it can only be replaced by the
+service organizations of the manufacturer or equivalent qualified
+persons.
+Make sure that the appliance is not placed on the mains cable.
+Do not use an extension cable or a multiple socket for the
+connection. The mains plug must be easily accessible after
+installing the appliance.
+Do not excessively bend the water inlet and drain hoses or the
+mains cable during installation. Make sure that the water inlet
+and drain hoses or the mains cable do not become stuck.
+After installing the appliance, make sure that you run the
+appliance without dishes for the first time.
+POSITIONING THE APPLIANCE
+When determining the place of the appliance, make sure that
+you choose a place where you can easily load and unload it.
+Do not place the appliance in a location where the room
+temperature can be below 0°C.
+Place the appliance close to a water tap or drain and mains
+socket. Keep in mind that the connections will not be changed
+when they are made.
+Do not hold the appliance at the door or control panel to move it.
+Make sure that the water inlet and outlet hoses do not get stuck
+while placing the appliance.
+Place the appliance in a safe and level location.
+Make sure that the appliance is level and balanced by adjusting
+the feet. When the appliance is placed correctly the door opens
+and closes easily.
+34
+WATER CONNECTION
+Make sure that the indoor plumbing is suitable for installing the
+appliance.
+Install a filter at the water supply to avoid damage to the
+appliance due to contamination from the water (sand, clay, rust,
+etc.).
+Use the new water inlet hose supplied with the appliance.
+Before making the connection, run water through the hose.
+Make sure that you connect the water inlet hose directly to the
+water tap. The pressure of the water tap must be a minimum of
+0,03 MPa and a maximum of 1 MPa. Install a pressure relief
+valve if the pressure is more than 1 MPa.
+After connecting the appliance, open the water tap completely
+and do a check for leaks.
+The appliance is supplied with a double-walled aquastop. The
+system automatically cuts off the water supply if the water inlet
+hose is leaking and the space between the walls is filled with
+water. Do not cut into the aquastop and make sure that the
+aquastop does not get twisted or stuck.
+Do not use a drain hose that is longer than 4 meter. As a result,
+dishes can remain dirty. The manufacturer will not accept
+responsibility.
+The appliance must be connected to the water mains using the
+newly supplied hose sets. Do not reuse old hose sets.
+ELECTRICAL CONNECTION
+Make sure that the mains plug of the appliance is connected to a
+grounded mains socket. The manufacturer is not responsible for
+damage resulting from using the appliance with a mains socket
+that is not grounded.
+Make sure that the voltage and the frequency values for the
+current correspond to the values of the rating plate.
+
+The electrical system in your home must be supplied with a 16
+Amp fuse. The appliance is designed for connecting to 220-240
+V ~50Hz.
+Do not connect the appliance during placement.
+Use the provided mains plug.
+The mains cable of the appliance must only be replaced by an
+authorized service or an authorized electrician. Failure to do so
+can lead to accidents.
+For safety reasons, make sure that you disconnect the mains
+plug when a program has finished. Do not disconnect the mains
+plug when your hands are wet. This can result in electric shock.
+Always pull the mains plug when you disconnect the appliance.
+Do not pull the mains cable.
+SAFETY INSTRUCTIONS FOR OPERATION
+This appliance is intended to use in household and similar
+applications, such as shops, offices and other working
+environments, farm houses, customers of motels, hotels and
+other residential environments and bed and breakfasts.
+For safety reasons, only use accessories and spare parts from
+the manufacturer that are suitable for your appliance.
+This appliance must be grounded, this prevents the risk of
+electric shock in the event of an error or fault. The appliance has
+a grounded mains cable and mains plug. Only connect the
+mains plug to a grounded mains socket that is installed
+according to local electrical regulations.
+Incorrectly connecting the mains cable can result in a life
+threatening situation. In case of doubt, contact a qualified
+electrician or service technician.
+Do not make changes to the mains plug. If the mains plug does
+not fit into the mains socket, contact a qualified electrician.
+Do not place heavy objects on the opened door of the appliance.
+36
+Do not stand on the opened door of the appliance. The
+appliance can fall over which can result into damage to the
+appliance.
+Do not put any chemical dissolving agents such as solvents in
+the appliance. There is a risk of explosion.
+Do not clean unsuitable plastic dishes in the appliance. Only
+dishes with a mark, indicating that they are dishwasher-safe can
+be cleaned in the appliance. Follow the instructions of the
+manufacturer when dishes do not have a mark.
+Only use detergent, rinse aid and salt that is intended for
+dishwashers. The manufacturer will not be responsible for any
+damage resulting from using unsuitable products.
+Keep detergent and rinse aid out of reach of children.
+Keep children away from the appliance when the door is open.
+There can be cleaning agent present in the appliance. When
+cleaning agent is swallowed, immediately consult a doctor and
+take the packaging.
+Some dishwasher detergents are strongly alkaline and can be
+extremely dangerous if swallowed. Avoid contact with the skin
+and eyes. Keep children and pets away from the appliance
+when the door is open. Check that the detergent reservoir is
+empty after completion of the wash cycle.
+Keep the door closed. You can fall.
+Avoid contact between the cleaning agent and your skin and
+eyes.
+Make sure that all loose components in the appliance are fitted
+correctly.
+Do not open the door of the appliance during operation. Hot
+water can come out.
+Do not use the appliance for any other purpose than washing
+dishes.
+Only use the appliance in a frost free room.
+
+Remove the door or deactivate the lock when disposing of the
+appliance. Make sure that children cannot lock themselves in an
+old appliance.
+Make sure that the detergent reservoir is empty at the end of a
+wash cycle.
+Make sure that you fill the salt and rinse aid reservoir before first
+use and when the indicators are on.
+Make sure that you set the salt consumption before use.
+Make sure that you disconnect the appliance before cleaning or
+performing repairs. Remove the mains plug from the mains
+socket or turn off the switch in the fuse box.
+Make sure that long and/or sharp items of cutlery are placed
+facing down in the cutlery basket or are placed horizontally in
+the upper basket or the cutlery drawer.
+Do not put any items in the appliance that are not suitable for
+dishwashing.
+Do not fill a basket above the capacity. The manufacturer will
+not be responsible for damage to the appliance caused by
+movement of a basket.
+Do not drink the water from the appliance. The water is not
+suitable for consumption.
+Malfunctions of the appliance must be repaired by a qualified
+service technician. Repairs that are performed by other persons
+are not covered by the warranty.
+3 Product fiche
+PRODUCT FICHE
+Item Specification
+Model IVW6040A
+Number of place settings 15 couverts
+Energy efficiency class  A+++
+Annual power consumption [Aec] kWh  241
+Power consumption standard cycle [Et] 0.84
+Power consumption in OFF mode [Po] 0.50
+38
+Item Specification
+Power consumption in standby mode [PI] 1.00
+Annual water consumption  2520
+Drying efficiency class  A
+Standard program ECO
+Standard program duration  254
+Noise level dB(A) 39
+Type of appliance Built-in
+ A+++ (highest efficiency) to D (lowest efficiency)
+ Based on 280 standard cleaning cycles. The actual power/water consumption depends on the actual frequency
+of usage.
+ A (highest efficiency) to G (lowest efficiency)
+ The standard program is suitable for cleaning normally soiled tableware. It is the most efficient program in
+terms of the combined energy and water consumption for that type of tableware.
+Note:
+The values are measured in accordance with standards under specified operating conditions. Results
+can vary greatly to quantity and dishes, water hardness, amount of detergent, etc.
+GENERAL SPECIFICATIONS
+Item Specification
+Fully integrated Yes
+Color of control panel Black stainless steel
+Number of spray arms 3
+Upper basket height adjustable Yes
+Maximum amount of place settings 15
+Half-load option Yes
+Extra-fast option Yes
+Extra-silent option Yes
+Timer [hours] 1-19
+Type of display LED display
+Aquastop Yes
+Type of drying system Turbo
+Interior light 4 spots
+DIMENSIONS AND WEIGHT
+Item Specification
+Dimensions (W x D x H) [mm] 598 x 550 x 820
+Built-in height [mm] 820-870
+Built-in width [mm] 600
+Built-in depth [mm] 570
+Height of appliance door (min. & max.) [mm] 647-717
+
+Item Specification
+Net weight [kg] 38
+Gross weight [kg] 40
+Weight of appliance door (min. & max.) [kg] 3-8
+TECHNICAL SPECIFICATIONS
+Item Specification
+Total power consumption [W] 1900
+Heating power [W] 1800
+Pump power [W] 100
+Drain pump power [W] 30
+Rated voltage [V] / frequency [Hz] 220-240 / 50
+Water supply pressure [MPa] 0.03 (0.3 bar) - 1 (10 bar)
+Current [A] 10
+Length of mains cable [m] 1.65
+Type of mains plug EU/TR
+Type of supply hose connection 3/4 inch, inner thread
+Position of supply hose Right rear
+Length of supply hose [m] 1.70
+Position of outlet hose Right rear
+Length of outlet hose [m] 2.00
+4 Description
+INTENDED USE
+The appliance is intended to wash dishes.
+Do not use the appliance for any other purpose than described in this document.
+BUILT-IN DISHWASHER
+(Figure 1)
+A Nozzle of the cutlery drawer
+B Spots
+C LED indicator
+D Cutlery drawer
+E Upper basket
+F Lower basket
+G Rating plate
+H Control panel
+I Detergent and rinse aid reservoir
+J Cutlery basket
+K Salt reservoir
+L Filters
+M Lower spray arm
+N Upper spray arm
+40
+Item Function
+Nozzle of the cutlery drawer To clean the dishes in the cutlery drawer.
+Spots To provide light inside the appliance during loading and
+unloading:
+The spots come on when the door is open.
+The spots go off when the door is closed.
+When the appliance is in standby, the spots turn off
+4 minutes after opening the door. If you push a
+button during this time, the spots come on again.
+LED indicator To show the state of the appliance. Refer to section
+'LED indicator'.
+The LED indicator projects a light on the floor.
+Cutlery drawer Refer to section 'Loading the appliance'.
+Upper basket Refer to section 'Loading the appliance'.
+Lower basket Refer to section 'Loading the appliance'.
+Rating label To show the specifications of the appliance.
+Control panel Refer to section 'Control panel'.
+Detergent and rinse aid reservoir To hold the detergent and rinse aid.
+Cutlery basket Refer to section 'Loading the appliance'.
+Salt reservoir To hold the salt.
+Filters To keep the appliance free from contamination.
+Lower spray arm To clean the dishes in the lower basket.
+Upper spray arm To clean the dishes in the upper basket.
+CONTROL PANEL
+(Figure 2)
+A On/off button
+B Programs
+C Display
+D Program selector button
+E Timer button
+F Tablet detergent button
+G Extra-silent button
+H Half-load / extra-fast button
+I Extra-fast indicator
+J Half-load indicator
+K Salt indicator
+L Rinse aid indicator
+M Ready indicator
+Item Function
+On/off button To start or stop the appliance.
+Programs To show an overview of the available programs. Refer to
+section 'Programs'.
+Display To show the remaining time of the selected program and
+the timer.
+Program selector button To select a program.
+Timer button To delay the start of a program.
+Tablet detergent button To indicate you use a combined detergent that includes
+salt and rinse aid.
+Extra-silent button To select the extra-silent option. The appliance has a
+reduced noise level of 36 dB.
+
+Item Function
+Half-load / extra-fast button To select an area for dishwashing: the upper basket,
+the lower basket or both baskets.
+To select the extra-fast option. The program time
+reduces.
+Extra-fast indicator To show that the extra-fast option is selected.
+Half-load indicator To show which area for dishwashing is selected:
+The upper indicator is on, when the upper basket is
+selected as a dishwashing area.
+The lower indicator is on, when the lower basket is
+selected as a dishwashing area.
+Both indicators are on, when both the upper and the
+lower basket are selected as dishwashing areas.
+Salt indicator To show that the level of salt is low.
+The indicator is on when the salt reservoir is almost
+empty.
+Rinse aid indicator To show that the level of rinse aid is low.
+The indicator is on when the rinse aid reservoir is almost
+empty.
+Ready indicator To show that a program is finished.
+PROGRAMS
+Icon Name Description Time
+[min.]
+P1 - Quick rinse Fastest program for lightly soiled and recently used
+dishes. The program is suitable for 4 place settings.
+14
+P2 - Quick '30 Short program for lightly soiled dishes, such as cups and
+glasses.
+30
+P3 - Eco Daily program for normally soiled dishes. The program
+takes longer, but uses less water and slowly heats for
+lower energy consumption.
+254
+P4 - Duo wash Program for both lightly soiled, delicate glassware and
+heavily soiled dishes at the same time.
+112
+P5 - Quick '50 Short program for normally soiled dishes. 50
+P6 - Hygiene Program for heavily soiled dishes that need a hygienic
+cleaning.
+154
+P7 - Auto delicate Auto program for normally soiled, delicate dishes. 64-91
+42
+Icon Name Description Time
+[min.]
+P8 - Auto basic Auto program for normally soiled dishes. 100-122
+P9 - Auto intensive Auto program for heavily soiled dishes. 111-179
+Note:
+For the auto delicate, auto basic and auto intensive programs, the appliance automatically adjusts the
+washing time, the temperature and the amount of water based on the soil level of the dishes.
+5 Operation
+PREPARING FOR OPERATION
+1. Do a check if the electricity and the water supply connections of the appliance match the values indicated in the
+installation instructions.
+2. Remove all packaging material inside the appliance.
+3. Fill the salt reservoir. Refer to section 'Filling the salt reservoir'.
+4. Fill the rinse aid reservoir. Refer to section 'Filling the rinse aid reservoir'.
+FILLING THE SALT RESERVOIR
+For a good result the appliance needs soft (less calcareous) water. Salt is used to soften the water and it prevents
+white lime residues on your dishes and the interior of the appliance.
+Caution:
+Only use salt that is suitable for a dishwasher. Do not use table salt.
+Note:
+Fill the salt reservoir when the salt indicator on the control panel is on.
+1. Remove the lower basket.
+2. Turn the cap (A) of the salt reservoir counter-clockwise to remove it.
+3. Fill the salt reservoir with water.
+Note:
+You only have to fill the salt reservoir with water before first use of the appliance.
+4. Put a funnel in the opening of the salt reservoir.
+5. Fill the reservoir with salt until the overflow level.
+6. Install the cap of the salt reservoir.
+Caution:
+Remove any spilled salt immediately and run a full program to prevent corrosion of the appliance.
+(Figure 3)
+(Figure 4)
+(Figure 5)
+
+SETTING THE LEVEL OF SALT CONSUMPTION
+The salt consumption of the appliance depends on the level of water hardness.
+Set the level of salt consumption according to the information in section 'Water hardness level settings (salt
+consumption)'.
+Note:
+Contact your local water company to verify the level of water hardness in your area.
+Note:
+As a default, the level of water hardness of the appliance is set to level 3.
+1. Make sure that the appliance is off.
+2. Push and hold the program selector button and push the on/off button.
+3. Hold the program selector button until the display briefly shows SL. After that the display shows the latest set
+level of water hardness.
+4. Push the program selector button to change the level of water hardness.
+5. Push the on/off button to confirm the setting.
+FILLING THE DETERGENT RESERVOIR
+Warning:
+Store detergent out of reach of children in a cool and dry place.
+Caution:
+Only use detergent that is suitable for dishwashers.
+Caution:
+Do not put a detergent tablet in the cutlery basket, only use the detergent reservoir.
+Note:
+Detergent is available in powder, gel and tablets and is also available as a combined product (with salt
+and/or rinse aid). Combined products only produce sufficient results under certain conditions. Observe
+the instructions of the packaging.
+1. Make sure that you fill the detergent reservoir before you start the appliance.
+2. Push the latch (A) to open the detergent reservoir.
+3. Fill the reservoir (B) with detergent:
+a. Use 25 grams of detergent for heavily soiled dishes.
+b. Use 15 grams of detergent for lightly soiled dishes.
+Caution:
+The detergent reservoir has a capacity of 40 grams. Do not overfill the detergent reservoir. This can
+result in poorly dissolving detergent and damage to your glassware.
+4. Close the detergent reservoir.
+5. Push the tablet detergent button if you use a combined product.
+6. Select a program.
+7. Close the door.
+FILLING THE RINSE AID RESERVOIR
+Rinse aid is used to prevent traces of water droplets on clean dishes and increases drying performance.
+(Figure 6)
+(Figure 7)
+44
+Caution:
+Only use rinse aid that is suitable for dishwashers.
+Note:
+Fill the rinse aid reservoir when the rinse aid indicator on the control panel is on.
+1. Open the rinse aid reservoir (A).
+2. Fill the reservoir (B) with rinse aid until the MAX level.
+Caution:
+Remove any spilled rinse aid immediately. Spilled rinse aid can form extreme foam which can cause
+leaks.
+SETTING THE LEVEL OF RINSE AID CONSUMPTION
+When water stains form on your dishes after a wash cycle, you have to increase the level of rinse aid consumption.
+When blue stains form on your dishes after a wash cycle, you have to decrease the level of rinse aid consumption.
+Set the level of rinse aid consumption according to the information in section 'Rinse aid consumption settings'.
+Note:
+As a default, the level of rinse aid consumption of the appliance is set to level 4.
+1. Make sure that the appliance is off.
+2. Push and hold the program selector button and push the on/off button.
+3. Hold the program selector button until the display briefly shows rA. After that the display shows the latest set level
+of rinse aid consumption.
+4. Push the program selector button to change the level of rinse aid consumption.
+5. Push the on/off button to confirm the setting.
+LOADING THE APPLIANCE
+Correctly placing dishes into the appliance has a positive effect on the energy consumption and the washing and
+drying performance of your appliance.
+You can place dishes in the cutlery drawer or basket, the upper basket and the lower basket.
+Caution:
+Make sure that you load the appliance in such a way that the dishes do not block the upper and lower
+spray arm. If the spray arms are blocked they cannot spin during washing.
+Loading the cutlery drawer
+The cutlery drawer is designed for loading cutlery. You can remove the cutlery drawer partly to create more space in
+the upper basket or you can remove it completely for easy loading.
+1. If necessary, remove the cutlery drawer from the appliance. Refer to section 'Removing the cutlery drawer'.
+2. Place the cutlery items in the drawer.
+Loading the cutlery basket
+The cutlery basket is designed for loading cutlery.
+Warning:
+Place sharp items of cutlery, such as knives and forks, face down in the cutlery basket to prevent injury.
+(Figure 8)
+(Figure 9)
+(Figure 10)
+
+Caution:
+Make sure that there are no items of cutlery sticking out of the bottom of the basket.
+1. Place the cutlery piece by piece in a compartment of the cutlery basket to make sure that the
+spray arms can reach all items.
+Loading the upper basket
+The upper basket is designed for loading cups and saucers, small bowls and glasses. You can both adjust the height
+of the upper basket and the height of the racks of the upper basket to create more space.
+1. If necessary, adjust the height of the racks of the upper basket. Refer to section 'Adjusting the height of the racks
+of the upper basket'.
+2. If necessary, adjust the height of the upper basket. Refer to section 'Adjusting the height of the upper basket'.
+3. Place the dishes in the upper basket.
+4. Make sure that you place wine glasses and long-stem glasses against the edge of the basket, rack or glass
+supporter wire.
+Caution:
+Do not place wine glasses and long-stem glasses against other items to prevent damage to the
+glasses.
+5. Place long, small cooking utensils, such as wooden spoons, in the middle of the upper basket.
+Loading the lower basket
+The lower basket is designed for loading pots with long handles, pans, lids, plates and salad bowls. The lower basket
+also has space for the cutlery basket. You can fold the racks of the lower basket to create more space for larger
+items.
+1. If necessary, fold the racks of the lower basket. Refer to section 'Folding the racks of the lower
+basket'.
+2. Place the dishes in the lower basket.
+ADJUSTING THE HEIGHT OF THE RACKS OF THE UPPER BASKET
+The racks can be moved up to create more space in the upper basket, for example to place different-sized glasses
+under the racks or to place cutlery items on the racks.
+1. Move the racks (A) up or down.
+ADJUSTING THE HEIGHT OF THE UPPER BASKET
+The complete upper basket can be moved to create more space in the upper basket or in the lower basket. When the
+upper basket is in the upper position, you can place large items, such as pots and large plates, in the lower basket.
+When the upper basket is in the lower position, you can place large plates in the upper basket.
+1. Move the upper basket (A) up or down. Use the handles (B) on each side of the basket.
+FOLDING THE RACKS OF THE LOWER BASKET
+The racks can be folded down to create more space in the lower basket, for example to place large items (pots,
+pans, etc.) in the basket. The racks can be folded separately or all together.
+1. Push the racks (A) to fold them down.
+2. Pull the racks upwards to put them in the up position.
+REMOVING THE CUTLERY DRAWER
+The cutlery drawer can be removed partly to create more space in the upper basket or it can be removed completely
+for easy loading.
+(Figure 11)
+(Figure 12)
+(Figure 13)
+(Figure 14)
+(Figure 15)
+(Figure 16)
+(Figure 17)
+46
+1. Remove (part of) the cutlery drawer from the appliance.
+STARTING THE APPLIANCE
+1. Push the on/off button to start the appliance. The ready indicator goes on.
+CHOOSING A PROGRAM
+Note:
+For an overview of the programs, refer to section 'Programs'.
+Note:
+If you used an extra option with the previous program, this option will remain active for the new program.
+1. Use the program selector button to choose a program. The display shows the selected program and the duration.
+2. Use the timer button to delay the start time of the program. Refer to section 'Delaying the program'.
+3. Use the extra-silent button or the half-load / extra-fast button to add an option to the selected program.
+Note:
+If an option is not compatible with the selected program, a buzzer sounds.
+4. If necessary, cancel a selected option by pushing the button for the selected option again until the corresponding
+indicator goes off.
+The program starts when you close the door.
+CHANGING THE PROGRAM
+You can change the program while the appliance is running.
+1. Carefully open the door to avoid water spillage.
+2. Use the program selector button to choose another program.
+3. Close the door.
+The newly selected program will resume the course of the previously selected program.
+DELAYING THE PROGRAM
+Note:
+The start time of a program can be delayed for a maximum of 19 hours.
+1. Push the timer button to delay the start time of a program. Every time you push the button the timer increases by
+1 hour.
+2. Push the timer button again to change the time or cancel the timer.
+3. Close the door to activate the timer.
+The program will start when the timer has finished.
+RESETTING THE PROGRAM
+You can reset the program while the appliance is running.
+1. Carefully open the door to avoid water spillage. The display shows the selected program.
+2. Push and hold the program selector button for 3 seconds. The ready indicator flashes and the display shows 1.
+3. Close the door to let the appliance drain the water inside. This takes about 30 seconds.
+A buzzer sounds five times and the ready indicator is on when the program is cancelled.
+(Figure 10)
+
+STOPPING THE APPLIANCE
+Note:
+The appliance is silent for 40 to 45 minutes during the drying process.
+Note:
+A buzzer sounds five times and the ready indicator is on when a program is finished.
+1. Open the door.
+2. Wait a few minutes before you unload the appliance. The dishes are very hot and can break.
+3. Push the on/off button to switch off the appliance.
+6 Cleaning and maintenance
+CLEANING THE APPLIANCE
+Caution:
+Make sure that the appliance is off.
+Note:
+If you clean the appliance regularly, it will improve the service life.
+1. Clean the outside of the appliance. Use a damp cloth.
+2. Clean the seals of the door. Use a soft cloth.
+3. Clean the inside of the appliance in case of high contamination:
+a. Fill the detergent reservoir with a special cleaning agent for dishwashers.
+b. Select a program with a high temperature.
+c. Start the program.
+CLEANING THE FILTERS
+The filter system of the appliance consists of three components: the main filter, the micro filter and the sieve.
+Clean the filters weekly.
+Warning:
+Do not use the appliance without the filter system.
+Note:
+Clean filters make sure that your appliance functions correctly.
+1. Remove the lower basket.
+2. Turn the main filter (A) counter-clockwise to remove it.
+Note:
+The micro filter is attached to the main filter.
+3. Remove the main filter (A) from the micro filter (B).
+4. Remove the sieve (C).
+5. Clean the main filter, the micro filter and the sieve. Use warm water and a dishwasing brush.
+6. Install the sieve.
+(Figure 18)
+(Figure 19)
+(Figure 20)
+48
+7. Install the main filter into the micro filter. Make sure that the markers are aligned.
+8. Install the main filter into the sieve.
+9. Turn the main filter clockwise to fasten it.
+Caution:
+Make sure that the filters are placed correctly. Incorrect placement of the filters affects the maximum
+performance of the appliance.
+CLEANING THE SPRAY ARMS
+1. Remove the upper and lower basket.
+2. Remove the nut (A).
+3. Remove the upper spray arm (B).
+4. Pull the lower spray arm (C) upwards to remove it.
+5. Clean the spray arms. Use warm water.
+6. Install the lower spray arm (C).
+7. Install the upper spray arm (B).
+8. Tighten the nut (A).
+7 Extra information
+LED INDICATOR
+LED indicator State of the appliance
+Red, continuous The appliance is running a program.
+Red, flashing A program is cancelled.
+Red, flashing rapidly The appliance has an error. Refer to section 'Fault
+codes'.
+Green, continuous A program is finished.
+Note:
+The LED indicator does not operate when the door of the appliance is opened.
+WATER HARDNESS LEVEL SETTINGS (SALT CONSUMPTION)
+Level German hardness
+[dH]
+French hardness
+[dF]
+British hardness [dE] Display indicator
+1 0-5 0-9 0-6 L1
+2 6-11 10-20 7-14 L2
+3 12-17 21-30 15-21 L3
+4 18-22 31-40 22-28 L4
+5 23-31 41-55 29-39 L5
+6 32-50 56-90 40-63 L6
+(Figure 21)
+(Figure 22)
+(Figure 23)
+
+RINSE AID CONSUMPTION SETTINGS
+Level Number of rinse aid doses that is dispensed Display indicator
+1 Rinse aid not dispensed r1
+2 1 dose r2
+3 2 doses r3
+4 3 doses r4
+5 4 doses r5
+8 Troubleshooting
+GENERAL TROUBLESHOOTING PROCEDURE
+1. Try to find a solution for the problem with the help of the troubleshooting table and the fault codes.
+2. If you cannot find a solution for the problem, reset the appliance. Refer to section 'Resetting the program'.
+3. If the fault code keeps re-occuring, contact the -servicedienst.
+TROUBLESHOOTING TABLE
+Problem Possible cause Possible solution
+The program does not start. The mains plug is not connected. Connect the mains plug.
+There is a problem with the fuse. Do a check on the fuse box.
+There is no water supply. Open the water tap.
+The door of the appliance is open. Close the door.
+The appliance is switched off. Start the appliance. Refer to section
+'Starting the appliance'.
+The water inlet hose and filters are
+clogged.
+Make sure that the water inlet hose
+and the filters are not clogged.
+A function indicator is on and the
+display goes on and off.
+The door is open. Close the door.
+The ready indicator does not go off
+when a program is finished.
+The on/off button is pushed. Release the on/off button.
+The detergent reservoir contains
+detergent residues.
+The detergent reservoir is filled while
+the reservoir was still damp.
+Make sure that you fill the detergent
+reservoir when it is dry.
+The appliance contains water when
+the program is finished.
+The drain hose is clogged or twisted. Make sure that the drain hose is
+not clogged.
+Make sure that the drain hose is
+not twisted.
+The filters are clogged. Clean the filters. Refer to section
+'Cleaning the filters'.
+The program has not finished. Wait until the program is finished.
+A buzzer sounds five times and the
+ready indicator is on when a program
+is finished.
+The appliance stops during a
+program.
+There is a power failure. Make sure that there is power.
+There is a water inlet failure. Make sure that there is water inlet
+supply.
+50
+Problem Possible cause Possible solution
+The program is paused. Start the program.
+The appliance makes unusual
+sounds during a program.
+The appliance is not loaded
+correctly.
+Make sure that you load the
+appliance correctly. Refer to section
+'Loading the appliance'.
+One of the spray arms hits the
+dishes.
+Make sure that you load the
+appliance correctly. Refer to section
+'Loading the appliance'.
+There is food waste left on the
+dishes.
+The appliance is not loaded correctly
+and the spray arms cannot reach all
+the dishes.
+Make sure that you load the
+appliance correctly. Refer to section
+'Loading the appliance'.
+The cutlery basket is too full. Make sure that you load the
+appliance correctly. Refer to section
+'Loading the appliance'.
+The dishes are placed too close
+together.
+Make sure that you load the
+appliance correctly. Refer to section
+'Loading the appliance'.
+The amount of detergent is
+insufficient.
+Make sure that you fill the detergent
+reservoir with a sufficient amount of
+detergent. Refer to section 'Filling
+the detergent reservoir'.
+The selected program is not suitable
+for the loaded dishes.
+Choose a suitable program. Refer to
+section 'Programs'.
+One of the spray arms is clogged. Clean the spray arms. Refer to
+section 'Cleaning the spray arms'.
+The filters are clogged. Clean the filters. Refer to section
+'Cleaning the filters'.
+The filters are not placed correctly. Make sure that you correctly place
+the filters.
+The water drain pump is clogged. Make sure that the water drain pump
+is not clogged.
+There are white stains on the dishes. The amount of detergent is
+insufficient.
+Make sure that you fill the detergent
+reservoir with a sufficient amount of
+detergent. Refer to section 'Filling
+the detergent reservoir'.
+The level of rinse aid consumption is
+set too low.
+Adjust the level of rinse aid
+consumption. Refer to section
+'Setting the level of rinse aid
+consumption'.
+There is a high level of water
+hardness and no salt is used.
+Fill the salt reservoir. Refer to
+section 'Filling the salt reservoir'.
+The level of water hardness is set
+too low, which affects the salt
+consumption.
+Adjust the level of salt consumption.
+Refer to section 'Setting the level of
+salt consumption'.
+The cap of the salt reservoir is not
+closed correctly.
+Make sure that the cap of the salt
+reservoir is closed firmly.
+The dishes are not dry. The selected program does not
+include drying.
+Choose a program that includes
+drying. Refer to section 'Programs'.
+
+Problem Possible cause Possible solution
+The level of rinse aid consumption is
+set too low.
+Adjust the level of rinse aid
+consumption. Refer to section
+'Setting the level of rinse aid
+consumption'.
+The appliance is unloaded too
+quickly after the program is finished.
+Wait a few minutes after the program
+is finished before you unload the
+appliance.
+There are rust stains on the dishes. The stainless steel quality of the
+dishes is insufficient.
+Make sure that you only clean
+dishwasher-safe dishes in the
+appliance.
+The level of salt consumption is set
+too high.
+Adjust the level of salt consumption.
+Refer to section 'Setting the level of
+salt consumption'.
+The cap of the salt reservoir is not
+closed correctly.
+Make sure that the cap of the salt
+reservoir is closed firmly.
+Any spilled salt during filling of the
+salt reservoir was not cleaned
+immediately.
+Make sure that you clean any spilled
+salt immediately and run a full
+program to prevent corrosion.
+The water supply is polluted. Do a check on the water supply.
+FAULT CODES
+The fault codes are shown on the display of the control panel.
+Fault code Possible cause Possible solution
+F5 There is insufficient water supply. Make sure that the water tap is fully open and that
+the water supply is not blocked.
+Close the water tap, remove the water inlet hose and
+do a check if the hose is clogged.
+Start the appliance again.
+Contact the -servicedienst if the fault code
+keeps re-occuring.
+F3 The water supply does not stop. Close the water tap.
+Contact the -servicedienst.
+F2 The waste water in the appliance cannot
+be discharged.
+Do a check if the drain hose is clogged.
+Do a check if the filters are clogged.
+Switch the appliance off and reset the program. Refer
+to section 'Resetting the program'.
+Contact the -servicedienst if the fault code
+keeps re-occuring.
+F8 The heater has an error. Contact the -servicedienst.
+F1 The safety for water overflow is
+activated.
+Contact the -servicedienst.
+FE There is an electronic error. Contact the -servicedienst.
+F7 The temperature of the appliance is too
+high.
+Contact the -servicedienst.
+52
+Fault code Possible cause Possible solution
+F9 The position of the distributor has an
+error.
+Contact the -servicedienst.
+F6 The heat sensor has an error. Contact the -servicedienst.
+9 General terms and conditions of service and warranty
+We do not need to remind you of the importance of service. After all, we develop our products to a standard so that
+you can enjoy them for many years, without any concerns. If, nevertheless, there is a problem, we believe you are
+entitled to a solution straight away. Hence our products come with an exchange service, on top of the rights and
+claims you are entitled to by law. By exchanging a product or part, we save you time, effort and costs.
+2-year full manufacturer’s warranty
+1. Customers enjoy a 2-year full manufacturer’s warranty on all  products. Within this period, a faulty
+product or part will always be exchanged for a new model, free of charge. In order to claim under the 2-year full
+manufacturer’s warranty, you can either return the product to the shop you bought it from or contact the
+costumer service department via the form at 'https://www..eu/service-aanvraag'.
+2. The 2-year warranty period starts from the date the product is bought.
+3. In order to claim under the warranty, you must produce a copy of the original receipt.
+4. The warranty applies only to normal domestic use of  products within the Netherlands.
+5-year  warranty
+1.  offers a 5-year warranty on most large domestic appliances and a selection of small domestic
+appliances. This 5-year  warranty consists of a 2-year full manufacturer’s warranty, extended by a
+further 3-year warranty. The only thing you need to do to qualify for the 3-year extended warranty is to register
+the product within 45 days of purchase. You can read more about registering the product in the following
+paragraph.
+2. In accordance with the 5-year  warranty provisions, a faulty product or part will always be exchanged for
+a new model during the first 2 years under the warranty. During the 3rd to 5th year under the warranty, you will
+only pay the costs of exchange. The current costs of exchange are listed at 'https://www..eu/
+omruilkosten'.
+3. In order to claim under the 5-year  warranty, you can either return the product to the shop you bought it
+from or contact the  costumer service department via the form at 'https://www..eu/serviceaanvraag'.
+4. The 5-year warranty period starts from the date the product is bought.
+5. In order to claim under the warranty, you must produce a copy of the original receipt.
+6. The warranty applies only to normal domestic use of  products within the Netherlands.
+Product registration
+1. The 3-year extended warranty is easy to obtain, free of charge, by registering the product within 45 days of
+purchase, via the website 'https://www..eu/garantie-registratie'. If you did not register the product within
+45 days of purchase, you can still do so up to 2 years after the purchase date. However, there will be a charge.
+The one-off registration charge is € 89 for each separate product. Registration is possible only for products that
+are subject to the 5-year  warranty. Whether the product qualifies for the 5-year  warranty is
+stated in the product user manual and in the product information sheet, on ’s website.
+2. The warranty period always starts from the date the product is bought. If the product is registered for the
+extended warranty at a later date, the warranty period still starts from the original date of purchase.
+3. The 3-year extended warranty can only be applied for if you are in the possession of a copy of the original receipt
+and the  5-year warranty certificate.
+Large domestic appliances
+1. Breakdowns or faults in large domestic appliances (separate and built-in white goods) can be registered via the
+form at 'https://www..eu/service-aanvraag', by calling the  costumer service department or in
+the store where you bought the device. The telephone number of the costumer service department can be found
+at 'https://www..eu'.
+
+2. In the event of breakdowns or faults in large domestic appliances,  will have the option to have a service
+engineer inspect the faulty device onsite at the customer in the Netherlands and to carry out repairs, there and
+then. The  customer service department can also decide to have the device exchanged.
+3. If you suffer a breakdown or fault in a large domestic appliance during the first 2 years from the date of purchase,
+ will not charge any costs for the exchange, call-out or for parts and labour.
+4. If you registered the product as described before at 'https://www..eu/garantie-registratie' and you
+subsequently report a breakdown of a large domestic appliance in the 3rd to 5th year of the date of purchase, the
+5-year  warranty applies and the device will be repaired or exchanged, free of charge. In the event of a
+repair or exchange of the device, you only pay the costs of exchange. The current costs of exchange are listed at
+'https://www..eu/omruilkosten'. If you did not register the product, the 3-year extended warranty does not
+apply.
+5. When reporting a breakdown or fault, a service engineer will contact the customer within 1 working day in order to
+make an appointment. When the report is made in a weekend or during a public holiday, this will be the next
+working day.
+6. If you report a breakdown or fault via the form at 'https://www..eu/service-aanvraag', you will be kept
+informed of the progress via mobile messages and e-mail.
+7. The warranty period starts from the date the product is bought.
+8. In order to claim under the warranty, you must produce a copy of the original receipt and the  5-year
+warranty certificate.
+9. The warranty applies only to normal domestic use of  products within the Netherlands.
+Breakdowns or faults outside the warranty period
+1. Breakdowns or faults in small or large domestic appliances outside the warranty period, can be reported to the
+costumer services department via the form at 'https://www..eu/service-aanvraag' or by calling the
+costumer services department.
+2. The costumer services department may ask you to send the product for inspection or repair. The costs of
+dispatch will be at your expense.
+3. The inspection to establish whether repair is possible involves a charge. You need to grant your permission for
+this, in advance.
+4. In the event of a large domestic appliance, , at your request, can send out a service engineer. In that
+case, you will be charged the call-out costs, as well as parts and labour.
+5. In the event of an instruction to repair, the repair costs must be paid in advance. In the event of a repair by a
+service engineer, the costs of the repair must be settled with the engineer onsite, preferably by means of PIN
+payment.
+Warranty exclusions
+1. The following is excluded from the aforesaid warranties:
+normal wear and tear;
+improper use or misuse;
+insufficient maintenance;
+failure to comply with the operating and maintenance instructions;
+unprofessional installation or repairs by third parties or the customer himself;
+non-original parts used by the customer;
+use for commercial or business purposes;
+removal of the serial number and/or rating label.
+2. In addition, the warranty does not apply to normal consumer goods, such as:
+dough hooks, baking tins, (carbon) filters, etc.;
+batteries, bulbs, carbon filters, fat filters, etc.;
+external connection cables;
+glass accessories and glass parts such as oven doors;
+and similar items.
+3. Transport damage not caused by  is also excluded. Therefore, inspect your new device before starting
+to use it. If you detect any damage, you must report this to the store where you purchased the product within 5
+working days, or to the  customer service department via the form at 'https://www..eu/serviceaanvraag'. If transport damage is not reported within this period,  does not accept any liability in this
+respect.
+54
+4. The following are excluded from warranty and/or replacement: faults, loss of and damage to the device as a
+result of an event that is normally insured under the home contents insurance.
+Important to know
+1. The replacement or repair of a faulty product, or a part thereof, does not lead to an extension of the original
+warranty period.
+2. Parts that have been replaced, packaging material and exchanged devices are taken back by the service
+engineer and become the property of .
+3. If a complaint is unfounded, all costs arising from it will be at the customer’s expense.
+4. Following expiry of the warranty period, all costs of repair or replacement, including administration costs, dispatch
+and call-out charges, will be charged to the customer.
+5.  cannot be held liable for damage as a result of devices built in incorrectly.
+6.  cannot be held liable for damage caused by external events, unless this liability arises from mandatory
+
+Speed: up to 31,000 brush head movements/Min.
+Performance: removes up to 10 times more plaque *
+Benefits for health: improves the health of your gums in just 2 weeks
+White Teeth: two-way whiter teeth
+Timer: 2-minute timer and QuadPacer
+Easy to use
+Battery display: illuminated icon indicates battery status to
+Handle: Slim, ergonomic design
+Display: Illuminated Display
+Brush head system: Easy snap-on brush heads
+Operating time (full to empty battery): up to 3 weeks*
+Voltage: 110 to 220 V
+Cleaning programs
+Clean: for excellent daily cleaning
+White: removes superficial discoloration
+Sensitive: gentle cleaning of teeth and gums
+Gum Care: massage gently the gums
+Deep Clean: for a thorough cleaning
+Speed: up to 31,000 brush head movements/Min.
+Performance: removes up to 10 times more plaque *
+Benefits for health: improves the health of your gums in just 2 weeks
+White Teeth: two-way whiter teeth
+Timer: 2-minute timer and QuadPacer
+Easy to use
+Battery display: illuminated icon indicates battery status to
+Handle: Slim, ergonomic design
+Display: Illuminated Display
+Brush head system: Easy snap-on brush heads
+Operating time (full to empty battery): up to 3 weeks*
+Voltage: 110 to 220 V
+Cleaning programs
+Clean: for excellent daily cleaning
+White: removes superficial discoloration
+Sensitive: gentle cleaning of teeth and gums
+Gum Care: massage gently the gums
+Deep Clean: for a thorough cleaning
+5 Plaster Programs
+2 DIAMOND clean hand parts
+Charging glass
+With deep clean plaster program
+Highlights & Details
+Ions cause deep cleansing of the skin
+The built-in ionizer emits the finest, 40°C warm ion steam
+The nozzle can be adjusted at a 45° angle
+Facts
+Ions cause deep cleansing of the skin
+Improves hydration
+The built-in ionizer emits the finest, 40 °C warm ion steam
+The nozzle can be adjusted at a 45° angle
+Life of a tank filling: 15 minutes
+Capacity 90 ml
+Delivery
+Ion facial sauna
+User manual
+Intensive foot reflexology massage
+Two different types of massages can be selected
+Shiatsu massage the soles and heels
+Intensive foot reflexology massage
+Two different types of massages can be selected
+Shiatsu massage the soles and heels
+Compression massage of the Foot Tops
+Switchable red light and heat function
+2 Intensity levels of compression massage can be selected
+Promotes blood circulation and revitalizes tired feet
+Removable, washable inner lining
+Easy to maintain material
+Comfortable size (up to shoe size 46)
+Cable length: approx. 180 cm.
+With recirculation function
+Versatile - always juicy and tasty
+Easy and quick baking of rolls etc.
+Heat-resistant paint
+Recirculation function
+5-stage switch
+Temperature settings between 100°C and 230°C
+Interior lighting; automatic shut-off
+
+LOOKING AFTER YOUR DYSON HAND DRYER
+HOW TO USE
+Place your hands beneath the Dyson hand dryer and it will start automatically, creating sheets of air to scrape water
+from your hands.
+For best dry time results:
+1. Keep your hands flat and parallel to the machine surface approximately 5mm from the blade, drawing your hands
+through the airflow from your wrists to finger tips.
+2. Move your hands slowly through the airflow keeping a consistent speed, approx. 2.5 seconds per side alternating
+between front and back each time.
+3. Keep your hands flat, close the gaps between your fingers and keep your thumbs in to ensure that the whole of your
+hand is drawn through the airflow.
+TROUBLESHOOTING GUIDE
+Problem Action
+The Dyson hand dryer fails to start. Check fuse/circuit breaker is working and that the power supply is
+connected.Must be performed by a qualified electrician.
+If a safe method of switching is available, turn the unit on and off.
+If a safe method is not available, a qualified electrician must perform
+this task.
+The Dyson hand dryer sometimes cuts out when in use but resumes
+operation after a period of time.
+Check the air inlets are clean and free of dust.
+If the air inlets are dusty or dirty simply remove the dust or debris with
+a soft cloth.
+The dry time of the Dyson hand dryer has increased. Inspect the inlet grilles for dust and remove.
+Inspect filters and change if required.
+The air flow from the Dyson hand dryer is running hotter than usual. Inspect the inlet grilles for dust and remove.
+Inspect filters and change if required.
+If you have any further questions please contact the Dyson Helpline
+CLEANING
+The Dyson hand dryer should be cleaned daily.
+Follow these 3 simple steps to ensure the machine performs to its best and remains hygienic. Using the wrong cleaning
+method or product may invalidate your guarantee.
+1. Wipe all surfaces with a soft cloth and non-abrasive cleaner.
+2. Clean the air inlets on the sides REGULARLY.
+3. Clean the floor and wall beneath and around the machine. This may be required more regularly in high use areas.
+GENERAL ADVICE
+Contains silver ion antibacterial technology to preserve the surface and can help prevent degradation caused by the
+growth of bacteria.
+All cleaning chemicals should be used exactly as indicated by the manufacturer’s instructions (including appropriate
+dilution).
+If a cleaning product is left on the machine for too long, a film will form.
+This may reduce the effectiveness of the anti-bacterial surfaces.
+Any chemicals intended for use should first be tested on an inconspicuous area to confirm suitability.
+Aside from cleaning chemicals, care should be taken to avoid any harmful fluids from coming into contact with the
+product, in particular oils and alcohol-based products.
+CHEMICAL GUIDELINES
+Many professional cleaning chemicals can be used. The following are some that are harmful to the machine and should
+not be used. Use of these will invalidate your warranty.
+Do not use:
+Alcohol-acid mixes
+Alcohol
+Solvent / oil-based products
+Quaternary ammonium
+Alkali-bleach mixes
+Foaming ingredients
+Bleach or abrasive cleaners
+Do not pressure wash
+WATER GUIDELINES
+This Dyson hand dryer has an IP24 certification.
+Use of pressure washers can force water inside the casing. Water damage caused by incorrect cleaning will invalidate
+your guarantee.
+FILTER MAINTENANCE
+Regularly check the air inlets to ensure that they are free from dust and debris. Simply wiping the inlet with a soft cloth
+should be sufficient to remove dust and debris.
+If the air inlets get clogged, further cleaning or a filter change might be required.
+If required for high usage environments, a Dyson filter change kit provides everything needed to change your unit’s
+ filters on site. Contact the Dyson Helpline on the number on the back cover of this manual for more information.
+Filter cleaning or replacement for your Dyson hand dryer can be carried out by carefully following the instructions given
+in the filter change kit. If in any doubt, consult a qualified electrician or contact the Dyson Helpline for support.
+DISPOSAL INFORMATION
+Dyson products are made from high grade recyclable materials. Please dispose of this product responsibly and recycle
+where possible.
+This marking indicates that this product should not be disposed with other household wastes throughout the EU.
+To prevent possible harm to the environment or human health from uncontrolled waste disposal, recycle it responsibly
+to promote the sustainable reuse of material resources. To return your used device, please use the return and collection
+systems or contact the retailer where the product was purchased. They can take this product for environmental
+safe recycling.
+PLEASE REGISTER AS A DYSON HAND DRYER OWNER
+To help us ensure you receive prompt and efficient service, please register your unit at www.dysonairblade.com
+This will register your guarantee, confirm ownership of your Dyson unit in the event of an insurance loss, and enable us
+to contact you if necessary.
+You will need your serial number, which is on the rating plate behind the grille on the side of the hand dryer, on a
+registration sheet in the box and also on an information sticker on the front of the unit when it is unpacked.
+Please ensure all instructions and guidance in this operating manual, the installation guide and cleaning guide are
+adhered to or your guarantee may be invalidated.
+YOUR GUARANTEE
+TERMS AND CONDITIONS OF THE DYSON 5 YEAR GUARANTEE.
+If you have registered your unit online, your guarantee will start from the date of purchase. Please retain your proof of
+purchase. If you do not have your proof of purchase, your guarantee will start 90 days after the date of manufacture,
+according to Dyson’s records.
+Where this unit is sold within the EU, this guarantee will only be valid (i) if the unit is installed and used in the country in
+which it was sold or (ii), if the unit is installed and used in Austria, Belgium, France, Germany, Ireland, Italy, Netherlands,
+Spain or the United Kingdom and the same model as this unit is sold at the same voltage rating in the relevant country.
+Where this unit is sold outside of the EU, this guarantee will only be valid if the unit is installed and used in the country in
+which it was sold.
+WHAT IS COVERED
+5 YEAR GUARANTEE
+All factory parts of your hand dryer are guaranteed against original defects, material and workmanship when used in
+43
+accordance with the owner’s manual and installation guide for a period of 5 years from the start of your guarantee.
+Please call the Dyson Helpline for more information.
+Where Dyson determines that the main body assembly needs replacement, Dyson will send a replacement to be
+fitted by the customer on site. The customer will need to return any defective parts to Dyson using the pre paid postage
+box provided.
+Any replaced parts must be returned to Dyson or an administration fee will be levied.
+Where a filter change is required, Dyson will provide a filter change kit to be installed on site by the customer.
+• Any parts which are returned and replaced by Dyson will become the property of Dyson.
+• The replacement of any part of your unit under guarantee will not extend the period of guarantee.
+• The guarantee provides benefits which are additional to and do not affect any statutory rights you may have as a
+consumer.
+WHAT IS NOT COVERED
+Dyson does not guarantee the repair or replacement of a product as a result of:
+• Accidental damage, faults caused by negligent use or care, unintentional or deliberate misuse, neglect, vandalism,
+careless operation or handling of the unit which is not in accordance with the Dyson operating manual.
+• Use of parts not assembled or installed in accordance with the instructions of Dyson.
+• Use of parts and accessories which are not genuine Dyson components.
+• Faulty installation, or installation that does not precisely follow the installation instructions supplied by Dyson (except
+where installed by Dyson).
+• Repairs or alterations carried out other than in accordance with instructions by Dyson.
+• Damage from external sources such as transit, weather, electrical outages or power surges.
+• Normal wear and tear (e.g. fuse, etc.).
+• Damage caused by cleaning which is not in line with the instructions in this manual: for example, cleaning with
+chemicals or products listed as harmful to the unit.
+• Damage caused by water ingress due to cleaning or treatment prohibited in this manual.
+• Any electrical, flooding or structural damage, or any loss of business or revenue as a result of product failure.
+If you are in any doubt as to what is covered by your guarantee, please contact Dyson (details on the back cover).
+ABOUT YOUR PRIVACY
+• Your information will be held by Dyson and its agents for promotional, marketing and servicing purposes.
+• If your details change, if you change your mind about any of your marketing preferences or if you have any
