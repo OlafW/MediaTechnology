@@ -4,6 +4,7 @@
 *.obj
 *.wav
 *.mp3
+*.pdf
 __pycache__
 ITP_Exam
 RSAI
